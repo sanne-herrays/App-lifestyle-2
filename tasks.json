@@ -205,7 +205,7 @@
       "id": "TASK-019",
       "title": "Create the UX heuristic audit template",
       "workstream": "Experience Teardown",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the UX heuristic audit template'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Define task success, cognitive load, navigation, error recovery, decision points and friction measures; require severity and screen reference fields.",
