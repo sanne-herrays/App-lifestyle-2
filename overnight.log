@@ -1535,3 +1535,105 @@ Review complete. **TASK-030 (`docs/strategy/capability-mechanism-record-schema.m
 Status advanced `in_review` → `completed` in `tasks.json`; a 3-bullet Reviewer verdict appended to `PROGRESS.md`.
 
 APPROVED
+[main dba25e6] feat: complete autonomous task
+ 4 files changed, 478 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/capability-mechanism-record-schema.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   b127586..dba25e6  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Mon Nov 23 00:38:28 CET 2026
+==========================================
+TASK-031 is complete and left at `in_review`, per the workflow rules. Summary of what was done:
+
+## TASK-031 — Build the five-layer capability extraction worksheet ✓ (→ `in_review`)
+
+**Deliverable:** `docs/strategy/five-layer-capability-extraction-worksheet.md` (v0.1, publication-grade)
+
+This was the first `pending` task. It's the facilitation **process** that populates the `CAP` record whose fields TASK-030 (already completed) defines — the two are deliberately matched so a filled worksheet *is* the `extracted` record, with no re-keying drift.
+
+**What it contains:**
+- **Five physically-separated, gated layers** — Observable feature → User job → Mechanism → Evidence & limitations → Design possibilities — each with prompts, cells mapped 1:1 to `CAP` fields, a "🛑 Stop-and-check" box naming that layer's typical fakes, and a **gate question** that blocks progress until answered. Layer separation is the structural enforcement of the PRD's "do not build a collage of competitor features" mandate.
+- **Five working rules (W1–W5)** that make fabrication hard to commit and easy to catch, each tied to a TASK-030 non-negotiable (observation ≠ efficacy grade; every fact sourced or labelled; unknowns preserved; popularity ≠ efficacy; the worksheet ends at design possibilities and never decides).
+- A **completion checklist**, a **worksheet→`CAP` crosswalk** (proving coverage of all AC-named elements), the **90-minute workshop mapping** (`→ TASK-032`), a **copy-ready blank template**, and the required **streak example** fully worked end-to-end as synthetic/illustrative — carried through all five layers with its hypothesis status intact and `decision_status: pending`.
+
+**Verification:**
+- `cd prototype && npm run build` → **exit code 0** (`tsc -b` + `vite build` clean, zero warnings/errors). Docs-only change; no `prototype/src/` touched.
+- Placeholder scan clean (only "JTBD" matched — a legitimate term).
+
+**Not done, per rules:** No commit made; `tasks.json` set to `in_review` (not `completed`) pending Reviewer approval; `PROGRESS.md` updated. Exiting.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/react-CHdo91hT.svg    4.12 kB │ gzip:  2.06 kB
+dist/assets/vite-BF8QNONU.svg     8.70 kB │ gzip:  1.60 kB
+dist/assets/hero-CLDdwZDr.png    13.05 kB
+dist/assets/index-D64VDMd1.css    4.10 kB │ gzip:  1.47 kB
+dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
+
+✓ built in 78ms
+Both files updated: `tasks.json` TASK-031 reverted `in_review` → `pending`, and `## Review Rejection Notes` appended to `PROGRESS.md`.
+
+**Verdict:** The worksheet is substantively strong — genuinely concrete, well-structured, no placeholders/TODOs, no fake logic, zero-guilt design actively encoded, clean build — but it is rejected for one disqualifying, verifiable defect:
+
+Its foundational PRD citations (`§3.4`, `§3.5`, `§3.6`) **do not resolve** — PRD §3 has no decimal subsections, and the cited five-layer formulation and streaks example both actually live in **§5 Phase 3**. The error is pervasive, internally contradictory (the doc cites both `§3.5` and the correct `§5 Phase 3` for the same example), and was knowingly carried forward from the prior task. For a deliverable whose own rule W2 demands *"every factual cell carries a resolvable source,"* a non-resolving Source basis fails its own standard — and propagates into every `CAP` record it produces. The fix is a scoped citation sweep, not a rewrite.
+
+REJECTED
+Task rejected by Reviewer. Retrying...
+==========================================
+Starting next task at Mon Nov 23 00:46:31 CET 2026
+==========================================
+TASK-031 complete. Per the overnight workflow, I'm stopping here (no commit).
+
+## Summary
+
+**Task executed:** TASK-031 — Build the five-layer capability extraction worksheet (Capability Extraction workstream).
+
+This task had been **previously rejected** and returned to `pending`. The deliverable (`docs/strategy/five-layer-capability-extraction-worksheet.md`) was substantively excellent — five physically-separated gated layers, concrete prompts/cells/Stop-and-checks, the required worked streak example, a `CAP` crosswalk, and a copy-ready blank template — but was rejected for **one disqualifying defect**: pervasive invented PRD decimal citations (`§3.4`, `§3.5`, `§3.6`) that don't resolve, which is especially damning for a provenance-discipline instrument.
+
+**Remediation applied (exactly the reviewer's required fixes 1–4):**
+- **Five-layer translation** and **streaks example** → corrected to `§5 Phase 3` (verified at prd.md:133/135).
+- **"Translate the visible feature…" instruction** → `§3 "Strong documented examples" item 4` (prd.md:86), and §1.1 reworded so it is *not* conflated with the five layers.
+- **"Annotated reference patterns… not mandatory features"** → `§3 "Strong documented examples" item 6` (prd.md:88).
+- **Sibling sweep:** the TASK-030 `CAP` schema carried the same errors (11 occurrences) — all corrected, while leaving its legitimate internal `§3.1–§3.8` section numbering untouched.
+- **Verified** no `prd.md §N.M` decimal citation remains in either document; the one-sentence test still holds (citation-only change, no content altered). Worksheet bumped to v0.2 with a change-log entry.
+
+**Verification:**
+- `cd prototype && npm run build` → exit 0 (`tsc -b` + `vite build` clean, zero warnings/errors).
+- Docs-only change confirmed via `git status`; strict-TypeScript gate not triggered.
+
+**Status:** tasks.json TASK-031 set `pending → in_review`. No commit made, per workflow rules — awaiting Reviewer approval.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/react-CHdo91hT.svg    4.12 kB │ gzip:  2.06 kB
+dist/assets/vite-BF8QNONU.svg     8.70 kB │ gzip:  1.60 kB
+dist/assets/hero-CLDdwZDr.png    13.05 kB
+dist/assets/index-D64VDMd1.css    4.10 kB │ gzip:  1.47 kB
+dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
+
+✓ built in 91ms
+Review complete. TASK-031 ("Build the five-layer capability extraction worksheet") passes both acceptance criteria and all CLAUDE.md standards:
+
+- The worksheet physically separates all five mandated layers with gate questions, Stop-and-check boxes, a `CAP`-field crosswalk, a reusable blank template, and the required streak example worked end-to-end.
+- The sole prior defect — invented `prd.md` decimal citations — is genuinely fixed; I independently confirmed the new references (`§3` items 4/6, `§5 Phase 3`) resolve to real PRD locations and no decimal PRD citation remains.
+- Zero-guilt behavioral design is intact (streak studied as a risk, punitive-reset-inverting invention, observation grade kept separate from efficacy, contradiction preserved, no verdict written).
+- No placeholders, no fabricated research, docs-only (TypeScript gate not triggered).
+
+tasks.json updated `in_review` → `completed`; 3-bullet approval appended to PROGRESS.md.
+
+APPROVED

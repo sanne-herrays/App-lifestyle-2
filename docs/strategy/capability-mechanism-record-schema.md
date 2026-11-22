@@ -5,17 +5,17 @@
 **Version:** 0.1 · **Status:** Proposed, not yet populated
 **Owner (accountable role):** Head of Product (Capability Extraction Board chair) · schema co-custodian with Program Director
 **Reviewers:** Behavioral scientist · Senior UX designer · Motion/interaction designer · Product analyst/growth · iOS engineer · Clinical reviewer · Privacy/regulatory reviewer · QA/accessibility
-**Source basis:** `prd.md` §4 (Capability Library `CAP-001`, grades, source handling), §3.3–§3.5 (how documented examples are used; the five-layer translation; the streaks worked example), §5 Phase 3 (capability mechanism extraction, 30–50 deep records, 90-minute workshop), §5 Phase 4 (capability review; Adopt/Adapt/Invent/Reject/Defer), §6 (behavioral science, guilt/compulsion/burden risks), §11 (quality gates), §13 Prompt 06 (Capability Extraction Board field list) and Prompt 07 (review/red-team), §14 (handoff templates / acceptance criteria)
+**Source basis:** `prd.md` §4 (Capability Library `CAP-001`, grades, source handling), §3 "Strong documented examples" (how documented examples are used; item 4 the feature-translation instruction), §5 Phase 3 (the five-layer translation; the streaks worked example; capability mechanism extraction, 30–50 deep records, 90-minute workshop), §5 Phase 4 (capability review; Adopt/Adapt/Invent/Reject/Defer), §6 (behavioral science, guilt/compulsion/burden risks), §11 (quality gates), §13 Prompt 06 (Capability Extraction Board field list) and Prompt 07 (review/red-team), §14 (handoff templates / acceptance criteria)
 
 ---
 
 ## 0. How to read this document
 
-This document defines the **record format for a single extracted capability** — the `CAP` record — the atomic unit of the HerRays **Capability Mechanism Library** (`prd.md` §4, `CAP-001`). A `CAP` record takes one *observed* product behavior (e.g., a streak counter) and carries it through the five-layer translation the PRD mandates — **observed feature → user job → mechanism → evidence/limitations → alternative solutions** (`prd.md` §3.4, §5 Phase 3) — ending in a graded, source-linked, reviewable decision (`Adopt / Adapt / Invent / Reject / Defer`).
+This document defines the **record format for a single extracted capability** — the `CAP` record — the atomic unit of the HerRays **Capability Mechanism Library** (`prd.md` §4, `CAP-001`). A `CAP` record takes one *observed* product behavior (e.g., a streak counter) and carries it through the five-layer translation the PRD mandates — **observed feature → user job → mechanism → evidence/limitations → alternative solutions** (`prd.md` §5 Phase 3) — ending in a graded, source-linked, reviewable decision (`Adopt / Adapt / Invent / Reject / Defer`).
 
-It is a **governance / data-contract artifact**. It defines **fields, identifiers, allowed values, and validation rules** for a capability record. It does **not** contain any real research finding. The single worked record in §8 reproduces the PRD's own *illustrative* streaks example (`prd.md` §3.5) scaffolded with clearly-marked synthetic evidence ids, and exists only to prove the schema validates.
+It is a **governance / data-contract artifact**. It defines **fields, identifiers, allowed values, and validation rules** for a capability record. It does **not** contain any real research finding. The single worked record in §8 reproduces the PRD's own *illustrative* streaks example (`prd.md` §5 Phase 3) scaffolded with clearly-marked synthetic evidence ids, and exists only to prove the schema validates.
 
-> **No-fabrication statement.** This schema contains no real user research, interview, metric, clinical outcome, or test result. It cites no real `EVD` record. The one worked record (§8) is labelled **ILLUSTRATIVE (synthetic)** end-to-end; its mechanisms and alternatives are quoted from the PRD's own streaks example (`prd.md` §3.5), which the PRD presents as *hypotheses to test*, not findings — and the record preserves them as such (`mechanism_status: hypothesized`, `decision_status: pending`). The schema itself is built to make fabrication *detectable*: no claim may enter a `CAP` field without either a resolvable `EVD` source (`↔ TASK-005`) or an explicit `invention`/`hypothesis` label (`↔ TASK-004 §2`); the forbidden-value rules (§6) reject a decision reached without evidence, popularity dressed up as efficacy, and any capability that skips the mandatory clinical/privacy/accessibility gates (`→ TASK-033`).
+> **No-fabrication statement.** This schema contains no real user research, interview, metric, clinical outcome, or test result. It cites no real `EVD` record. The one worked record (§8) is labelled **ILLUSTRATIVE (synthetic)** end-to-end; its mechanisms and alternatives are quoted from the PRD's own streaks example (`prd.md` §5 Phase 3), which the PRD presents as *hypotheses to test*, not findings — and the record preserves them as such (`mechanism_status: hypothesized`, `decision_status: pending`). The schema itself is built to make fabrication *detectable*: no claim may enter a `CAP` field without either a resolvable `EVD` source (`↔ TASK-005`) or an explicit `invention`/`hypothesis` label (`↔ TASK-004 §2`); the forbidden-value rules (§6) reject a decision reached without evidence, popularity dressed up as efficacy, and any capability that skips the mandatory clinical/privacy/accessibility gates (`→ TASK-033`).
 
 **Scope boundary (what this task is and is not).**
 - **TASK-030 (this document) = the *record*: how one extracted capability is stored, identified, graded, and made reviewable.** It owns `cap_id`, `observed_feature`, `user_job`, `mechanism`, the evidence links, `downsides`, the three `alternatives`, the one `novel_alternative`, `validation`, and `decision_status` — the exact fields named in the acceptance criteria.
@@ -33,7 +33,7 @@ It is a **governance / data-contract artifact**. It defines **fields, identifier
 The record exists to do six jobs:
 
 1. **Separate the five layers so they cannot be conflated.** The observed *feature* (what the app does), the *job* it serves for the user, the *mechanism* by which it might work, the *evidence* for that mechanism, and the *alternative* ways to serve the job are distinct fields with distinct grading. A reader can never mistake "this app has streaks" (observation) for "streaks cause behavior change" (an unproven hypothesis) or "we will build streaks" (a decision). This is the PRD's central anti-collage discipline (`prd.md` executive mandate: "Do not build a collage of competitor features").
-2. **Translate feature → job → mechanism, not feature → feature.** Every record is anchored to a *user job* and a *mechanism*, so the Lab reasons about why something works, not merely that a competitor shipped it (`prd.md` §3.4). Preserving original examples as "annotated reference patterns … **not mandatory features**" (`prd.md` §3.6) is enforced structurally: a record cannot advance to `Adopt` without a mechanism and evidence, and popularity is barred from the evidence axes (§6).
+2. **Translate feature → job → mechanism, not feature → feature.** Every record is anchored to a *user job* and a *mechanism*, so the Lab reasons about why something works, not merely that a competitor shipped it (`prd.md` §3 "Strong documented examples" item 4). Preserving original examples as "annotated reference patterns … **not mandatory features**" (`prd.md` §3 "Strong documented examples" item 6) is enforced structurally: a record cannot advance to `Adopt` without a mechanism and evidence, and popularity is barred from the evidence axes (§6).
 3. **Carry supporting *and* contradictory evidence.** Both `supporting_evidence` and `contradictory_evidence` are first-class fields (`prd.md` Prompt 06 "supporting/contradictory evidence"; "Preserve specialist disagreements"). Contradictions are never averaged away; they route to the contradiction log (`→ TASK-008`).
 4. **Require three alternatives plus one unconventional option before any decision.** The PRD requires, per capability, "three alternatives plus one unconventional alternative" (`prd.md` §5 Phase 3). The record makes this a *validation precondition*: a decision cannot be `approved` while the alternatives block is incomplete (§7.2, §6.2). This is the structural guard against adopting the first thing seen.
 5. **Separate popularity from efficacy, and gate safety first.** Clinical, privacy, ethics, accessibility and unsupported-claim gates are applied *before* value scoring (`prd.md` §5 Phase 4; `→ TASK-033`). A capability that fails a mandatory gate cannot be `Adopt`ed no matter how high its value score — the gates are non-compensable (`prd.md` §9/§11).
@@ -119,7 +119,7 @@ The record has seven field groups. **M** = mandatory, **C** = conditionally mand
 | Field | Req | Type / allowed values | Rule |
 |---|---|---|---|
 | `mechanism` | M | string | The behavioral mechanism(s) by which the feature might serve the job, named in BCT/COM-B/SDT/Fogg/habit terms where applicable (`prd.md` §6; e.g., "reinforcement, feedback, commitment device"). This is the heart of the record. |
-| `mechanism_status` | M | `evidenced \| hypothesized \| contested \| invented` | Epistemic status of the mechanism (`↔ TASK-004 §2`). `hypothesized` is the honest default for competitor-observed mechanisms (the PRD's streaks mechanisms are explicitly "hypothesized", `prd.md` §3.5). |
+| `mechanism_status` | M | `evidenced \| hypothesized \| contested \| invented` | Epistemic status of the mechanism (`↔ TASK-004 §2`). `hypothesized` is the honest default for competitor-observed mechanisms (the PRD's streaks mechanisms are explicitly "hypothesized", `prd.md` §5 Phase 3). |
 | `supporting_evidence` | C | list of `EVD-NNN` \| `none` | Scientific / user / observational evidence *for* the mechanism (`↔ TASK-005`; `prd.md` §6 "populations, interventions, comparators, duration, effect sizes"). `none` permitted only if `mechanism_status ∈ {hypothesized, invented}` and the gap is logged (`→ TASK-008`). |
 | `contradictory_evidence` | C | list of `EVD-NNN` \| `none` | Evidence *against* the mechanism or surfacing a failure mode (`prd.md` Prompt 06 "supporting/contradictory evidence"). **Never deleted or averaged against supporting evidence** (C4); a live contradiction forces a `→ TASK-008` `CON` record. |
 | `efficacy_grade` | M | `A\|B\|C\|D` \| `n/a` | Grade of the *mechanism's efficacy for behavior change* under `↔ TASK-004`, **graded separately from `observation_grade`** (C1). `n/a` + `hypothesized` is the correct state for an untested mechanism; it is never silently promoted from the observation grade. |
@@ -273,11 +273,11 @@ A record passes entry validation iff:
 
 ## 8. Validated sample record (ILLUSTRATIVE — synthetic; PRD streaks example)
 
-The record below instantiates the schema on the PRD's **own** worked example — the streak counter (`prd.md` §3.5). Its *mechanisms, risks, alternatives and required test are quoted from the PRD*, which presents them as **hypotheses to test, not findings**. All evidence ids are **synthetic** (`EVD-SYNTH-*`, `APP-SYNTH-*`, etc.) and assert nothing about any real app or study; the record is deliberately held at `decision_status: pending` to show the schema refusing to manufacture a decision.
+The record below instantiates the schema on the PRD's **own** worked example — the streak counter (`prd.md` §5 Phase 3). Its *mechanisms, risks, alternatives and required test are quoted from the PRD*, which presents them as **hypotheses to test, not findings**. All evidence ids are **synthetic** (`EVD-SYNTH-*`, `APP-SYNTH-*`, etc.) and assert nothing about any real app or study; the record is deliberately held at `decision_status: pending` to show the schema refusing to manufacture a decision.
 
 ```yaml
 # ILLUSTRATIVE (synthetic) — demonstrates schema validity only.
-# Mechanisms/risks/alternatives quoted from prd.md §3.5 as HYPOTHESES. No real evidence.
+# Mechanisms/risks/alternatives quoted from prd.md §5 Phase 3 as HYPOTHESES. No real evidence.
 cap_id: CAP-001
 record_version: 0.1
 record_status: extracted          # five layers filled; not yet reviewed/decided
@@ -299,7 +299,7 @@ job_evidence: hypothesis          # no interview evidence yet → honest label (
 job_grade: n/a                    # open until job_evidence exists → open_gaps below
 
 # Layer 3 — Mechanism & evidence
-mechanism: "Hypothesized: reinforcement, feedback, and commitment (prd.md §3.5). Visible progress acts as a reward signal and a loss-averse commitment device."
+mechanism: "Hypothesized: reinforcement, feedback, and commitment (prd.md §5 Phase 3). Visible progress acts as a reward signal and a loss-averse commitment device."
 mechanism_status: hypothesized    # the PRD states these are hypothesized, not proven
 supporting_evidence: none         # permitted: status=hypothesized + open_gap logged
 contradictory_evidence: [EVD-SYNTH-022]   # synthetic review evidence of post-miss abandonment
@@ -308,7 +308,7 @@ transferability: unknown          # no midlife-women evidence examined yet
 confidence: speculative           # matches an untested mechanism (§4.2)
 
 # Layer 4 — Downsides, failure modes & lenses
-downsides: "Shame and all-or-nothing behavior after a missed day; the reset can punish a single lapse and drive abandonment rather than recovery (prd.md §3.5, §6 guilt/compulsion risks)."
+downsides: "Shame and all-or-nothing behavior after a missed day; the reset can punish a single lapse and drive abandonment rather than recovery (prd.md §5 Phase 3, §6 guilt/compulsion risks)."
 positive_experience: "Sense of momentum and pride while the streak is intact (unverified)."
 ethics_flags:
   - {issue: "Loss-aversion/guilt pressure after a miss may undermine autonomy", severity: high}
@@ -336,7 +336,7 @@ novel_alternative:
   why_unconventional: "Rewards the behavior (coming back) that streaks penalize."
   evidence_or_label: invention
 validation:
-  test_hypothesis: "Do the alternatives improve meaningful repeated action and perceived autonomy, not merely app opens, versus a resetting streak? (prd.md §3.5)"
+  test_hypothesis: "Do the alternatives improve meaningful repeated action and perceived autonomy, not merely app opens, versus a resetting streak? (prd.md §5 Phase 3)"
   smallest_experiment: "Prototype A/B of resetting-streak vs. flexible-weekly on the missed-day/recovery journey; measure return-after-miss and an autonomy item."
   success_criteria: "Higher return-after-miss and non-inferior perceived autonomy for the alternative; no increase in self-reported guilt."
   exp_ref: none                   # not yet registered → TASK-009

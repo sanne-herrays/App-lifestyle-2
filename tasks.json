@@ -337,7 +337,7 @@
       "id": "TASK-031",
       "title": "Build the five-layer capability extraction worksheet",
       "workstream": "Capability Extraction",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Build the five-layer capability extraction worksheet'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Create a reusable worksheet separating observable feature, user job, mechanism, evidence limitations and design possibilities; include the streak example.",
