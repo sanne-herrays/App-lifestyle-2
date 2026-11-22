@@ -1328,3 +1328,56 @@ TASK-026 (`docs/strategy/user-recruitment-consent-pack.md`) satisfies both accep
 Status advanced `in_review` → `completed` in `tasks.json`; approval logged in `PROGRESS.md`. The only finding is a non-blocking citation nit (the "20–30" band attributed to §6 originates in Prompt 04), which does not affect correctness.
 
 APPROVED
+[main 2aa2b3b] feat: complete autonomous task
+ 4 files changed, 512 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/user-recruitment-consent-pack.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   d831fe7..2aa2b3b  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Mon Nov 23 00:08:02 CET 2026
+==========================================
+TASK-027 is complete and left at `in_review` per the workflow rules. Summary of this session's work:
+
+## TASK-027 — Create the neutral discovery interview guide ✅ (→ `in_review`)
+
+**First pending task** in `tasks.json` (Behavior & User Research / WS04). Executed it alone, nothing else.
+
+**Built:** `docs/strategy/neutral-discovery-interview-guide.md` — a publication-grade, runnable interview instrument (v0.1, study UNEXECUTED):
+- **45–60-minute timed script** (§4 budget summing 45→64 min; §5 full segment-by-segment script) across welcome/re-consent → routine warm-up → the anchor behavioural story → obstacles → workarounds → motivation/meaning → missed-days/recovery → tools/tracking/trust → optional-diary close.
+- **Grounded in behavioral science**: Critical Incident Technique + JTBD "Switch"/timeline for the anchor story, Grand-Tour ethnography, means–end laddering to reach SDT motivation quality, and COM-B used as a *silent* interviewer coverage checklist (never read aloud).
+- **"Remove leading future-preference questions" satisfied structurally**: a non-leading rulebook (§3), interviewer self-check (§6.2), and a **10-row banned-question → neutral past-behaviour-rewrite table** (§6.3) that kills every "Would you use…/Would reminders help…/How much would you pay…/What features would you want…" question with a concrete episode-anchored replacement.
+- Nine non-negotiables, a facilitation/capture/safety/accessibility protocol inheriting TASK-026's consent + R14 signposting machinery, a 12-item Gate-2 forbidden-value catalogue, and an acceptance-criteria crosswalk.
+
+**No fabrication:** no participant, quote, or finding anywhere; the only populated response content is one clearly-labelled synthetic `PART-SYNTH-C` technique demo, explicitly inadmissible. Placeholder scan → zero hits. Scope fenced from TASK-026/028/029/004/005/048.
+
+**Verified:** `cd prototype && npm run build` → **exit code 0** (`tsc -b` + `vite build` clean, zero warnings/errors). Docs-only change; no `prototype/src/` files touched.
+
+**Not done (per rules):** no commit. `tasks.json` set to `in_review`; `PROGRESS.md` logged. Next pending task is TASK-028. Exiting.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/react-CHdo91hT.svg    4.12 kB │ gzip:  2.06 kB
+dist/assets/vite-BF8QNONU.svg     8.70 kB │ gzip:  1.60 kB
+dist/assets/hero-CLDdwZDr.png    13.05 kB
+dist/assets/index-D64VDMd1.css    4.10 kB │ gzip:  1.47 kB
+dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
+
+✓ built in 80ms
+The deliverable passes a ruthless review. TASK-027's `docs/strategy/neutral-discovery-interview-guide.md` is a concrete, publication-grade interview instrument — not filler — that satisfies both acceptance criteria and every CLAUDE.md rule:
+
+- **45–60-min script** on actual past behaviour, obstacles, workarounds and motivations (§4 budget + §5 full script, grounded in Critical Incident / JTBD "Switch" / Grand-Tour / laddering / silent COM-B).
+- **Leading future-preference questions removed structurally** via the §3 rulebook and the §6.3 10-row banned→neutral-rewrite table.
+- **No fabrication** — study explicitly UNEXECUTED, only one clearly-tagged, inadmissible synthetic demo; placeholder scan clean.
+- **Build gate** re-run independently → exit 0; docs-only, no `prototype/src/` touched, so no `any`/`@ts-ignore` possible.
+
+I've advanced `tasks.json` TASK-027 `in_review → completed` and appended the 3-bullet approval to `PROGRESS.md`.
+
+APPROVED

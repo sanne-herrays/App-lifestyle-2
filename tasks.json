@@ -293,7 +293,7 @@
       "id": "TASK-027",
       "title": "Create the neutral discovery interview guide",
       "workstream": "Behavior & User Research",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the neutral discovery interview guide'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Produce a 45–60-minute interview script focused on actual past behavior, obstacles, workarounds and motivations; remove leading future-preference questions.",
