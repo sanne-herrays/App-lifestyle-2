@@ -132,3 +132,62 @@ dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
 TASK-003 reviewed against its acceptance criteria and CLAUDE.md standards. The specialist responsibility matrix maps all 15 roles (13 core + clinical + privacy, matching PRD §2 exactly) to every research activity and review approval with strict single-accountability RACI, proves no required audit lacks an owner, and is cleanly labeled with no fabricated data or placeholders. `tasks.json` set to `completed` and a 3-bullet approval logged to `PROGRESS.md`.
 
 APPROVED
+[main 1ccfed9] feat: complete autonomous task
+ 4 files changed, 410 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/specialist-responsibility-matrix.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   9354a54..1ccfed9  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Sun Nov 22 21:09:56 CET 2026
+==========================================
+TASK-004 complete. Per the overnight-build instructions, I executed exactly one task and am exiting without committing.
+
+## Summary
+
+**Task executed:** TASK-004 — Define evidence grading rules (Foundation workstream), the first `pending` task in `tasks.json`.
+
+**Deliverable:** `docs/strategy/evidence-grading-rules.md` (v0.1) — a publication-grade governance ruleset that satisfies both acceptance criteria:
+
+- **Grades A–D** — stated verbatim from PRD §4, then operationalized with an admissibility map, hard ceilings (e.g., one direct observation caps at B; app-store reviews cap at C; market estimates may never become retention/CAC/LTV; editorial recognition is inadmissible on efficacy), and promotion/demotion rules.
+- **Admissible source types** — a per-grade source-type table tied to PRD §3/§4.
+- **Uncertainty rules** — mandatory uncertainty notes, a controlled confidence vocabulary with banned words, and first-class unknown-states (open question / contested / untestable-now).
+- **Observation / inference / hypothesis / invention distinction** — four epistemic labels with definitions, grade ceilings, and rightward-only transition rules.
+- **One example per grade** — four worked A/B/C/D examples, each explicitly labelled ILLUSTRATIVE (synthetic).
+
+Also added: multi-dimensional grading (5 axes), eight prohibited gradings, quality-gate mapping, and a minimal grading stamp — with scope kept distinct from TASK-005 (storage schema referenced, not duplicated).
+
+**Verification:** `cd prototype && npm run build` → **exit code 0** (`tsc -b` + `vite build` clean, zero warnings/errors). Docs-only change; no `prototype/src/` files touched.
+
+**Status changes:** `tasks.json` TASK-004 → `in_review`; `PROGRESS.md` updated with a factual build log.
+
+**No commit made**, per the workflow rules — task left at `in_review` pending the Reviewer step.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/react-CHdo91hT.svg    4.12 kB │ gzip:  2.06 kB
+dist/assets/vite-BF8QNONU.svg     8.70 kB │ gzip:  1.60 kB
+dist/assets/hero-CLDdwZDr.png    13.05 kB
+dist/assets/index-D64VDMd1.css    4.10 kB │ gzip:  1.47 kB
+dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
+
+✓ built in 94ms
+Review complete. **TASK-004 — Define evidence grading rules** passes against both acceptance criteria and all CLAUDE.md non-negotiables:
+
+- All five required elements present and concrete: A–D scale, admissible source types with hard ceilings, uncertainty rules, the observation/inference/hypothesis/invention distinction, and one worked example per grade.
+- No fabrication: every example is explicitly synthetic; no real observations, metrics, or clinical outcomes asserted.
+- Zero-guilt behavioral values upheld; PRD citations verified accurate; no placeholders.
+- Docs-only change — no `prototype/src/` touched, so the strict-TypeScript gate is not triggered.
+
+Actions taken:
+- `tasks.json`: TASK-004 `in_review` → `completed`.
+- `PROGRESS.md`: appended the 3-bullet reviewer approval summary.
+
+APPROVED

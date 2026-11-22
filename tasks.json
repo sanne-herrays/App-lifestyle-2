@@ -40,7 +40,7 @@
       "id": "TASK-004",
       "title": "Define evidence grading rules",
       "workstream": "Foundation",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Define evidence grading rules'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Document grades A–D, admissible source types, uncertainty rules and the distinction between observation, inference, hypothesis and invention; include one example per grade.",
