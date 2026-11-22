@@ -183,7 +183,7 @@
       "id": "TASK-017",
       "title": "Create the screen capture and annotation protocol",
       "workstream": "Experience Teardown",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the screen capture and annotation protocol'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Specify device, OS, app version, region, recording consent, timestamps, taps, task duration, friction and accessibility annotations; provide a reusable checklist.",

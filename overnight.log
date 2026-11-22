@@ -803,3 +803,55 @@ Review complete. TASK-016 ("Define ten standardized app test journeys") meets bo
 I advanced `tasks.json` TASK-016 `in_review` → `completed` and appended a 3-bullet reviewer verdict to `PROGRESS.md`.
 
 APPROVED
+[main 10b5a47] feat: complete autonomous task
+ 4 files changed, 528 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/ten-standardized-app-test-journeys.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   6fddeaa..10b5a47  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Sun Nov 22 22:36:17 CET 2026
+==========================================
+TASK-017 is complete and left at `in_review` per the workflow rules. Summary:
+
+**Executed: TASK-017 — Create the screen capture and annotation protocol** (Experience Teardown / WS02, the first pending task).
+
+**Deliverable:** `docs/strategy/screen-capture-annotation-protocol.md` (v0.1) — the *how-to-record* layer TASK-016 deferred. It produces the `capture_ref`/`screen_ref`/tap-log/timestamp artifacts every `JRN` record points to and promotes to an `EVD`.
+
+Every acceptance-criteria element is specified concretely:
+- **device / OS / app version / region** — a frame-evidenced rig contract (§4) where each value must be read back from a captured artifact, not just typed (`app_version: unknown` → invalid run).
+- **recording consent** — a `consent_record.yaml` contract that must be logged before the first frame.
+- **timestamps** — a single monotonic session clock (§7.1).
+- **taps / task duration** — append-only `events.log` with cumulative `tap_count` and raw measured durations, kept as pure observation.
+- **friction / accessibility annotations** — controlled-vocabulary observation records that classify type/dimension only and never emit a severity or pass/fail score (observation↔interpretation firewall preserved).
+- **reusable checklist** — delivered as an itemized pre-flight/in-session/post-session/validation checklist (§10) plus a copy-ready one-page block (§13).
+
+Backed by five anti-fabrication non-negotiables (C1–C5), a 10-check validation gate, copyright/privacy/minimization rules, and one fully-labelled synthetic worked example (`APP-SYNTH-Z`). No real app is characterised anywhere.
+
+**Verification:** `cd prototype && npm run build` → **exit code 0** (`tsc -b` + `vite build` clean, zero warnings/errors). Docs-only change — no `prototype/src/` files touched.
+
+**Status:** `tasks.json` TASK-017 set to `in_review`; `PROGRESS.md` logged. No commit made, per workflow rules.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/react-CHdo91hT.svg    4.12 kB │ gzip:  2.06 kB
+dist/assets/vite-BF8QNONU.svg     8.70 kB │ gzip:  1.60 kB
+dist/assets/hero-CLDdwZDr.png    13.05 kB
+dist/assets/index-D64VDMd1.css    4.10 kB │ gzip:  1.47 kB
+dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
+
+✓ built in 77ms
+TASK-017 reviewed against its acceptance criteria and CLAUDE.md standards.
+
+**Verdict:** Every AC1 field is specified concretely and defensibly — device/OS/app-version/region (frame-evidenced rig, §4.1), recording consent (§5.1), timestamps (§7.1), taps (§7.2), task duration (§7.3), friction (§8) and accessibility (§9) annotations, plus the reusable checklist delivered twice (§10, §13). No TODOs, `[TBD]`, Lorem ipsum, or filler (the two "placeholder" hits are legitimate). No fabricated observations — the only populated data is the clearly-labeled synthetic `APP-SYNTH-Z`. PRD anchors verified verbatim-accurate. Zero-guilt design upheld (J8 captured as unjudged observation). Docs-only change, no `prototype/src/` touched, `npm run build` independently re-run clean (exit 0), so no `any`/`@ts-ignore` possible.
+
+I advanced `tasks.json` TASK-017 `in_review` → `completed` and appended a 3-bullet reviewer verdict to `PROGRESS.md`.
+
+APPROVED
