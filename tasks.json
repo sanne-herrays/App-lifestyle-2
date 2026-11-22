@@ -216,7 +216,7 @@
       "id": "TASK-020",
       "title": "Create the visual and motion audit template",
       "workstream": "Experience Teardown",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the visual and motion audit template'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Define criteria for hierarchy, typography, brand distinction, feedback, animation timing and reduced-motion support; require evidence-backed observations.",

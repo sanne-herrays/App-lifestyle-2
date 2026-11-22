@@ -958,3 +958,54 @@ Review complete. TASK-019 ("Create the UX heuristic audit template") passes both
 `tasks.json` status moved `in_review` → `completed`; a 3-bullet reviewer summary appended to `PROGRESS.md`.
 
 APPROVED
+[main c3b7265] feat: complete autonomous task
+ 4 files changed, 653 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/ux-heuristic-audit-template.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   6ac0d31..c3b7265  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Sun Nov 22 23:02:27 CET 2026
+==========================================
+TASK-020 complete. Per the overnight-build instructions, I executed exactly one task and am exiting without committing.
+
+## Summary
+
+**Task executed:** TASK-020 — Create the visual and motion audit template (Experience Teardown / WS02), the first `pending` task in `tasks.json`.
+
+**Deliverable:** `docs/strategy/visual-motion-audit-template.md` — a publication-grade audit instrument (sibling to the TASK-019 UX audit), covering all six acceptance-criteria dimensions:
+- **Visual (R04):** D1 hierarchy, D2 typography, D3 brand distinction
+- **Motion (R08):** D4 feedback, D5 animation timing, D6 reduced-motion support
+
+**Key craft decisions:**
+- Honored the **lens-split ownership** (R04 visual / R08 motion) defined in the TASK-003 responsibility matrix via an `auditor_lens` field and a dimension↔lens consistency rule.
+- Grounded each dimension in **published instruments** (Gestalt, Bringhurst/Apple HIG type, Ehrenberg-Bass distinctive brand assets, Norman/Saffer feedback, Disney/Material/Doherty/Nielsen motion timing, WCAG 2.3.3/2.2.2 + vestibular safety) — cited as methods, never scored results.
+- Enforced the **observation→interpretation→rating→hypothesis firewall** with a mandatory evidence anchor and a mandatory 0–4 rating, plus a 17-item validation catalogue.
+- Fenced scope cleanly from TASK-022 (formal WCAG contrast/VoiceOver/Dynamic-Type verdicts are cross-linked, not asserted) and made the strong no-fabrication rule that **D6 reduced-motion can never be inferred** without a dedicated Reduce-Motion capture pass.
+
+**Verification:**
+- `cd prototype && npm run build` → **exit code 0** (`tsc -b` + `vite build` clean, zero warnings/errors).
+- Docs-only change — `git status` confirms no `prototype/src/` files touched.
+- Placeholder scan (`[TBD]`/Lorem ipsum/TODO/FIXME) → clean.
+
+**State changes:** `tasks.json` TASK-020 → `in_review`; `PROGRESS.md` log appended. No commit made (per workflow rules), awaiting Reviewer approval.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/react-CHdo91hT.svg    4.12 kB │ gzip:  2.06 kB
+dist/assets/vite-BF8QNONU.svg     8.70 kB │ gzip:  1.60 kB
+dist/assets/hero-CLDdwZDr.png    13.05 kB
+dist/assets/index-D64VDMd1.css    4.10 kB │ gzip:  1.47 kB
+dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
+
+✓ built in 73ms
+TASK-020 passes review against both acceptance criteria and all CLAUDE.md non-negotiables. `tasks.json` status moved `in_review` → `completed`, and a 3-bullet reviewer sign-off has been appended to `PROGRESS.md`.
+
+APPROVED
