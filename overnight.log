@@ -402,3 +402,61 @@ dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
 TASK-008 passed review. The deliverable `docs/strategy/research-gap-contradiction-log.md` fully satisfies both acceptance criteria and all CLAUDE.md standards: a concrete, non-boilerplate dual-register schema with all six required fields defined and linked, two synthetic validated sample records, zero fabrication, zero placeholders, accurate PRD citations, and a clean build. I've advanced the status to `completed` in `tasks.json` and appended the 3-bullet verdict to `PROGRESS.md`.
 
 APPROVED
+[main a7f5606] feat: complete autonomous task
+ 4 files changed, 479 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/research-gap-contradiction-log.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   4762795..a7f5606  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Sun Nov 22 21:38:06 CET 2026
+==========================================
+TASK-009 complete and left at `in_review` per workflow rules.
+
+## Summary
+
+**Task executed:** TASK-009 — Create the decision and experiment registers (first `pending` task in `tasks.json`).
+
+**Deliverable:** `docs/strategy/decision-experiment-registers.md` (v0.1, publication-grade), defining the two linked registers PRD §4 names:
+- **Decision register** (`DEC-NNN`) — Adopt/Adapt/Invent/Reject/Defer verdict, rationale, reviewer, confidence, date.
+- **Experiment register** (`EXP-NNN`) — hypothesis, method, success criteria, sample, result, outcome.
+
+**Acceptance criteria satisfied:**
+- Every required field is concretely defined — unique DEC/EXP identifiers, linked evidence, hypothesis, decision owner (exactly one each), status (two lifecycle vocabularies extending PRD §14), test method, and outcome.
+- Two synthetic samples validated with full entry/transition traces (`DEC-001` + `EXP-001`), coupled two-way and to a gap/contradiction.
+- Four non-negotiables make it anti-fabrication by construction: traceable basis before approval, **pre-registration before data**, **results only when earned** (unrunnable → `unexecuted`, never scored), and reverse-with-cause/never-delete.
+
+**No fabrication:** All samples labelled ILLUSTRATIVE (synthetic) on `*-SYNTH-*` ids; `DEC-001` held at `in_review` (not falsely approved), `EXP-001` with empty result and un-recruited sample. Grep for placeholders → clean.
+
+**Verified:** `cd prototype && npm run build` → **exit code 0** (`tsc -b` + `vite build` clean, zero warnings/errors). Docs-only change — no `prototype/src/` files touched.
+
+**State:** `tasks.json` TASK-009 set to `in_review`; `PROGRESS.md` logged. **No commit made** — exiting per instructions.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/react-CHdo91hT.svg    4.12 kB │ gzip:  2.06 kB
+dist/assets/vite-BF8QNONU.svg     8.70 kB │ gzip:  1.60 kB
+dist/assets/hero-CLDdwZDr.png    13.05 kB
+dist/assets/index-D64VDMd1.css    4.10 kB │ gzip:  1.47 kB
+dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
+
+✓ built in 77ms
+Review complete.
+
+**TASK-009 — Create the decision and experiment registers:** `docs/strategy/decision-experiment-registers.md`
+
+The deliverable passes every acceptance criterion and CLAUDE.md standard:
+- All seven required fields (unique `DEC`/`EXP` ids, linked evidence, hypothesis, decision owner, status, test method, outcome) are concretely defined with allowed values and rules, plus one fully-validated synthetic sample of each (`DEC-001`, `EXP-001`) carrying explicit entry/transition traces.
+- Zero fabrication: samples are `[SYNTHETIC]`/`*-SYNTH-*` end-to-end, the decision is honestly held at `in_review` rather than falsely `approved`, and the experiment's result is empty with no invented sample size. Anti-fabrication is built into the schema (pre-registration E1, earned-results E2), and the design is zero-guilt.
+- Every `prd.md` citation independently verified accurate. No placeholders/TODOs. Docs-only change — no `prototype/src/` touched, so the strict-TypeScript/build gate is unaffected.
+
+Actions taken: `tasks.json` TASK-009 `in_review` → `completed`; appended a 3-bullet Reviewer approval summary to `PROGRESS.md`.
+
+APPROVED

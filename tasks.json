@@ -95,7 +95,7 @@
       "id": "TASK-009",
       "title": "Create the decision and experiment registers",
       "workstream": "Foundation",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the decision and experiment registers'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Define unique DEC and EXP identifiers, linked evidence, hypothesis, decision owner, status, test method and outcome fields; validate one sample of each.",
