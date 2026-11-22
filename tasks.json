@@ -348,7 +348,7 @@
       "id": "TASK-032",
       "title": "Design the 90-minute capability workshop script",
       "workstream": "Capability Extraction",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Design the 90-minute capability workshop script'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Provide timed agenda, facilitation instructions, independent ideation rules, output template and role assignments; require three alternatives per capability.",

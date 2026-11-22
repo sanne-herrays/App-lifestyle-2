@@ -1637,3 +1637,60 @@ Review complete. TASK-031 ("Build the five-layer capability extraction worksheet
 tasks.json updated `in_review` → `completed`; 3-bullet approval appended to PROGRESS.md.
 
 APPROVED
+[main 004eef8] feat: complete autonomous task
+ 5 files changed, 716 insertions(+), 12 deletions(-)
+ create mode 100644 docs/strategy/five-layer-capability-extraction-worksheet.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   dba25e6..004eef8  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Mon Nov 23 00:52:59 CET 2026
+==========================================
+TASK-032 is complete and left at `in_review` as instructed. Summary:
+
+## TASK-032 — Design the 90-minute capability workshop script ✅ (in_review)
+
+**Deliverable:** `docs/strategy/capability-workshop-script.md` (v0.1, publication-grade)
+
+This was the first `pending` task. It operationalizes the PRD's "90-minute extraction workshop per important mechanism" (`prd.md` §5 Phase 3) into a timed facilitation script — and it closes the handoff that the sibling worksheet (TASK-031 §7) explicitly deferred to it: *"the detailed timing, seating, warm-up and facilitation scripts are TASK-032's job."*
+
+**All five acceptance-criteria elements delivered:**
+- **Timed agenda** — six 15-minute blocks (+ warm-up), each with lead, facilitation script, I/O mapped to worksheet layers, Stop-and-check, and an exit gate.
+- **Facilitation instructions** — per-block scripts + a playbook for overruns, decision-drift, parking-lot, and a remote variant.
+- **Independent ideation rules** — a mandatory anti-anchoring protocol (silent solo generation first → round-robin → cluster for distinctness; disagreement preserved, not voted away).
+- **Output template** — the filled worksheet = `CAP` record, plus a session-log YAML with an independence attestation.
+- **Role assignments** — a seating chart over R01–R15 with facilitator ≠ scribe ≠ reviewer, and clinical/privacy reviewers on-call for flags (not gates).
+- **Three-alternatives rule enforced structurally** — Block 4 can't exit without ≥3 distinct alternatives, Block 5 without exactly one `invention`; shortfalls re-queue rather than pad.
+
+**No fabrication:** no session, attendee, metric, or result asserted; the dry-run is labelled synthetic and closes at `decision_status: pending`; the session-log template is left blank/`null`.
+
+**Verified:** `cd prototype && npm run build` → **exit 0** (clean `tsc -b` + `vite build`); docs-only change, no `prototype/src/` touched.
+
+**State changes:** `tasks.json` TASK-032 → `in_review`; `PROGRESS.md` log appended. **No commit made**, per the workflow rules — awaiting Reviewer approval.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/react-CHdo91hT.svg    4.12 kB │ gzip:  2.06 kB
+dist/assets/vite-BF8QNONU.svg     8.70 kB │ gzip:  1.60 kB
+dist/assets/hero-CLDdwZDr.png    13.05 kB
+dist/assets/index-D64VDMd1.css    4.10 kB │ gzip:  1.47 kB
+dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
+
+✓ built in 89ms
+Review complete. **TASK-032 (Design the 90-minute capability workshop script)** passes on every axis:
+
+- **All six acceptance-criteria elements** are present and concrete — timed agenda, per-block facilitation scripts + playbook, independent-ideation (silent-generation anti-anchoring) rules, output template, R01–R15 role/seating assignments, and the three-alternatives rule enforced *structurally* (Block 4 can't exit without ≥3 distinct alternatives; it re-queues rather than padding).
+- **Citations verified against `prd.md`** — unlike the prior sibling that was rejected for fabricated decimal sections, every quote here resolves exactly (six-block structure `prd.md:137`, three-alternatives rule `prd.md:133`, "Do not finalize features in this workshop" verbatim, streaks example `prd.md:135`, "Preserve specialist disagreements" in Prompt 06 `prd.md:259`).
+- **No fabrication / zero-guilt design** — synthetic `*-SYNTH-*` ids, blank session log, `decision_status: pending`, the streak treated as a risk whose invention inverts the punitive reset.
+- **No placeholders** (clean scan), and the strict-TypeScript gate is correctly N/A — docs-only change, no `prototype/src/` touched.
+
+`tasks.json` advanced `in_review` → `completed`; a 3-bullet reviewer summary appended to `PROGRESS.md`.
+
+APPROVED
