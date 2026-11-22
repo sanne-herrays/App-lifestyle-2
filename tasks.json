@@ -84,7 +84,7 @@
       "id": "TASK-008",
       "title": "Create the research gap and contradiction log",
       "workstream": "Foundation",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the research gap and contradiction log'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Define linked records for missing evidence, contradictory findings, impact, owner, next action and resolution status; demonstrate with two sample records.",

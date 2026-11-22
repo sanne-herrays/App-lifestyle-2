@@ -342,3 +342,63 @@ Review complete. TASK-007 ("Create the extended app selection rubric") passed ag
 I updated `tasks.json` (`in_review` → `completed`) and appended a 3-bullet review summary to `PROGRESS.md`.
 
 APPROVED
+[main 4762795] feat: complete autonomous task
+ 4 files changed, 449 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/extended-app-selection-rubric.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   29e8106..4762795  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Sun Nov 22 21:32:17 CET 2026
+==========================================
+TASK-008 complete and left at `in_review` per the workflow rules. Summary of this session's single-task execution:
+
+## TASK-008 — Create the research gap and contradiction log (Foundation)
+
+**Deliverable:** `docs/strategy/research-gap-contradiction-log.md` (v0.1, "Proposed, not yet populated")
+
+**What it defines** — the two linked registers PRD §13 Prompt 00 mandates:
+- **Research Gap register** (`GAP-NNN`) — a missing/insufficient piece of evidence tied to a decision or gate.
+- **Contradiction register** (`CON-NNN`) — two or more admissible findings that cannot both hold.
+
+**All six acceptance-criteria elements are present as defined, linked fields:**
+| Required | Field |
+|---|---|
+| Missing evidence | `gap_kind` + `evidence_needed` |
+| Contradictory findings | `conflicting_findings` (≥2, each `{source_ref, claim, grade}`) |
+| Impact | `impact` + `severity` |
+| Owner | exactly one `owner_role` |
+| Next action | `next_action` + `next_action_due` |
+| Resolution status | `resolution_status` (9-state vocabulary) |
+
+Records link to `EVD`/`DEC`/`EXP`/`CAP`/gates **and to each other** (the `GAP-001 ↔ CON-001` pairing).
+
+**Two synthetic sample records** (§8) demonstrate the schema — one gap, one contradiction — each with a full entry-validation trace, all `*-SYNTH-*` ids, every string tagged `[SYNTHETIC]`. `CON-001` is deliberately left unresolved to prove the "preserve, never average" rule (G2).
+
+**Anti-fabrication by design:** four non-negotiables (owner+action, preserve-don't-average, no-close-by-assumption, declared-impact), a 12-item validation catalogue, and a TASK-005 interlock that auto-opens records on `contested`/`stale`/`retracted` evidence events.
+
+**Verification:**
+- `cd prototype && npm run build` → **exit code 0** (`tsc -b` + `vite build` clean, zero warnings/errors). Docs-only change; no `prototype/src/` touched.
+- `grep` for `[TBD]`/Lorem ipsum/TODO/FIXME/placeholder → no matches.
+
+**State changes:** `tasks.json` TASK-008 → `in_review`; `PROGRESS.md` logged. **No commit made** — exiting now, per instructions.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/react-CHdo91hT.svg    4.12 kB │ gzip:  2.06 kB
+dist/assets/vite-BF8QNONU.svg     8.70 kB │ gzip:  1.60 kB
+dist/assets/hero-CLDdwZDr.png    13.05 kB
+dist/assets/index-D64VDMd1.css    4.10 kB │ gzip:  1.47 kB
+dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
+
+✓ built in 94ms
+TASK-008 passed review. The deliverable `docs/strategy/research-gap-contradiction-log.md` fully satisfies both acceptance criteria and all CLAUDE.md standards: a concrete, non-boilerplate dual-register schema with all six required fields defined and linked, two synthetic validated sample records, zero fabrication, zero placeholders, accurate PRD citations, and a clean build. I've advanced the status to `completed` in `tasks.json` and appended the 3-bullet verdict to `PROGRESS.md`.
+
+APPROVED
