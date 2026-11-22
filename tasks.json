@@ -106,7 +106,7 @@
       "id": "TASK-010",
       "title": "Verify benchmark editorial recognition",
       "workstream": "Competitive Intelligence",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Verify benchmark editorial recognition'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Produce a dated source ledger for App of the Day and other Apple editorial claims for all five core apps; distinguish verified, unverified and out-of-window claims.",

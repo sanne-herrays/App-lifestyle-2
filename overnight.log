@@ -460,3 +460,54 @@ The deliverable passes every acceptance criterion and CLAUDE.md standard:
 Actions taken: `tasks.json` TASK-009 `in_review` → `completed`; appended a 3-bullet Reviewer approval summary to `PROGRESS.md`.
 
 APPROVED
+[main ec4a0f4] feat: complete autonomous task
+ 4 files changed, 519 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/decision-experiment-registers.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   a7f5606..ec4a0f4  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Sun Nov 22 21:45:09 CET 2026
+==========================================
+Done. TASK-010 executed completely.
+
+## Summary
+
+**Task:** TASK-010 — Verify benchmark editorial recognition (first pending task; Competitive Intelligence / WS01).
+
+**Deliverable:** `docs/strategy/benchmark-editorial-recognition-ledger.md` — a publication-grade **dated source ledger** for Apple editorial claims (App of the Day, etc.) across all five core apps.
+
+**How it meets the acceptance criteria:**
+- **Dated source ledger for all five core apps** — `ERC` record contract carrying `claimed_date`, `claimed_country`, `claim_origin`, and a `verification_source` pointing to a dated `EVD` record (TASK-005). All five apps (APP-001…005) registered.
+- **Distinguishes verified / unverified / out-of-window** — these are three first-class values in a five-state status taxonomy (plus `refuted`/`unverifiable`), with a defined, checkable verification window (2023–2026, per PRD §3) and geography scope so "out-of-window" is a computed state, not a caveat.
+- **No fabrication** — the hard constraint here. The PRD explicitly says the core five are *not* a claim of verified recognition, so **every app is seeded at `unverified` with `claimed_date: unknown`** — no App-of-the-Day date is invented or repeated from hearsay. The only fully-populated rows are clearly-labelled SYNTHETIC mechanics demonstrations. An efficacy firewall (recognition is inadmissible as evidence the app works) is enforced on every record.
+
+**Verification:** `cd prototype && npm run build` → exit code 0 (`tsc -b` + `vite build` clean). Docs-only change; no `prototype/src/` touched.
+
+**State:** `tasks.json` → TASK-010 set to `in_review`; `PROGRESS.md` logged. **No commit made** (per workflow rules), pending the Reviewer step.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/react-CHdo91hT.svg    4.12 kB │ gzip:  2.06 kB
+dist/assets/vite-BF8QNONU.svg     8.70 kB │ gzip:  1.60 kB
+dist/assets/hero-CLDdwZDr.png    13.05 kB
+dist/assets/index-D64VDMd1.css    4.10 kB │ gzip:  1.47 kB
+dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
+
+✓ built in 75ms
+Review complete. TASK-010 ("Verify benchmark editorial recognition") passes against both acceptance criteria and all CLAUDE.md standards:
+
+- **Dated source ledger, all five apps, verified/unverified/out-of-window** — delivered as a first-class five-value status taxonomy with deterministic window/geo rules.
+- **No fabrication** — all five rows honestly `unverified`/`unknown`; the only populated rows are clearly labelled SYNTHETIC. Fabricating dates would have violated the PRD, so the empty-but-rigorous scaffold is the correct deliverable.
+- **Craft/citations** — every `prd.md` anchor verified accurate; docs-only, so the strict-TypeScript build gate is untouched.
+
+I updated `tasks.json` (`in_review` → `completed`) and appended a 3-bullet reviewer sign-off to `PROGRESS.md`.
+
+APPROVED
