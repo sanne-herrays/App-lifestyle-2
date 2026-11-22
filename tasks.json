@@ -238,7 +238,7 @@
       "id": "TASK-022",
       "title": "Create the iOS and accessibility audit template",
       "workstream": "Experience Teardown",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the iOS and accessibility audit template'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Define native platform behaviors, offline use, performance, VoiceOver, Dynamic Type, contrast and interaction targets; include test method and severity.",
