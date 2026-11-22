@@ -128,7 +128,7 @@
       "id": "TASK-012",
       "title": "Build the competitor feature comparison matrix",
       "workstream": "Competitive Intelligence",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Build the competitor feature comparison matrix'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Create a normalized feature taxonomy and compare the five benchmark apps; each populated claim must link to an observation or source record.",

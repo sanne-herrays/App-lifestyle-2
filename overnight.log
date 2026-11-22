@@ -561,3 +561,53 @@ TASK-011 reviewed against its acceptance criteria and all CLAUDE.md non-negotiab
 - `PROGRESS.md`: status updated and a 3-bullet reviewer sign-off appended
 
 APPROVED
+[main 15d95f2] feat: complete autonomous task
+ 4 files changed, 464 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/benchmark-listing-pricing-capture.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   962f9f8..15d95f2  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Sun Nov 22 21:59:53 CET 2026
+==========================================
+TASK-012 executed and left at `in_review`. Per the workflow rules I did **not** commit.
+
+## Summary
+
+**Task:** TASK-012 — Build the competitor feature comparison matrix (Competitive Intelligence / WS01), the first `pending` task.
+
+**Deliverable:** `docs/strategy/competitor-feature-comparison-matrix.md` (v0.1)
+
+**Both acceptance criteria met:**
+1. *Normalized feature taxonomy + compare the five benchmark apps* — a **10-domain × 38-family** (`FT-01`…`FT-38`) mechanism-anchored taxonomy, each family with an observable **presence test**, a **variant axis** (the real competitive-intelligence dimension), and a **COM-B/BCTTv1/SDT lens** (`prd.md` §6). The five registered apps (`APP-001`…`APP-005` from TASK-006) form the columns → a 190-cell grid.
+2. *Each populated claim must link to an observation or source record* — enforced as a hard validation rule (**M1**): no cell can hold a substantive status without a non-empty `JRN`/`EVD` pointer + build + date.
+
+**No-fabrication discipline** (matching the approved TASK-006/010/011 pattern): no teardown exists yet, so all **190 cells are `unassessed`** / `evidence_refs: []` — zero feature claims about any real app. The honest three-way split (`absent` vs. `not_reached` vs. `unassessed`) stops a research gap from masquerading as a market white-space; `claimed_marketing` (grade-capped C) keeps marketing out of `present`. The only populated cells are **synthetic** (`APP-SYNTH-Z`, `*-SYNTH-*` ids), proving the contract runs. It explicitly serves the "do not build a collage of competitor features" mandate (M4: presence is description, never endorsement).
+
+**Verified:** `cd prototype && npm run build` → **exit code 0** (`tsc -b` strict + `vite build`, zero warnings/errors). Docs-only change; no `prototype/src/` touched.
+
+**State:** `tasks.json` TASK-012 → `in_review`; `PROGRESS.md` logged. No commit made.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/react-CHdo91hT.svg    4.12 kB │ gzip:  2.06 kB
+dist/assets/vite-BF8QNONU.svg     8.70 kB │ gzip:  1.60 kB
+dist/assets/hero-CLDdwZDr.png    13.05 kB
+dist/assets/index-D64VDMd1.css    4.10 kB │ gzip:  1.47 kB
+dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
+
+✓ built in 93ms
+All approval actions complete:
+- `tasks.json`: TASK-012 status `in_review` → `completed`
+- `PROGRESS.md`: builder's status line updated to `completed` and a 3-bullet reviewer sign-off appended
+
+**Review verdict:** TASK-012 — *Build the competitor feature comparison matrix* — passes both acceptance criteria and every CLAUDE.md non-negotiable. The deliverable is a substantive, mechanism-anchored normalized taxonomy (10 domains × 38 verified feature families, each with a presence test, variant axis, and COM-B/BCTTv1/SDT lens) scaffolded against the exact five PRD benchmark apps, with evidence-linkage enforced as hard rule M1. No fabrication: all 190 empirical cells honestly held at `unassessed`, consistent with the PRD's "mark it unexecuted" rule and the approved TASK-006/010/011 pattern; the only populated cells are explicitly-labeled synthetic demonstrations on a fictitious app. Zero-guilt design is reinforced. Docs-only change; build independently re-run at exit 0 with zero warnings/errors.
+
+APPROVED
