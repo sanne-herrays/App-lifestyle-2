@@ -247,3 +247,49 @@ Review complete.
 `tasks.json` advanced `in_review` → `completed`; PROGRESS.md updated with the 3-bullet approval.
 
 APPROVED
+[main 76c5ddc] feat: complete autonomous task
+ 4 files changed, 418 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/source-evidence-record-schema.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   ebf6e6b..76c5ddc  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Sun Nov 22 21:20:53 CET 2026
+==========================================
+TASK-006 is complete and left at `in_review`, per the workflow.
+
+## Summary
+
+**Task executed:** TASK-006 — Create the benchmark app registry (first `pending` task in `tasks.json`).
+
+**Deliverable:** `docs/strategy/benchmark-app-registry.md` — the App Registry (`APP-001` per PRD §4), v0.1.
+
+**What it does (both acceptance criteria met):**
+- **AC1** — Registers all five core apps with unique IDs and the required fields (platform, country, version, access status): **APP-001 Routinery, APP-002 Fabulous, APP-003 (Not Boring) Habits, APP-004 Habitify, APP-005 Griply**. Every unverified field is left **explicitly `unknown`**, exactly as the criterion demands. Full field dictionary (§3), access-status taxonomy (§4), and benchmark-role taxonomy (§5) grounded in PRD §3/§4.
+- **AC2** — Independently reviewable and clearly labeled ("Proposed — registered, not yet captured"), with an explicit no-fabrication statement, a forbidden-value catalogue (§6), entry-gate rules (§7), and a self-validation trace (§8.3) showing 5/5 rows valid.
+
+**No-fabrication discipline:** No App Store data was invented — all developer/version/price/country/URL fields are `unknown`; `platform` is tagged **inferred** (not observed); no App-of-the-Day or editorial award is asserted (only pointers to the TASK-010 ledger); `source_evd = []` everywhere. Scope kept distinct from TASK-005/007/010/011/015.
+
+**Verification:** `cd prototype && npm run build` → **exit code 0** (`tsc -b` + `vite build` clean, zero warnings). Docs-only change; no `prototype/src/` files touched.
+
+**Status:** `tasks.json` TASK-006 set to `in_review`; `PROGRESS.md` updated. No commit made — exiting per instructions.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/react-CHdo91hT.svg    4.12 kB │ gzip:  2.06 kB
+dist/assets/vite-BF8QNONU.svg     8.70 kB │ gzip:  1.60 kB
+dist/assets/hero-CLDdwZDr.png    13.05 kB
+dist/assets/index-D64VDMd1.css    4.10 kB │ gzip:  1.47 kB
+dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
+
+✓ built in 93ms
+TASK-006 passes review on both acceptance criteria with no defects. `tasks.json` advanced `in_review` → `completed`; PROGRESS.md updated with the 3-bullet approval.
+
+APPROVED

@@ -62,7 +62,7 @@
       "id": "TASK-006",
       "title": "Create the benchmark app registry",
       "workstream": "Foundation",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the benchmark app registry'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Register Routinery, Fabulous, (Not Boring) Habits, Habitify and Griply with unique APP IDs and fields for platform, country, version and access status; leave unverified fields explicitly unknown.",
