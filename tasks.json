@@ -18,7 +18,7 @@
       "id": "TASK-002",
       "title": "Create the program workstream registry",
       "workstream": "Foundation",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the program workstream registry'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Register all eight research workstreams with unique IDs, accountable roles, dependencies, deliverables and completion gates; ensure each workstream has exactly one accountable owner role.",
