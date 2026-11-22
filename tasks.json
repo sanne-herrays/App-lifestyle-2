@@ -117,7 +117,7 @@
       "id": "TASK-011",
       "title": "Capture benchmark listings and pricing",
       "workstream": "Competitive Intelligence",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Capture benchmark listings and pricing'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Record App Store positioning, screenshots, pricing and subscription terms for five core apps with country, capture date and source link; mark inaccessible details unknown.",

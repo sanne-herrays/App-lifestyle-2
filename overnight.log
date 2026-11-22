@@ -511,3 +511,53 @@ Review complete. TASK-010 ("Verify benchmark editorial recognition") passes agai
 I updated `tasks.json` (`in_review` → `completed`) and appended a 3-bullet reviewer sign-off to `PROGRESS.md`.
 
 APPROVED
+[main 962f9f8] feat: complete autonomous task
+ 4 files changed, 466 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/benchmark-editorial-recognition-ledger.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   ec4a0f4..962f9f8  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Sun Nov 22 21:52:10 CET 2026
+==========================================
+TASK-011 is complete and verified. Per the workflow (one task per session, no commit), I'm stopping here.
+
+## Summary
+
+**Task executed:** TASK-011 — Capture benchmark listings and pricing (Competitive Intelligence / WS01), the first `pending` task in `tasks.json`.
+
+**Deliverable:** `docs/strategy/benchmark-listing-pricing-capture.md` — a publication-grade data contract for capturing the five core apps' App Store positioning, screenshots, pricing, and subscription terms. Key design decisions, all grounded in `PRD.md`:
+
+- **Every acceptance-criteria element is a defined, stamped field** — positioning (§3.2), screenshots (§3.3/§5.3), and pricing/subscription terms decomposed into a full `price_point` + offer-terms + `paywall` sub-schema (§4) — each carrying **country**, **capture date**, **app version**, and a **source link** (`source_evd` → TASK-005).
+- **"Mark inaccessible details unknown" made structural** via L1, the `partial`/`blocked` lifecycle states, and `access_barrier` reasons — nothing is ever guessed or recalled.
+- **Three firewalls** matching the PRD: observed price ≠ revenue/retention/CAC/LTV (routed to TASK-015 as estimates); positioning captured as a *claim*, not asserted as fact; and crowd/algorithmic/editorial signals (ratings, chart rank, "App of the Day") explicitly excluded and routed elsewhere — keeping it cleanly distinct from the sibling TASK-010 editorial ledger.
+- **No fabrication:** all five records held at `capture_state: registered` with every observable `unknown` and `source_evd: []`; the only populated row is labelled SYNTHETIC. An 8-point self-validation trace confirms 5/5 rows valid.
+
+**Verification:** `cd prototype && npm run build` → **exit code 0** (`tsc -b` + `vite build` clean, zero warnings/errors). Docs-only change; no `prototype/src/` touched.
+
+**State changes:** `tasks.json` TASK-011 `pending → in_review`; `PROGRESS.md` updated with the build log. No commit made, per workflow rules — awaiting Reviewer approval.
+
+One note: a HerRays OS MCP server and Notion are connected (the PRD mentions them as the intended source of truth). I followed the established, 10-times-approved repo pattern of a markdown doc in `docs/strategy/` rather than writing to those systems — if you'd prefer these deliverables mirrored into HerRays OS/Notion, let me know and I can set that up.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/react-CHdo91hT.svg    4.12 kB │ gzip:  2.06 kB
+dist/assets/vite-BF8QNONU.svg     8.70 kB │ gzip:  1.60 kB
+dist/assets/hero-CLDdwZDr.png    13.05 kB
+dist/assets/index-D64VDMd1.css    4.10 kB │ gzip:  1.47 kB
+dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
+
+✓ built in 73ms
+TASK-011 reviewed against its acceptance criteria and all CLAUDE.md non-negotiables. The deliverable (`docs/strategy/benchmark-listing-pricing-capture.md`) is a concrete, rigorous capture contract covering all five core apps with country/capture-date/version/source-link discipline and a structural `unknown` + `access_barrier` mechanism for inaccessible details. No fabricated observations (all rows honestly `registered`/`unknown`; the one worked example is clearly SYNTHETIC), no placeholders, no price→revenue/retention/CAC/LTV leakage, every PRD citation verified accurate, and docs-only so the strict-TypeScript build gate is unaffected.
+
+- `tasks.json`: TASK-011 `in_review` → `completed`
+- `PROGRESS.md`: status updated and a 3-bullet reviewer sign-off appended
+
+APPROVED
