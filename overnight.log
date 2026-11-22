@@ -1217,3 +1217,60 @@ Review complete for **TASK-024 — Create the behavioral literature search proto
 Actions taken: `tasks.json` TASK-024 status `in_review` → `completed`; appended a 3-bullet Reviewer verdict to `PROGRESS.md`.
 
 APPROVED
+[main 9a5685e] feat: complete autonomous task
+ 4 files changed, 509 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/behavioral-literature-search-protocol.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   4cd30d9..9a5685e  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Sun Nov 22 23:52:59 CET 2026
+==========================================
+Task complete. Summary of this session's work:
+
+## TASK-025 — Create the behavior-change evidence extraction table ✅ → `in_review`
+
+**First pending task** in `tasks.json`; executed in isolation per the one-task-per-session rule.
+
+**Deliverable:** `docs/strategy/behavior-change-evidence-extraction-table.md` (v0.1, "Proposed — no study extracted").
+
+It defines a one-row-per-study×outcome-layer extraction schema covering **every acceptance-criteria field** — intervention, BCT (BCTTv1), population, comparator, duration, outcome, effect estimate, certainty, and transferability to HerRays — plus a clearly-labelled synthetic sample row (`EXT-SYNTH-001`) with a full V1–V8 validation trace.
+
+Key design choices that fit the existing evidence architecture:
+- **Begins where TASK-024 stops** — consumes its included set + PRISMA flow, reuses its four-layer outcome taxonomy (engagement/adherence/automaticity/clinical) verbatim.
+- **Two-certainty model (§7)** — GRADE certainty-of-evidence kept separate from the TASK-004 efficacy-vs-relevance grade, enforcing the PRD rule that a usability grade is never a health-impact grade.
+- **Anti-spin + anti-layer-collapse guards** — effect recorded as reported (number or `not_reported`, never an adjective); engagement never upgraded to behaviour/health; harm tracked orthogonally (`harm_unassessed` ≠ `no_harm`); transfer distance bounds relevance only.
+
+**Verification:**
+- `cd prototype && npm run build` → **exit 0** (`tsc -b` + `vite build` clean).
+- Placeholder scan (`[TBD]`/Lorem ipsum/TODO/FIXME/XXX) → **zero hits**.
+- Docs-only change; no `prototype/src/` touched.
+
+`tasks.json` set to `in_review`; `PROGRESS.md` logged. **No commit made** — exiting per instructions, pending Reviewer approval.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/react-CHdo91hT.svg    4.12 kB │ gzip:  2.06 kB
+dist/assets/vite-BF8QNONU.svg     8.70 kB │ gzip:  1.60 kB
+dist/assets/hero-CLDdwZDr.png    13.05 kB
+dist/assets/index-D64VDMd1.css    4.10 kB │ gzip:  1.47 kB
+dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
+
+✓ built in 72ms
+Review complete. TASK-025 ("Create the behavior-change evidence extraction table") meets every acceptance criterion and all CLAUDE.md non-negotiables:
+
+- **Every required field is a typed, rule-bound column** (§4): intervention, BCT (BCTTv1), population, comparator, duration, outcome (4-layer taxonomy), effect estimate, certainty (GRADE + TASK-004 grades), transferability-to-HerRays — plus a clearly-labelled synthetic sample row (`EXT-SYNTH-001`, §11) with a V1–V8 validation trace.
+- **No fabrication:** no real study, effect size, CI, or p-value asserted; frameworks cited as instruments only; placeholder scan clean; absence tokens replace every blank.
+- **Zero-guilt behavioral design enforced structurally:** harm tracked orthogonally, `no_harm` is a forbidden value, no punitive framing; layer-collapse and transfer-laundering are hard rejections.
+- **TypeScript gate genuinely out of scope** — docs-only change, no `prototype/src/` touched.
+
+tasks.json updated `in_review` → `completed`; 3-bullet reviewer sign-off appended to PROGRESS.md.
+
+APPROVED

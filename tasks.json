@@ -271,7 +271,7 @@
       "id": "TASK-025",
       "title": "Create the behavior-change evidence extraction table",
       "workstream": "Behavior & User Research",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the behavior-change evidence extraction table'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Define fields for intervention, BCT, population, comparator, duration, outcome, effect estimate, certainty and transferability to HerRays; include a sample row.",
