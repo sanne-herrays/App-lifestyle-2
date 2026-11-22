@@ -1,0 +1,535 @@
+{
+  "project": "HerRays Product Intelligence & Innovation Lab",
+  "source": "strategy.md",
+  "task_count": 48,
+  "tasks": [
+    {
+      "id": "TASK-001",
+      "title": "Define measurable product success metrics",
+      "workstream": "Foundation",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Define measurable product success metrics'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Create a success-metrics specification covering activation, repeat behavior, sustained outcomes, user delight, accessibility and safety; define numerator, denominator, observation window and data source for each metric.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-002",
+      "title": "Create the program workstream registry",
+      "workstream": "Foundation",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the program workstream registry'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Register all eight research workstreams with unique IDs, accountable roles, dependencies, deliverables and completion gates; ensure each workstream has exactly one accountable owner role.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-003",
+      "title": "Create the specialist responsibility matrix",
+      "workstream": "Foundation",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the specialist responsibility matrix'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Map the 13 core specialist roles plus clinical and privacy reviewers to research activities and review approvals; ensure no required audit lacks an assigned role.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-004",
+      "title": "Define evidence grading rules",
+      "workstream": "Foundation",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Define evidence grading rules'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Document grades A–D, admissible source types, uncertainty rules and the distinction between observation, inference, hypothesis and invention; include one example per grade.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-005",
+      "title": "Create the source and evidence record schema",
+      "workstream": "Foundation",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the source and evidence record schema'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Define EVD identifiers, source URL or artifact, capture date, app version, region, evidence type, confidence, owner and limitations; validate one sample record.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-006",
+      "title": "Create the benchmark app registry",
+      "workstream": "Foundation",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the benchmark app registry'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Register Routinery, Fabulous, (Not Boring) Habits, Habitify and Griply with unique APP IDs and fields for platform, country, version and access status; leave unverified fields explicitly unknown.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-007",
+      "title": "Create the extended app selection rubric",
+      "workstream": "Foundation",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the extended app selection rubric'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Define inclusion and exclusion criteria for a 15–20-app portfolio across direct, adjacent health and exceptional consumer categories; include scoring and rationale fields.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-008",
+      "title": "Create the research gap and contradiction log",
+      "workstream": "Foundation",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the research gap and contradiction log'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Define linked records for missing evidence, contradictory findings, impact, owner, next action and resolution status; demonstrate with two sample records.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-009",
+      "title": "Create the decision and experiment registers",
+      "workstream": "Foundation",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the decision and experiment registers'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Define unique DEC and EXP identifiers, linked evidence, hypothesis, decision owner, status, test method and outcome fields; validate one sample of each.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-010",
+      "title": "Verify benchmark editorial recognition",
+      "workstream": "Competitive Intelligence",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Verify benchmark editorial recognition'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Produce a dated source ledger for App of the Day and other Apple editorial claims for all five core apps; distinguish verified, unverified and out-of-window claims.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-011",
+      "title": "Capture benchmark listings and pricing",
+      "workstream": "Competitive Intelligence",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Capture benchmark listings and pricing'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Record App Store positioning, screenshots, pricing and subscription terms for five core apps with country, capture date and source link; mark inaccessible details unknown.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-012",
+      "title": "Build the competitor feature comparison matrix",
+      "workstream": "Competitive Intelligence",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Build the competitor feature comparison matrix'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Create a normalized feature taxonomy and compare the five benchmark apps; each populated claim must link to an observation or source record.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-013",
+      "title": "Design the app-review sampling protocol",
+      "workstream": "Competitive Intelligence",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Design the app-review sampling protocol'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Specify stratification by rating, recency and app version, target sample size, deduplication rules and coding categories; include reproducible sampling instructions.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-014",
+      "title": "Build the review coding worksheet",
+      "workstream": "Competitive Intelligence",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Build the review coding worksheet'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Create fields for praise, friction, cancellation, feature requests, perceived value, sentiment and source; include at least five illustrative records clearly labeled synthetic.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-015",
+      "title": "Create the commercial estimates evidence template",
+      "workstream": "Competitive Intelligence",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the commercial estimates evidence template'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Define how to record downloads, revenue estimates, ranking, provenance, date and uncertainty; prohibit inferred competitor retention, CAC or LTV.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-016",
+      "title": "Define ten standardized app test journeys",
+      "workstream": "Experience Teardown",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Define ten standardized app test journeys'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Write scripts for discovery, onboarding, personalization, first action, daily use, reminders, progress, missed days, changed circumstances and cancellation/return; specify expected observations.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-017",
+      "title": "Create the screen capture and annotation protocol",
+      "workstream": "Experience Teardown",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the screen capture and annotation protocol'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Specify device, OS, app version, region, recording consent, timestamps, taps, task duration, friction and accessibility annotations; provide a reusable checklist.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-018",
+      "title": "Create the behavioral scientist audit template",
+      "workstream": "Experience Teardown",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the behavioral scientist audit template'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Define a BCT-coded audit for cues, motivation, feedback, repetition, autonomy and recovery; require observation links and uncertainty notes.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-019",
+      "title": "Create the UX heuristic audit template",
+      "workstream": "Experience Teardown",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the UX heuristic audit template'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Define task success, cognitive load, navigation, error recovery, decision points and friction measures; require severity and screen reference fields.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-020",
+      "title": "Create the visual and motion audit template",
+      "workstream": "Experience Teardown",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the visual and motion audit template'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Define criteria for hierarchy, typography, brand distinction, feedback, animation timing and reduced-motion support; require evidence-backed observations.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-021",
+      "title": "Create the growth and UX writing audit template",
+      "workstream": "Experience Teardown",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the growth and UX writing audit template'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Define first-value moments, paywall timing, lifecycle messaging, copy tone and return triggers; prohibit unsupported conversion or retention claims.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-022",
+      "title": "Create the iOS and accessibility audit template",
+      "workstream": "Experience Teardown",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the iOS and accessibility audit template'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Define native platform behaviors, offline use, performance, VoiceOver, Dynamic Type, contrast and interaction targets; include test method and severity.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-023",
+      "title": "Create the cross-specialist reconciliation template",
+      "workstream": "Experience Teardown",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the cross-specialist reconciliation template'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Define a meeting output that preserves disagreements, linked observations, competing interpretations, resolution decisions and follow-up experiments.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-024",
+      "title": "Create the behavioral literature search protocol",
+      "workstream": "Behavior & User Research",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the behavioral literature search protocol'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Specify databases, queries, inclusion/exclusion criteria, study types, populations, outcomes and evidence grading; distinguish engagement from health outcomes.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-025",
+      "title": "Create the behavior-change evidence extraction table",
+      "workstream": "Behavior & User Research",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the behavior-change evidence extraction table'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Define fields for intervention, BCT, population, comparator, duration, outcome, effect estimate, certainty and transferability to HerRays; include a sample row.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-026",
+      "title": "Create the user recruitment and consent pack",
+      "workstream": "Behavior & User Research",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the user recruitment and consent pack'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Define recruitment quotas for 20–30 women, screening questions, privacy safeguards, consent language and incentives plan; do not fabricate recruitment.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-027",
+      "title": "Create the neutral discovery interview guide",
+      "workstream": "Behavior & User Research",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the neutral discovery interview guide'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Produce a 45–60-minute interview script focused on actual past behavior, obstacles, workarounds and motivations; remove leading future-preference questions.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-028",
+      "title": "Create the 7–14-day diary study kit",
+      "workstream": "Behavior & User Research",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the 7–14-day diary study kit'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Define daily prompts, event-based logging, reminder cadence, privacy boundaries and synthesis fields; include a participant instruction sheet.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-029",
+      "title": "Create the user-needs synthesis template",
+      "workstream": "Behavior & User Research",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the user-needs synthesis template'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Define JTBD, context, evidence links, barriers, desired outcomes, confidence and unresolved questions; include an illustrative example marked hypothetical.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-030",
+      "title": "Create the capability mechanism record schema",
+      "workstream": "Capability Extraction",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the capability mechanism record schema'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Define CAP ID, observed feature, user job, mechanism, evidence, downsides, alternatives, novel option, validation and decision fields; validate one record.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-031",
+      "title": "Build the five-layer capability extraction worksheet",
+      "workstream": "Capability Extraction",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Build the five-layer capability extraction worksheet'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Create a reusable worksheet separating observable feature, user job, mechanism, evidence limitations and design possibilities; include the streak example.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-032",
+      "title": "Design the 90-minute capability workshop script",
+      "workstream": "Capability Extraction",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Design the 90-minute capability workshop script'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Provide timed agenda, facilitation instructions, independent ideation rules, output template and role assignments; require three alternatives per capability.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-033",
+      "title": "Create the capability safety gate checklist",
+      "workstream": "Capability Extraction",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the capability safety gate checklist'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Define clinical, privacy, manipulation, accessibility and unsupported-claims checks with pass, redesign, investigate and reject outcomes.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-034",
+      "title": "Build the interactive capability evaluation scorecard",
+      "workstream": "Capability Extraction",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Build the interactive capability evaluation scorecard'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Specify or implement a weighted 1–5 scorecard for user value, evidence, UX, differentiation, long-term utility and feasibility; calculate 0–100 and export ratings.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-035",
+      "title": "Create the adopt/adapt/invent/reject/defer decision form",
+      "workstream": "Capability Extraction",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the adopt/adapt/invent/reject/defer decision form'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Define required rationale, linked evidence, alternatives, reviewer, risks and follow-up experiment for each decision; prevent approval without mandatory fields.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-036",
+      "title": "Create the capability red-team challenge protocol",
+      "workstream": "Capability Extraction",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the capability red-team challenge protocol'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Define adversarial questions about harm, dependency, anxiety, screen time, generalizability and simpler alternatives; require documented rebuttal or revision.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-037",
+      "title": "Create the build-buy-integrate-defer matrix",
+      "workstream": "Technology & Economics",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the build-buy-integrate-defer matrix'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Define evaluation fields for differentiation, complexity, maintenance, data ownership, security, regulatory risk, cost and vendor lock-in; include scoring guidance.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-038",
+      "title": "Create the phased tool purchasing decision sheet",
+      "workstream": "Technology & Economics",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the phased tool purchasing decision sheet'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "List Figma, Mobbin, Appfigures, AppFollow, Dovetail, Maze, analytics and RevenueCat with trigger, alternative, cost verification and buy/defer decision fields.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-039",
+      "title": "Create the iOS capability and integration inventory",
+      "workstream": "Technology & Economics",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the iOS capability and integration inventory'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Document HealthKit, widgets, Live Activities, notifications, haptics, on-device processing and sync interfaces with permissions and feasibility questions.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-040",
+      "title": "Create the privacy and clinical boundary checklist",
+      "workstream": "Technology & Economics",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the privacy and clinical boundary checklist'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Define data minimization, consent, access control, medical claims, escalation, clinical review and applicable regulatory assessment triggers.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-041",
+      "title": "Create the Opportunity Atlas record schema",
+      "workstream": "Opportunity Synthesis",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the Opportunity Atlas record schema'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Define OPP ID, root user need, evidence, current-solution gap, desired outcome, mechanisms, HMW statement, feasibility and test fields.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-042",
+      "title": "Build the opportunity prioritization rubric",
+      "workstream": "Opportunity Synthesis",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Build the opportunity prioritization rubric'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Define weighted evaluation of user importance, evidence, differentiation, feasibility and uncertainty; require at least 12 opportunities grouped into 4–6 territories.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-043",
+      "title": "Create six isolated concept studio briefs",
+      "workstream": "Concept Innovation",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create six isolated concept studio briefs'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Write separate briefs for Behavior First, Joy First, Invisible App, Health Intelligence, Life Companion and Category Breaker; share evidence but prohibit cross-studio concept viewing.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-044",
+      "title": "Create the divergent concept submission template",
+      "workstream": "Concept Innovation",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the divergent concept submission template'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Require each studio to submit 15 distinct ideas, three concept dossiers, evidence/invention labels, risks and a lead concept; provide completeness validation.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-045",
+      "title": "Create the eight-screen low-fidelity wireframe specification",
+      "workstream": "Concept Innovation",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the eight-screen low-fidelity wireframe specification'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Define welcome, discovery, first action, daily home, guided habit, progress, missed day and personal insight screens with interaction and accessibility annotations.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-046",
+      "title": "Prototype the 'Your Little Win Today' interaction",
+      "workstream": "Concept Innovation",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Prototype the 'Your Little Win Today' interaction'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Specify a standalone swipe/tap microinteraction with completion feedback, optional haptic behavior, reduced-motion fallback and no dependency on the full app.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-047",
+      "title": "Define the Habit Graduation state machine",
+      "workstream": "Concept Innovation",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Define the Habit Graduation state machine'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Specify states, transitions, events, persistence rules and tests for initiation, repetition, adaptation, graduation and recovery; no punitive reset on missed days.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    },
+    {
+      "id": "TASK-048",
+      "title": "Create the concept testing and final selection pack",
+      "workstream": "Validation & Selection",
+      "status": "pending",
+      "scope": "Produce only the standalone deliverable described by 'Create the concept testing and final selection pack'; do not implement or assume completion of other tasks.",
+      "acceptance_criteria": [
+        "Provide neutral usability scripts, counterbalancing, success measures, concept scorecard, evidence limitations, decision gate and final MVP handoff checklist; prohibit invented test results.",
+        "Deliverable is independently reviewable, clearly labeled, and contains no fabricated research observations or test results."
+      ]
+    }
+  ]
+}
