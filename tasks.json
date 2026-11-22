@@ -7,7 +7,7 @@
       "id": "TASK-001",
       "title": "Define measurable product success metrics",
       "workstream": "Foundation",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Define measurable product success metrics'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Create a success-metrics specification covering activation, repeat behavior, sustained outcomes, user delight, accessibility and safety; define numerator, denominator, observation window and data source for each metric.",

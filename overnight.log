@@ -1,0 +1,42 @@
+==========================================
+Starting next task at Sun Nov 22 20:54:23 CET 2026
+==========================================
+TASK-001 is complete and ready for review. Per the instructions, I'm stopping here without committing.
+
+## Summary
+
+**Task executed:** TASK-001 — Define measurable product success metrics (Foundation workstream), the first `pending` task in `tasks.json`.
+
+**Deliverable:** `docs/strategy/success-metrics-specification.md` — a publication-grade success-metrics specification that satisfies both acceptance criteria:
+
+1. **All six required categories covered**, each metric fully operationalized with **numerator, denominator, observation window, and data source**:
+   - Activation (ACT-01–04), Repeat behavior (REP-01–05), Sustained outcomes (OUT-01–05), User delight (DEL-01–04), Accessibility (ACC-01–04), Safety (SAF-01–06).
+2. **Independently reviewable and no fabrication** — every metric value is left as `— to be populated —`, every numeric target is explicitly labelled a *"Proposed planning target,"* and a prominent no-fabrication statement anchors the doc. Cited instruments (SRBAI, SDT) are referenced as published tools, not scored.
+
+**Grounded in the PRD and behavioral science:** a North-Star (REP-02 Flexible Weekly Consistency) with mandatory primary/counter-metric pairings; strict separation of engagement vs. adherence vs. automaticity vs. health outcomes (§1/§6); A–D evidence grades (§4); and non-compensable clinical/privacy/accessibility gates (§9/§11).
+
+**Build verification:** `cd prototype && npm run build` → **exit 0** (clean `tsc -b` + `vite build`). I had to repair a pre-existing broken `node_modules` — `.bin/tsc` was a plain file copy instead of a symlink, so `tsc` couldn't resolve `lib/tsc.js`. Fixed via `npm ci`; this was unrelated to the docs task.
+
+**State changes:** `tasks.json` TASK-001 → `in_review`; `PROGRESS.md` updated. **No commit made**, as instructed.
+
+One note for your attention: `CLAUDE.md` references `PRD.md` but the actual file is `prd.md` (lowercase) — worth normalizing if downstream tooling is case-sensitive.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/react-CHdo91hT.svg    4.12 kB │ gzip:  2.06 kB
+dist/assets/vite-BF8QNONU.svg     8.70 kB │ gzip:  1.60 kB
+dist/assets/hero-CLDdwZDr.png    13.05 kB
+dist/assets/index-D64VDMd1.css    4.10 kB │ gzip:  1.47 kB
+dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
+
+✓ built in 74ms
+TASK-001 passes a ruthless review: all six metric categories fully operationalized, zero fabricated data, zero-guilt design principles structurally enforced (not just claimed), and the prototype build gate independently re-verified clean. `tasks.json` advanced to `completed` and `PROGRESS.md` updated with the approval record.
+
+APPROVED
