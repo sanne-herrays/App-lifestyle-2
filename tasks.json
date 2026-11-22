@@ -161,7 +161,7 @@
       "id": "TASK-015",
       "title": "Create the commercial estimates evidence template",
       "workstream": "Competitive Intelligence",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the commercial estimates evidence template'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Define how to record downloads, revenue estimates, ranking, provenance, date and uncertainty; prohibit inferred competitor retention, CAC or LTV.",

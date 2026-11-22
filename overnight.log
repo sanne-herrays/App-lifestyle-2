@@ -704,3 +704,52 @@ dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
 Review complete. TASK-014 ("Build the review coding worksheet") satisfies both acceptance criteria and every CLAUDE.md non-negotiable: all seven required signals (praise, friction, cancellation, feature requests, perceived value, sentiment, source) are first-class worksheet fields with mandatory evidence spans; five records are cleanly quarantined as synthetic (`APP-SYNTH-Z`, `*-SYNTH-*`, `[SYNTHETIC]`); no real app data, prevalence, or κ measurement is fabricated; PRD citations verified verbatim; placeholder grep clean; and the docs-only change leaves the TypeScript gate untouched (`npm run build` re-run → exit 0). I've advanced the task to `completed` in `tasks.json` and appended the 3-bullet decision to `PROGRESS.md`.
 
 APPROVED
+[main 9672dd2] feat: complete autonomous task
+ 4 files changed, 539 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/review-coding-worksheet.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   a734b5d..9672dd2  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Sun Nov 22 22:20:56 CET 2026
+==========================================
+TASK-015 complete. Exiting per instructions.
+
+**Summary — TASK-015: Create the commercial estimates evidence template** (Competitive Intelligence / WS01)
+
+Executed the first `pending` task completely:
+
+- **Deliverable:** `docs/strategy/commercial-estimates-evidence-template.md` (v0.1, "Proposed — template + seeded records, no estimate yet recorded"). It is the firewall sibling of TASK-011: that task owns the *observed* list price; this one owns every *inferred/estimated* commercial figure.
+- **All six AC elements are mandatory, first-class fields:** downloads (§4.1), revenue estimates (§4.2, with the no-derivation rule), ranking (§4.3, algorithmic ≠ editorial), provenance (§5.1 provider + §5.2 method taxonomies), date (`as_of_date` + `collected_date`), and uncertainty (§5.3 first-class sub-record with mandatory plain-language statement).
+- **The AC prohibition is structural, not advisory:** retention/CAC/LTV/ARPU/churn/conversion are barred from *every field even labelled "estimate"* (C2/§6.1), with a `refused` lifecycle state that logs-and-refuses the request so it stays auditable — demonstrated by synthetic record EST-SYNTH-B.
+- **No fabrication:** all five core-app rows at `record_state: sought`, every figure `unknown`, `source_ref: []`; the only populated rows are labelled SYNTHETIC on `*-SYNTH-*` ids.
+
+**Verified:** `cd prototype && npm run build` → exit code 0 (tsc -b + vite build clean). Docs-only change; no `prototype/src/` touched.
+
+**State updates:** `tasks.json` TASK-015 → `in_review`; `PROGRESS.md` log entry added. No commit made, per workflow rules — left pending Reviewer approval.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/react-CHdo91hT.svg    4.12 kB │ gzip:  2.06 kB
+dist/assets/vite-BF8QNONU.svg     8.70 kB │ gzip:  1.60 kB
+dist/assets/hero-CLDdwZDr.png    13.05 kB
+dist/assets/index-D64VDMd1.css    4.10 kB │ gzip:  1.47 kB
+dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
+
+✓ built in 74ms
+Review complete. TASK-015 ("Create the commercial estimates evidence template") passes both acceptance criteria and every CLAUDE.md non-negotiable:
+
+- **AC1** — Downloads, revenue, and ranking each get concrete typed sub-schemas (§4.1–4.3); provenance (provider + method taxonomies), dual dates, and a mandatory first-class `uncertainty` sub-record are all required fields; and the retention/CAC/LTV prohibition is enforced *structurally* via a bar on those metrics in every field plus a `refused` lifecycle state — not just a written warning.
+- **AC2** — Clearly labeled v0.1 "Proposed"; independent grep confirmed **no real-app commercial figure is asserted anywhere** (all five core rows `sought`/`unknown`/`source_ref: []`), with only the explicitly `*-SYNTH-*` illustrative rows populated.
+- **Craft/build** — Dense and concrete (no boilerplate), placeholder-clean, docs-only, `prototype/` untouched, and I re-ran `npm run build` → exit 0, zero warnings.
+
+I advanced `tasks.json` TASK-015 `in_review` → `completed` and appended a 3-bullet reviewer decision to `PROGRESS.md`.
+
+APPROVED
