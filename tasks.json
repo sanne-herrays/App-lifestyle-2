@@ -315,7 +315,7 @@
       "id": "TASK-029",
       "title": "Create the user-needs synthesis template",
       "workstream": "Behavior & User Research",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the user-needs synthesis template'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Define JTBD, context, evidence links, barriers, desired outcomes, confidence and unresolved questions; include an illustrative example marked hypothetical.",

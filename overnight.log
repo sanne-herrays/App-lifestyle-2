@@ -1437,3 +1437,54 @@ Review complete. TASK-028 (the 7–14-day diary study kit) passed every check:
 Updated `tasks.json` status `in_review` → `completed` and appended the reviewer verdict to `PROGRESS.md`.
 
 APPROVED
+[main c42d52e] feat: complete autonomous task
+ 4 files changed, 546 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/diary-study-kit.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   cdc15b8..c42d52e  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Mon Nov 23 00:24:18 CET 2026
+==========================================
+TASK-029 is complete and left at `in_review` per the workflow rules. Summary of this session:
+
+## TASK-029 — Create the user-needs synthesis template ✅ (→ `in_review`)
+
+**Built:** `docs/strategy/user-needs-synthesis-template.md` — a publication-grade synthesis instrument (v0.1, "not yet populated"). It is the fourth WS04 deliverable: it turns the episode-anchored material from the TASK-027 interviews and TASK-028 diaries into the `NEED-001` records (`prd.md` §4) that seed the Opportunity Atlas.
+
+**All seven acceptance-criteria fields are defined, linked records in the §3 field dictionary** (mapping the six PRD §4 core fields and extending them):
+- **JTBD** — canonical "When…, I want…, so I can…" statement, solution-free by rule
+- **Context** + **observed behavior** (observation separated from inference)
+- **Evidence links** — `source_ref`/`support_count`/`participant_count`, copied from real `EVD`, never estimated
+- **Barriers** — coded against **COM-B**
+- **Desired outcomes** — layered (engagement/adherence/automaticity/health) with an outcome-layer firewall
+- **Confidence** — separate efficacy/relevance grades + TASK-004 confidence vocabulary, with prevalence thresholds
+- **Unresolved questions** — each linked to a TASK-008 `GAP`, mandatory below `established`
+
+**Governing discipline:** needs ≠ feature requests (`prd.md` §7/§11), enforced structurally (N1, forbidden-value F1, Gate-2 test). Includes nine non-negotiables, entry/transition validation, a 12-item forbidden-value catalogue, non-compensable clinical/privacy gates, and one **ILLUSTRATIVE (hypothetical)** worked record with a 10-point validation trace.
+
+**No-fabrication:** no real user/need/quote/count; the sole example is `*-SYNTH-*`, non-promotable, and deliberately below `established` to exercise the rules.
+
+**Verified:** `cd prototype && npm run build` → **exit 0** (clean `tsc -b` + `vite build`, "✓ built in 98ms"). Docs-only change; no `prototype/src/` touched.
+
+Per instructions: tasks.json set to `in_review`, PROGRESS.md logged, **no commit made**.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/react-CHdo91hT.svg    4.12 kB │ gzip:  2.06 kB
+dist/assets/vite-BF8QNONU.svg     8.70 kB │ gzip:  1.60 kB
+dist/assets/hero-CLDdwZDr.png    13.05 kB
+dist/assets/index-D64VDMd1.css    4.10 kB │ gzip:  1.47 kB
+dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
+
+✓ built in 74ms
+Review complete. TASK-029 (`docs/strategy/user-needs-synthesis-template.md`) delivers all seven required fields as concrete linked schema, marks its single worked example hypothetical end-to-end, contains zero placeholders or fabricated observations, and anchors every PRD citation verbatim. Status advanced `in_review` → `completed` in `tasks.json`; a 3-bullet Reviewer verdict appended to `PROGRESS.md`.
+
+APPROVED
