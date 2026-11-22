@@ -51,7 +51,7 @@
       "id": "TASK-005",
       "title": "Create the source and evidence record schema",
       "workstream": "Foundation",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the source and evidence record schema'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Define EVD identifiers, source URL or artifact, capture date, app version, region, evidence type, confidence, owner and limitations; validate one sample record.",

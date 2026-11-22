@@ -191,3 +191,59 @@ Actions taken:
 - `PROGRESS.md`: appended the 3-bullet reviewer approval summary.
 
 APPROVED
+[main ebf6e6b] feat: complete autonomous task
+ 4 files changed, 382 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/evidence-grading-rules.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   1ccfed9..ebf6e6b  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Sun Nov 22 21:15:15 CET 2026
+==========================================
+Task complete. Per the instructions, I executed only the first pending task and am exiting without committing.
+
+## Summary
+
+**Task executed:** TASK-005 — Create the source and evidence record schema (Foundation workstream, the first `pending` task in `tasks.json`).
+
+**Delivered:** `docs/strategy/source-evidence-record-schema.md` — a publication-grade data contract for the `EVD` evidence record that interlocks with the TASK-004 grading rules without duplicating them. It defines:
+
+- **All acceptance-criteria fields:** `evd_id` identifiers, source pointer (URL / artifact / citation), capture (`access_date`) + publication dates, `app_version`, `region`, `evidence_type` (the PRD §3 six-way taxonomy), `confidence`, `owner_role`, and mandatory non-empty `limitations`.
+- Six typed field groups, three structural anti-fabrication non-negotiables (resolvable source pointer, mandatory access date, `unknown`-never-guessed), a forbidden-value catalogue (rejecting fabricated retention/CAC/LTV, invented participants, clinical outcomes, and consent-less personal data), a record lifecycle state machine, excerpt/legal capture limits, freshness/re-verification, and the claim↔evidence join.
+- **One validated synthetic sample record** (`EVD-001`) with a six-point validation trace — satisfying the "validate one sample record" criterion while remaining explicitly ILLUSTRATIVE (synthetic).
+
+**Verification:** `cd prototype && npm run build` → **exit code 0** (`tsc -b` + `vite build` clean, zero warnings/errors). Docs-only change; no `prototype/src/` files touched.
+
+**State changes:**
+- `tasks.json`: TASK-005 `pending` → `in_review`.
+- `PROGRESS.md`: added a factual TASK-005 build log.
+- No commit made, per workflow rules — left at `in_review` pending the Reviewer step.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/react-CHdo91hT.svg    4.12 kB │ gzip:  2.06 kB
+dist/assets/vite-BF8QNONU.svg     8.70 kB │ gzip:  1.60 kB
+dist/assets/hero-CLDdwZDr.png    13.05 kB
+dist/assets/index-D64VDMd1.css    4.10 kB │ gzip:  1.47 kB
+dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
+
+✓ built in 96ms
+Review complete.
+
+**Verdict:** TASK-005 (*Create the source and evidence record schema*) passes against both acceptance criteria and all CLAUDE.md standards.
+
+- **AC1 — all fields + validated sample:** `docs/strategy/source-evidence-record-schema.md` concretely defines every required field with type and rule (`evd_id` `EVD-NNN`, source pointer via URL/`artifact_ref`/`citation`, `access_date`, `app_version`, `region`, `evidence_type`, `confidence`, `owner_role`, non-empty `limitations`) and §8 validates one synthetic `EVD-001` record with a six-point entry-validation trace.
+- **AC2 — no fabrication, clearly labeled:** Labeled v0.1, explicit no-fabrication statement, sole sample is ILLUSTRATIVE (synthetic) with `[SYNTHETIC]`/`unknown` tokens; forbidden-value catalogue (§6) structurally blocks fabricated retention/CAC/LTV, invented participants, and clinical outcomes.
+- **PRD fidelity:** Citations spot-checked against `prd.md` (§4 Evidence Library fields, §4 "Never fabricate… retention, CAC, LTV, clinical outcomes", §3 six-way taxonomy, §4 grades A–D) — all accurate.
+- **Craft/scope:** No boilerplate, no `[TBD]`/Lorem-ipsum (the two "placeholder" strings are deliberate synthetic-data labels). Docs-only change — no `prototype/src/` touched, so the strict-TypeScript gate isn't triggered. One minor non-blocking citation nit logged in PROGRESS.md.
+
+`tasks.json` advanced `in_review` → `completed`; PROGRESS.md updated with the 3-bullet approval.
+
+APPROVED
