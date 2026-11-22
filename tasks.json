@@ -227,7 +227,7 @@
       "id": "TASK-021",
       "title": "Create the growth and UX writing audit template",
       "workstream": "Experience Teardown",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the growth and UX writing audit template'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Define first-value moments, paywall timing, lifecycle messaging, copy tone and return triggers; prohibit unsupported conversion or retention claims.",

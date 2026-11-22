@@ -1009,3 +1009,54 @@ dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
 TASK-020 passes review against both acceptance criteria and all CLAUDE.md non-negotiables. `tasks.json` status moved `in_review` → `completed`, and a 3-bullet reviewer sign-off has been appended to `PROGRESS.md`.
 
 APPROVED
+[main 04677e4] feat: complete autonomous task
+ 4 files changed, 649 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/visual-motion-audit-template.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   c3b7265..04677e4  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Sun Nov 22 23:11:44 CET 2026
+==========================================
+TASK-021 complete. Per instruction 6 (do NOT commit, exit immediately), I'm stopping here.
+
+## Summary
+
+Executed **TASK-021 — Create the growth and UX writing audit template** (the first `pending` task, Experience Teardown / WS02).
+
+**Built:** `docs/strategy/growth-ux-writing-audit-template.md` — a publication-grade, two-lens audit instrument (v0.1) matching the established house style of its sibling teardown templates (TASK-018/019/020):
+
+- **Lens split:** growth (R09) owns D1 first-value moments, D2 paywall timing, D5 return triggers; content (R10) owns D3 lifecycle messaging, D4 copy tone — mapping the five acceptance-criteria items 1:1.
+- **The defining guard — "prohibit unsupported conversion or retention claims" — made structural:** non-negotiable X3 bars any conversion/activation/retention/churn/LTV/CAC/revenue figure, backed by a mandatory `conversion_retention_claim: none` field on every `GCA` record and a validation catalogue (V4–V6) that rejects laundered metrics; third-party numbers are routed to TASK-015, never asserted.
+- **Autonomy / anti-dark-pattern rule (§7.5):** coercive patterns (confirmshaming, forced continuity, guilt-based return bait) are always flagged as problems, routed to the TASK-033 manipulation gate, and can never be rated a "strength" for being effective — enforcing HerRays' non-patronizing/autonomy non-negotiables.
+- Grounded throughout in `prd.md` (§2 role lenses, §3, §4 no-fabrication + grading, §5 phases, §11 gates, §13 Prompt 02, §15), with published instruments (AARRR/TTFV, paywall taxonomy, Brignull/FTC dark patterns, Hook model read through its hazard, SDT/MI, UX-writing), an X6 capture guard, a 19-item validation catalogue, and three clearly-labelled synthetic records (one a deliberate coverage-gap).
+
+**Verified:** `cd prototype && npm run build` → exit 0 (`tsc -b` + `vite build`, "✓ built in 95ms", zero warnings/errors). Docs-only change; no `prototype/src/` touched. Zero placeholder/TODO hits.
+
+**State:** `tasks.json` TASK-021 → `in_review`; `PROGRESS.md` logged. No commit made.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/react-CHdo91hT.svg    4.12 kB │ gzip:  2.06 kB
+dist/assets/vite-BF8QNONU.svg     8.70 kB │ gzip:  1.60 kB
+dist/assets/hero-CLDdwZDr.png    13.05 kB
+dist/assets/index-D64VDMd1.css    4.10 kB │ gzip:  1.47 kB
+dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
+
+✓ built in 78ms
+Review complete. TASK-021 ("Create the growth and UX writing audit template") passes against its acceptance criteria and all CLAUDE.md non-negotiables:
+
+- **AC1 (five dimensions + prohibition):** D1 first-value, D2 paywall timing, D3 lifecycle messaging, D4 copy tone, D5 return triggers are each defined as concrete evaluation guides and mapped 1:1 to the criterion. The ban on unsupported conversion/retention claims is enforced *structurally* — non-negotiable X3, a hard-coded `conversion_retention_claim: none` field on every record, validation failures V4/V5/V6, and a banned growth-hype word list.
+- **AC2 (reviewable, labeled, no fabrication):** 19-item validation catalogue (§8) + reviewer checklist (§11), labeled v0.1 "Proposed — no app yet audited". PRD citations verified genuine; real-app names confined to the no-fabrication statement, source-basis quote, and a didactic counter-example; the only populated records are the clearly-labeled synthetic `APP-SYNTH-Z` set.
+- **Craft/integrity:** No placeholders, no boilerplate, no `any`/`@ts-ignore`; docs-only (strict-TS gate out of scope); the observation→interpretation→rating→hypothesis firewall and the "coercion can never be a strength" rule genuinely serve the zero-guilt/autonomy mandate.
+
+`tasks.json` status moved `in_review` → `completed`; reviewer summary appended to `PROGRESS.md`.
+
+APPROVED
