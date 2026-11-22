@@ -139,7 +139,7 @@
       "id": "TASK-013",
       "title": "Design the app-review sampling protocol",
       "workstream": "Competitive Intelligence",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Design the app-review sampling protocol'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Specify stratification by rating, recency and app version, target sample size, deduplication rules and coding categories; include reproducible sampling instructions.",

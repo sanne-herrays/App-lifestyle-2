@@ -611,3 +611,50 @@ All approval actions complete:
 **Review verdict:** TASK-012 — *Build the competitor feature comparison matrix* — passes both acceptance criteria and every CLAUDE.md non-negotiable. The deliverable is a substantive, mechanism-anchored normalized taxonomy (10 domains × 38 verified feature families, each with a presence test, variant axis, and COM-B/BCTTv1/SDT lens) scaffolded against the exact five PRD benchmark apps, with evidence-linkage enforced as hard rule M1. No fabrication: all 190 empirical cells honestly held at `unassessed`, consistent with the PRD's "mark it unexecuted" rule and the approved TASK-006/010/011 pattern; the only populated cells are explicitly-labeled synthetic demonstrations on a fictitious app. Zero-guilt design is reinforced. Docs-only change; build independently re-run at exit 0 with zero warnings/errors.
 
 APPROVED
+[main 080bdb4] feat: complete autonomous task
+ 4 files changed, 490 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/competitor-feature-comparison-matrix.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   15d95f2..080bdb4  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Sun Nov 22 22:07:44 CET 2026
+==========================================
+Task complete. Per the workflow rules, I've executed exactly one task and stopped before committing.
+
+## Summary — TASK-013: Design the app-review sampling protocol (WS01)
+
+**Deliverable:** `docs/strategy/app-review-sampling-protocol.md` (v0.1, "Proposed — protocol defined, no review yet sampled or coded")
+
+All five acceptance-criteria elements are specified concretely and reproducibly:
+- **Stratification** (§4) — rating (5 levels), recency (4 windows anchored to capture date `T₀`), and app version (store-dependent bands with a first-class `unknown` band that is never guessed from the date)
+- **Target sample size** (§5) — ~100/app → ~500 across the core five, justified by thematic saturation and the PRD's "several hundred" target, with a full per-app quota matrix over-weighting 1★–2★ dissatisfaction
+- **Deduplication rules** (§8) — four match tiers plus contamination exclusions (bot/incentivised/off-topic/ToS/untranslatable), all retained-with-reason, never deleted
+- **Coding categories** (§9) — 11 code families + required attributes, mapped to the ten journeys and §6 behavioral constructs, handing off to TASK-014
+- **Reproducible sampling instructions** (§7) — a 9-step seeded deterministic `SHA1(seed‖rev_id)` draw over a frozen candidate frame
+
+**No-fabrication:** no real review quoted, counted, or coded; no distribution/sentiment/prevalence asserted. All numbers are declared planning parameters; the only review text is the §10 synthetic example on a fictitious `APP-SYNTH-Z`. Firewalls bar reviews→retention/CAC/LTV, keep feature-claims grade-C, and never recompute a "true" rating.
+
+**Verified:** `cd prototype && npm run build` → **exit 0** (`tsc -b` + `vite build` clean). Docs-only change; no `prototype/src/` touched.
+
+**Status:** TASK-013 set to `in_review` in `tasks.json`; PROGRESS.md logged. No commit made — pending Reviewer approval.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/react-CHdo91hT.svg    4.12 kB │ gzip:  2.06 kB
+dist/assets/vite-BF8QNONU.svg     8.70 kB │ gzip:  1.60 kB
+dist/assets/hero-CLDdwZDr.png    13.05 kB
+dist/assets/index-D64VDMd1.css    4.10 kB │ gzip:  1.47 kB
+dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
+
+✓ built in 89ms
+Review complete. TASK-013's deliverable fully satisfies both acceptance criteria and every CLAUDE.md non-negotiable: concrete stratification/sizing/dedup/coding specs with reproducible seeded-draw instructions, verified quota arithmetic, accurate PRD citations, zero fabrication (synthetic example cleanly quarantined), no placeholders, and a docs-only change that leaves the TypeScript gate untouched. I've advanced the task to `completed` in `tasks.json` and appended the 3-bullet decision to `PROGRESS.md`.
+
+APPROVED
