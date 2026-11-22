@@ -249,7 +249,7 @@
       "id": "TASK-023",
       "title": "Create the cross-specialist reconciliation template",
       "workstream": "Experience Teardown",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the cross-specialist reconciliation template'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Define a meeting output that preserves disagreements, linked observations, competing interpretations, resolution decisions and follow-up experiments.",
