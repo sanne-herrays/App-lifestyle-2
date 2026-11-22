@@ -855,3 +855,52 @@ TASK-017 reviewed against its acceptance criteria and CLAUDE.md standards.
 I advanced `tasks.json` TASK-017 `in_review` → `completed` and appended a 3-bullet reviewer verdict to `PROGRESS.md`.
 
 APPROVED
+[main 8727676] feat: complete autonomous task
+ 4 files changed, 591 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/screen-capture-annotation-protocol.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   10b5a47..8727676  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Sun Nov 22 22:43:25 CET 2026
+==========================================
+TASK-018 is complete and verified. Per the workflow I've stopped before committing.
+
+## Summary
+
+**Task executed:** TASK-018 — Create the behavioral scientist audit template (Experience Teardown / WS02), the first pending task in `tasks.json`.
+
+**Deliverable:** `docs/strategy/behavioral-scientist-audit-template.md` (v0.1, "Proposed — audit instrument defined, no app yet coded") — the behavioral scientist's "Mechanism audit," first of the five specialist lenses that independently read the TASK-017 capture bundle.
+
+**How it meets the acceptance criteria:**
+- **BCT-coded audit for cues, motivation, feedback, repetition, autonomy and recovery** — six coding-guide dimensions (§5), each grounded in the exact models the PRD §2/§6 names: COM-B, BCTTv1 (the 93-technique / 16-grouping taxonomy supplying the controlled `bct_codes` vocabulary with a dimension crosswalk), Self-Determination Theory, the Fogg Behavior Model, plus the habit-formation and relapse-recovery literatures.
+- **Require observation links** — enforced structurally: every coded observation must anchor to a captured frame/event + `JRN` step (non-negotiable B1, mandatory fields in §6.2); an unanchored record is invalid (V1), an unobserved mechanism is a TASK-008 gap, never a finding.
+- **Require uncertainty notes** — mandatory non-empty `uncertainty_note` (B3), a controlled confidence vocabulary reused from TASK-004, and a banned-certainty-word list.
+- **No fabrication** — observation ≠ inference ≠ hypothesis firewall with separate grading (`presence_grade` ≤ B vs `efficacy_grade` default D); engagement/adherence/automaticity/clinical kept separate; ethical-risk a required field (the PRD §5 streaks shame case is the worked example). Scientific sources cited as instruments (names, not effect sizes). The only populated records are a clearly-labelled synthetic `APP-SYNTH-Z` example.
+
+**Verification:**
+- `cd prototype && npm run build` → **exit 0** (`tsc -b` + `vite build` clean, zero warnings/errors). Docs-only change; no `prototype/src/` touched.
+- No `[TBD]`/Lorem ipsum/TODO/placeholder in the document.
+- `tasks.json` TASK-018 status set to **`in_review`**; PROGRESS.md updated.
+
+Per workflow rules, **no commit was made** — TASK-018 awaits Reviewer approval.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/react-CHdo91hT.svg    4.12 kB │ gzip:  2.06 kB
+dist/assets/vite-BF8QNONU.svg     8.70 kB │ gzip:  1.60 kB
+dist/assets/hero-CLDdwZDr.png    13.05 kB
+dist/assets/index-D64VDMd1.css    4.10 kB │ gzip:  1.47 kB
+dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
+
+✓ built in 95ms
+Review complete. TASK-018 status advanced `in_review` → `completed` in `tasks.json`, and a 3-bullet Reviewer verdict appended to `PROGRESS.md`.
+
+APPROVED

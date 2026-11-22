@@ -194,7 +194,7 @@
       "id": "TASK-018",
       "title": "Create the behavioral scientist audit template",
       "workstream": "Experience Teardown",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the behavioral scientist audit template'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Define a BCT-coded audit for cues, motivation, feedback, repetition, autonomy and recovery; require observation links and uncertainty notes.",
