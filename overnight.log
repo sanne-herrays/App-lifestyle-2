@@ -1381,3 +1381,59 @@ The deliverable passes a ruthless review. TASK-027's `docs/strategy/neutral-disc
 I've advanced `tasks.json` TASK-027 `in_review → completed` and appended the 3-bullet approval to `PROGRESS.md`.
 
 APPROVED
+[main cdc15b8] feat: complete autonomous task
+ 4 files changed, 405 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/neutral-discovery-interview-guide.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   2aa2b3b..cdc15b8  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Mon Nov 23 00:16:00 CET 2026
+==========================================
+Task complete. Summary of this session's work on the overnight build:
+
+## TASK-028 — Create the 7–14-day diary study kit → `in_review`
+
+**Deliverable:** `docs/strategy/diary-study-kit.md` (v0.1, study **UNEXECUTED**) — the third WS04 / Behavior & User Research instrument, designing the diary that TASK-027 invites at interview close and TASK-026 gates via master consent.
+
+All six acceptance-criteria elements delivered as a **runnable instrument, not a summary**:
+- **§4 Daily prompts** — five-prompt, <3-min, skippable, non-leading end-of-day set + optional never-required tags + a banned-form kill-list.
+- **§5 Event-based logging** — a <60-second, symmetric (action / non-action / workaround), **pull-not-push** capture template.
+- **§6 Reminder cadence** — gentle, quiet-hours-aware, **one-nudge ceiling**, verbatim neutral copy, and **non-punitive missed-day handling** (no streaks/penalties).
+- **§7 Privacy boundaries** — collected-vs-excluded table, consented timestamp precision, photo/voice/special-category rules, and a verbatim **diary-specific consent module that attaches to** the TASK-026 master consent.
+- **§8 Synthesis fields** — per-entry coding schema with strict observation≠inference separation, feeding TASK-029/005/004/008.
+- **§9 Participant instruction sheet** — one-page plain-language hand-out.
+
+**Compliance:** Grounded in `prd.md` §4/§5/§6; zero-guilt by construction; no real participant/entry/finding — the only populated content is a clearly-tagged `PART-SYNTH-D` format demo. Scope fenced from TASK-026/027/029/005/004/038/048. Placeholder scan clean.
+
+**Verification:** `cd prototype && npm run build` → **exit 0** (`tsc -b` + `vite build` clean, zero warnings/errors). Docs-only change; no `prototype/src/` touched.
+
+Per workflow rules: `tasks.json` set to `in_review`, PROGRESS.md logged, **no commit made** — left for the Reviewer step.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/react-CHdo91hT.svg    4.12 kB │ gzip:  2.06 kB
+dist/assets/vite-BF8QNONU.svg     8.70 kB │ gzip:  1.60 kB
+dist/assets/hero-CLDdwZDr.png    13.05 kB
+dist/assets/index-D64VDMd1.css    4.10 kB │ gzip:  1.47 kB
+dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
+
+✓ built in 99ms
+Review complete. TASK-028 (the 7–14-day diary study kit) passed every check:
+
+- **Acceptance criteria** — all six elements present as a concrete, runnable instrument (daily prompts §4, event logging §5, reminder cadence §6, privacy boundaries §7, synthesis fields §8, participant instruction sheet §9).
+- **No fabrication** — study marked UNEXECUTED; the only populated content is one clearly-labeled `*-SYNTH-*` example, explicitly inadmissible. Placeholder scan returned zero hits.
+- **Citation integrity** — every `prd.md` anchor resolves verbatim to the correct section (L109, L129, L145/147, L251). No fabricated references.
+- **Zero-guilt & clinical boundaries** — non-punitive missed-day handling, no streaks/scores, async safety-signposting path, researcher-not-clinician framing.
+- **Strict-TS gate** — docs-only change, no `prototype/src/` touched; build re-run → exit 0.
+
+Updated `tasks.json` status `in_review` → `completed` and appended the reviewer verdict to `PROGRESS.md`.
+
+APPROVED

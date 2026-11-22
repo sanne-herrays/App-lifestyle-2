@@ -304,7 +304,7 @@
       "id": "TASK-028",
       "title": "Create the 7–14-day diary study kit",
       "workstream": "Behavior & User Research",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the 7–14-day diary study kit'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Define daily prompts, event-based logging, reminder cadence, privacy boundaries and synthesis fields; include a participant instruction sheet.",
