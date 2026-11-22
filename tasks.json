@@ -260,7 +260,7 @@
       "id": "TASK-024",
       "title": "Create the behavioral literature search protocol",
       "workstream": "Behavior & User Research",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the behavioral literature search protocol'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Specify databases, queries, inclusion/exclusion criteria, study types, populations, outcomes and evidence grading; distinguish engagement from health outcomes.",
