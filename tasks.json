@@ -172,7 +172,7 @@
       "id": "TASK-016",
       "title": "Define ten standardized app test journeys",
       "workstream": "Experience Teardown",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Define ten standardized app test journeys'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Write scripts for discovery, onboarding, personalization, first action, daily use, reminders, progress, missed days, changed circumstances and cancellation/return; specify expected observations.",

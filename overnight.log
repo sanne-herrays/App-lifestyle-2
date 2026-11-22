@@ -753,3 +753,53 @@ Review complete. TASK-015 ("Create the commercial estimates evidence template") 
 I advanced `tasks.json` TASK-015 `in_review` → `completed` and appended a 3-bullet reviewer decision to `PROGRESS.md`.
 
 APPROVED
+[main 6fddeaa] feat: complete autonomous task
+ 4 files changed, 495 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/commercial-estimates-evidence-template.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   9672dd2..6fddeaa  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Sun Nov 22 22:28:10 CET 2026
+==========================================
+TASK-016 is complete and ready for review. Per the workflow instructions, I'm exiting without committing.
+
+## Summary
+
+**Task executed:** TASK-016 — Define ten standardized app test journeys (Experience Teardown / WS02) — the first pending task in `tasks.json`.
+
+**Deliverable:** `docs/strategy/ten-standardized-app-test-journeys.md` (v0.1, publication-grade), the first WS02 artifact. It is a reusable **method/script**, not a dataset.
+
+**What it contains:**
+- **All ten mandatory journeys** (`prd.md` §5 Phase 2) scripted with an identical shape for cross-app comparability — J1 discovery → J10 paywall/cancellation/return — each with objective, the COM-B/SDT/Fogg research question, scenario fit, numbered task steps, expected observations, probes, error/recovery branches, and a stop rule.
+- A typed **`JRN` observation record contract** (§3) with a hard **observation ↔ interpretation firewall**, capturing every element the PRD names (taps, time, decisions, copy, transitions, friction, emotion *hypotheses*, errors, accessibility, platform behaviour).
+- A shared test harness (§4): the six provisional scenarios (flagged as planning constructs, not research findings), standardized conditions, counterbalancing, and the independent-specialist-run rule.
+- J8 (missed day) built as the primary **zero-guilt evidence journey**; four anti-fabrication non-negotiables; a 12-item validation catalogue; scope fenced from TASK-017/018–023.
+
+**No fabrication:** No real-app observation asserted anywhere; the sole populated record is clearly synthetic (`APP-SYNTH-Z`).
+
+**Verified:** `cd prototype && npm run build` → **exit code 0** (zero warnings/errors). Docs-only change; no `prototype/src/` files touched.
+
+**Status:** `tasks.json` TASK-016 set to `in_review`; `PROGRESS.md` logged. **No commit made**, pending Reviewer approval.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/react-CHdo91hT.svg    4.12 kB │ gzip:  2.06 kB
+dist/assets/vite-BF8QNONU.svg     8.70 kB │ gzip:  1.60 kB
+dist/assets/hero-CLDdwZDr.png    13.05 kB
+dist/assets/index-D64VDMd1.css    4.10 kB │ gzip:  1.47 kB
+dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
+
+✓ built in 74ms
+Review complete. TASK-016 ("Define ten standardized app test journeys") meets both acceptance criteria and all CLAUDE.md non-negotiables: all ten journeys scripted with explicit expected observations, clearly labeled and free of fabricated observations (only a labeled synthetic example), no placeholders/TODOs/filler, and the docs-only change leaves the strict-TypeScript build clean (independently verified, exit code 0).
+
+I advanced `tasks.json` TASK-016 `in_review` → `completed` and appended a 3-bullet reviewer verdict to `PROGRESS.md`.
+
+APPROVED
