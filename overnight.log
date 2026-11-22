@@ -1274,3 +1274,57 @@ Review complete. TASK-025 ("Create the behavior-change evidence extraction table
 tasks.json updated `in_review` → `completed`; 3-bullet reviewer sign-off appended to PROGRESS.md.
 
 APPROVED
+[main d831fe7] feat: complete autonomous task
+ 4 files changed, 500 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/behavior-change-evidence-extraction-table.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   9a5685e..d831fe7  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Sun Nov 22 23:59:50 CET 2026
+==========================================
+Task complete. Per the workflow instructions, I executed exactly one task and am exiting without committing.
+
+## Summary
+
+**Task executed: TASK-026 — Create the user recruitment and consent pack** (Behavior & User Research / WS04 User Discovery), the first `pending` task in `tasks.json`.
+
+**Deliverable:** `docs/strategy/user-recruitment-consent-pack.md` — a publication-grade, ready-to-run instrument pack covering all five acceptance-criteria elements:
+
+- **Recruitment quotas for 20–30 women** (§3): target 24 (reserve to 30) purposive sample across six primary quota dimensions — goal domain, menopause stage, prior success/failure, tracking tolerance, tech comfort, schedule/caregiving — each with target cell counts, plus secondary diversity soft-quotas and behavioural eligibility criteria.
+- **Screening questions** (§4): full screener with Q1–Q12 eligibility/quota items, separated contact capture, accessibility rules, and a mandatory **clinical-reviewer-owned safety screen & escalation path** (route-with-signposting, never bare rejection).
+- **Privacy safeguards** (§5): GDPR lawful basis, data-minimisation register, pseudonymisation with identity separation, retention/deletion schedule, data rights, DPIA trigger.
+- **Consent language** (§6): verbatim plain-language information sheet and a consent form with discrete, independently-tickable opt-ins (participation / recording / diary / quotation).
+- **Incentives plan** (§7): non-coercive, prorated, paid-on-withdrawal, no lottery-only.
+
+**No-fabrication compliance:** Study explicitly labelled **UNEXECUTED**; all counts held at `not-yet-recruited`; the only populated artifacts are two clearly-tagged `*-SYNTH-*` screener examples; amounts/periods/age band marked proposed defaults. Placeholder scan clean.
+
+**Verification:** `cd prototype && npm run build` → **exit code 0** (`tsc -b` + `vite build` clean, zero warnings/errors). Docs-only change — no `prototype/src/` files touched.
+
+**Status actions:** `tasks.json` TASK-026 set `pending → in_review`; `PROGRESS.md` updated with a factual build log. No commit made, per the workflow rules.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/react-CHdo91hT.svg    4.12 kB │ gzip:  2.06 kB
+dist/assets/vite-BF8QNONU.svg     8.70 kB │ gzip:  1.60 kB
+dist/assets/hero-CLDdwZDr.png    13.05 kB
+dist/assets/index-D64VDMd1.css    4.10 kB │ gzip:  1.47 kB
+dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
+
+✓ built in 82ms
+TASK-026 (`docs/strategy/user-recruitment-consent-pack.md`) satisfies both acceptance criteria and every CLAUDE.md non-negotiable:
+
+- All five required instruments are delivered as concrete, runnable artifacts (quota matrix, full screener with safety escalation, GDPR-grade privacy safeguards, verbatim consent language with discrete opt-ins, non-coercive incentive plan) — no boilerplate, no `[TBD]`/placeholders.
+- Zero fabrication: study explicitly UNEXECUTED, all counts `not-yet-recruited`, only two clearly-labeled `*-SYNTH-*` examples, all figures flagged as proposed defaults with unknowns left open.
+- PRD citations verified accurate; build gate re-run clean (docs-only, strict-TS gate untriggered).
+
+Status advanced `in_review` → `completed` in `tasks.json`; approval logged in `PROGRESS.md`. The only finding is a non-blocking citation nit (the "20–30" band attributed to §6 originates in Prompt 04), which does not affect correctness.
+
+APPROVED
