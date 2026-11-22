@@ -326,7 +326,7 @@
       "id": "TASK-030",
       "title": "Create the capability mechanism record schema",
       "workstream": "Capability Extraction",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the capability mechanism record schema'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Define CAP ID, observed feature, user job, mechanism, evidence, downsides, alternatives, novel option, validation and decision fields; validate one record.",
