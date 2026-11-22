@@ -46,3 +46,26 @@
 - **APPROVED.** `docs/strategy/program-workstream-registry.md` satisfies both acceptance criteria: all eight PRD §2 workstreams (WS01–WS08) are registered with stable unique IDs, dependencies (upstream + downstream), evidence-DB-mapped deliverables, and named §11 completion gates with stream-specific exit criteria — and the single-accountable-owner rule is enforced (8 streams → 8 distinct owners, verified; WS07's six studio leads resolved via a transparently-flagged "Concept Program Lead", WS06's Head-of-Product/Program-Director conflict surfaced not hidden).
 - **No-fabrication verified:** Labeled v0.1 "Proposed, not executed"; every stream at `not_started`; timings tagged as §12 planning estimates; unknowns (real staffing, WS04 recruitability) left explicitly open. No research, interview, teardown, concept, or validation result claimed as real. DAG is acyclic and preserves the §7/Prompt-08 hard stop before concept studios. No placeholders/TODOs (sole grep hit was "JTBD", a false positive on "TBD").
 - **Build gate confirmed:** Docs-only change; no `prototype/src/` files touched. `cd prototype && npm run build` independently re-run → `tsc -b` + `vite build` clean, zero warnings/errors, no `any`/`@ts-ignore`. Status advanced `in_review` → `completed`.
+
+## TASK-003 — Create the specialist responsibility matrix (Foundation)
+**Date:** 2026-11-22 · **Status:** in_review
+
+**Built:**
+- `docs/strategy/specialist-responsibility-matrix.md` — publication-grade RACI matrix (v0.1, "Proposed, not executed").
+- Registers all **15 roles** (R01–R15): the 13 core specialists from PRD §2 plus the 2 mandatory additional reviewers (clinical R14, privacy/regulatory R15), each with stable ID, required lens, and primary deliverable.
+- Maps every research activity across all eight workstreams (Foundation F1–F9, WS01 M1–M7, WS02 T1–T10, WS03 B1–B5, WS04 U1–U5, WS05 E1–E4, Capability C1–C7, WS06 O1–O2, WS07 K1–K5, WS08 V1–V5) with a strict **one-Accountable-per-row RACI** assignment.
+- Maps review approvals: the five §11 quality gates (§3.1), the five non-compensable mandatory gates — clinical/privacy/accessibility/manipulation/unsupported-claims — each with a dedicated accountable approver (§3.2), and audit sign-offs with reconciliation (§3.3).
+- **Acceptance criterion "no required audit lacks an assigned role" proven in §5:** all seven required audit outputs covered; the three two-lens audits (visual/motion, growth/content, iOS/accessibility) split by lens so motion, content and accessibility each have a dedicated owner (R04/R08, R09/R10, R05/R13) rather than being folded into a sibling lens; all 15 roles hold ≥1 accountable activity; every mandatory gate has an approver.
+- Separation-of-duties rules (§4): no self-approval of safety sign-offs; mandatory gates non-compensable (single `reject` blocks pass); Program-Director vs. WS06-owner hats recorded separately; studio isolation preserved; disagreements preserved at reconciliation.
+
+**No-fabrication compliance:** Every entry is a **planned responsibility assignment**, not evidence of a completed activity. No audit findings, gate verdicts, or research observations claimed. Roles are explicitly "accountable role types, not named individuals"; real staffing and studio-lead mapping left as open unknowns. The lens-split is flagged as a proposed default pending Program-Director confirmation.
+
+**Verified:**
+- `cd prototype && npm run build` → exit code 0 (`tsc -b` + `vite build` clean, zero warnings/errors). Docs-only change; no `prototype/src/` files touched.
+
+**Not done (per workflow rules):** No commit made. Task left at `in_review` pending Reviewer approval.
+
+## TASK-003 — Reviewer Approval (2026-11-22)
+- **APPROVED.** `docs/strategy/specialist-responsibility-matrix.md` meets both acceptance criteria: all 15 roles (13 core specialists R01–R13 + clinical R14 + privacy R15) match the PRD §2 specialist table exactly and are mapped — with strict one-Accountable-per-row RACI — to every research activity across all eight workstreams (§2) and to every review approval (§3: five §11 quality gates, five non-compensable mandatory gates, and audit sign-offs). §5 proves "no required audit lacks an assigned role": all seven audit outputs owned, the three two-lens audits split so motion/content/accessibility each get a dedicated owner, and all 15 roles hold ≥1 accountable activity.
+- **No-fabrication & craft verified:** Labeled v0.1 "Proposed, not executed" with an explicit no-fabrication statement; roles are "accountable role types, not named individuals"; no audit findings, gate verdicts, or research observations claimed. Grep found no TODO/`[TBD]`/Lorem ipsum/placeholder (only "JTBD", a legitimate term). The audit-lens split is a substantive, PRD-§2-justified design decision (preserving distinct roles rather than dropping a lens), not boilerplate.
+- **Scope/build gate:** Docs-only change; no `prototype/src/` files touched, so the strict-TypeScript gate is not triggered. Single accountability preserved in every normative matrix row. Status advanced `in_review` → `completed`.

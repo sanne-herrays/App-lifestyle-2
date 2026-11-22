@@ -29,7 +29,7 @@
       "id": "TASK-003",
       "title": "Create the specialist responsibility matrix",
       "workstream": "Foundation",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the specialist responsibility matrix'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Map the 13 core specialist roles plus clinical and privacy reviewers to research activities and review approvals; ensure no required audit lacks an assigned role.",
