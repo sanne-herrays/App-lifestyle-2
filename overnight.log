@@ -658,3 +658,49 @@ dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
 Review complete. TASK-013's deliverable fully satisfies both acceptance criteria and every CLAUDE.md non-negotiable: concrete stratification/sizing/dedup/coding specs with reproducible seeded-draw instructions, verified quota arithmetic, accurate PRD citations, zero fabrication (synthetic example cleanly quarantined), no placeholders, and a docs-only change that leaves the TypeScript gate untouched. I've advanced the task to `completed` in `tasks.json` and appended the 3-bullet decision to `PROGRESS.md`.
 
 APPROVED
+[main a734b5d] feat: complete autonomous task
+ 4 files changed, 413 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/app-review-sampling-protocol.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   080bdb4..a734b5d  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Sun Nov 22 22:14:21 CET 2026
+==========================================
+TASK-014 complete and left at `in_review` per workflow rules. Summary:
+
+## TASK-014 — Build the review coding worksheet ✅ (in_review)
+
+**Deliverable:** `docs/strategy/review-coding-worksheet.md` — a publication-grade coding instrument that operationalizes the TASK-013 category *list* into the actual per-review *worksheet* + inter-rater agreement instrument.
+
+**Acceptance criteria met:**
+- **All required fields are first-class worksheet fields** — `praise`, `friction`, `cancellation` (CHURN-INTENT), `feature_request`, `perceived_value`, `sentiment`, and **source** (`source_ref` + `rev_id`), each coded as a sub-record with a mandatory `evidence_span` and closed-list `sub_tag`. The full 11-family TASK-013 scheme, required attributes, and a grading/agreement block round it out.
+- **Five illustrative records, clearly labeled synthetic** (§8) — built on fictitious `APP-SYNTH-Z` with `*-SYNTH-*` ids and `[SYNTHETIC]`-prefixed text, collectively exercising every field plus the hardest disambiguation boundaries, a D-grade vague report, and a text/star divergence case.
+
+**Substance beyond a template:** per-family disambiguation rules (include/exclude/tie-breaker) for the four highest-disagreement families; a per-family Cohen's κ / Krippendorff's α agreement instrument with declared thresholds and a preserve-don't-average reconciliation routing to TASK-008.
+
+**Compliance:** no real review coded; three anti-fabrication firewalls enforced (no code without span; sentiment≠stars & prevalence≠"% of users"; reported≠observed & stated-reason≠rate; grade capped at C). No placeholders.
+
+**Verified:** `cd prototype && npm run build` → **exit code 0** (`tsc -b` + `vite build` clean). Docs-only change; no `prototype/src/` touched.
+
+tasks.json → `in_review`; PROGRESS.md logged. No commit made, per instructions.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/react-CHdo91hT.svg    4.12 kB │ gzip:  2.06 kB
+dist/assets/vite-BF8QNONU.svg     8.70 kB │ gzip:  1.60 kB
+dist/assets/hero-CLDdwZDr.png    13.05 kB
+dist/assets/index-D64VDMd1.css    4.10 kB │ gzip:  1.47 kB
+dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
+
+✓ built in 76ms
+Review complete. TASK-014 ("Build the review coding worksheet") satisfies both acceptance criteria and every CLAUDE.md non-negotiable: all seven required signals (praise, friction, cancellation, feature requests, perceived value, sentiment, source) are first-class worksheet fields with mandatory evidence spans; five records are cleanly quarantined as synthetic (`APP-SYNTH-Z`, `*-SYNTH-*`, `[SYNTHETIC]`); no real app data, prevalence, or κ measurement is fabricated; PRD citations verified verbatim; placeholder grep clean; and the docs-only change leaves the TypeScript gate untouched (`npm run build` re-run → exit 0). I've advanced the task to `completed` in `tasks.json` and appended the 3-bullet decision to `PROGRESS.md`.
+
+APPROVED

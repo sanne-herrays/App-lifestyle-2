@@ -150,7 +150,7 @@
       "id": "TASK-014",
       "title": "Build the review coding worksheet",
       "workstream": "Competitive Intelligence",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Build the review coding worksheet'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Create fields for praise, friction, cancellation, feature requests, perceived value, sentiment and source; include at least five illustrative records clearly labeled synthetic.",
