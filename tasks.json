@@ -73,7 +73,7 @@
       "id": "TASK-007",
       "title": "Create the extended app selection rubric",
       "workstream": "Foundation",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the extended app selection rubric'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Define inclusion and exclusion criteria for a 15–20-app portfolio across direct, adjacent health and exceptional consumer categories; include scoring and rationale fields.",

@@ -293,3 +293,52 @@ dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
 TASK-006 passes review on both acceptance criteria with no defects. `tasks.json` advanced `in_review` → `completed`; PROGRESS.md updated with the 3-bullet approval.
 
 APPROVED
+[main 29e8106] feat: complete autonomous task
+ 4 files changed, 468 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/benchmark-app-registry.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   76c5ddc..29e8106  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Sun Nov 22 21:26:02 CET 2026
+==========================================
+TASK-007 complete and left at `in_review` per the workflow rules. Summary:
+
+**Task executed:** TASK-007 — Create the extended app selection rubric (Foundation, the first `pending` task).
+
+**Deliverable:** `docs/strategy/extended-app-selection-rubric.md` — a publication-grade rubric that satisfies both acceptance criteria:
+- **Inclusion/exclusion criteria** for the 15–20-app portfolio across the three required categories (direct / adjacent-health / exceptional-consumer): five inclusion gates (§3) and six exclusion disqualifiers (§4).
+- **Scoring and rationale fields** (§5–§6): a candidate field dictionary plus a transparent weighted six-dimension 0–100 fit score with anchors, a computed-not-hand-set rule, and six scoring-validation failures.
+- Grounded throughout in the PRD (§3 "15–20 apps", "distinct question", category declaration, negative/discontinued examples; §4 no-fabrication; §9/§11 non-compensable safety gates) and the established house conventions (S1–S4 non-negotiables, `unknown`-never-guessed, `EVD`/`APP`/`DEC` cross-references).
+
+**No-fabrication:** No app assessed, scored, or selected; PRD-named candidates are listed only as `assessment_pending` with hypotheses, not facts; all empirical fields `unknown`; the one worked record is labelled synthetic.
+
+**Build gate:** `cd prototype && npm run build` → **exit code 0** (`tsc -b` strict + `vite build`, zero warnings/errors). Docs-only change; no `prototype/src/` touched.
+
+**State changes:** `tasks.json` TASK-007 → `in_review`; `PROGRESS.md` updated. No commit made, per the workflow rules. Exiting.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/react-CHdo91hT.svg    4.12 kB │ gzip:  2.06 kB
+dist/assets/vite-BF8QNONU.svg     8.70 kB │ gzip:  1.60 kB
+dist/assets/hero-CLDdwZDr.png    13.05 kB
+dist/assets/index-D64VDMd1.css    4.10 kB │ gzip:  1.47 kB
+dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
+
+✓ built in 93ms
+Review complete. TASK-007 ("Create the extended app selection rubric") passed against both acceptance criteria and all CLAUDE.md rules:
+
+- **Inclusion/exclusion criteria + scoring/rationale for a 15–20-app portfolio across three categories** — all present and concrete (§2–§6).
+- **No fabrication** — no app assessed/scored/selected, every empirical field `unknown`, synthetic example clearly labeled, PRD citations verified accurate against `prd.md`.
+- **No boilerplate, no placeholders, no TS violations** — docs-only change, nothing in `prototype/src/` touched.
+
+I updated `tasks.json` (`in_review` → `completed`) and appended a 3-bullet review summary to `PROGRESS.md`.
+
+APPROVED
