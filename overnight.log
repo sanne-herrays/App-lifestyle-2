@@ -1744,3 +1744,50 @@ dist/assets/index-GpEN3EET.js   222.44 kB │ gzip: 69.28 kB
 Review complete. TASK-033 (capability safety gate checklist) meets both acceptance criteria and all CLAUDE.md standards: five concrete gate domains with numbered check items, the four required outcomes with structural non-compensability, verbatim-verified PRD citations with no fabricated subsections, a clearly-labeled synthetic worked example, clean placeholder scan, and a passing build with no `any`/`@ts-ignore`. `tasks.json` set to `completed` and a reviewer sign-off appended to `PROGRESS.md`.
 
 APPROVED
+[main 8d91b1c] feat: complete autonomous task
+ 4 files changed, 506 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/capability-safety-gate-checklist.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   8dcbf70..8d91b1c  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Mon Nov 23 01:08:54 CET 2026
+==========================================
+Done. Executed **TASK-034 — Build the interactive capability evaluation scorecard** (the first pending task; also the first prototype feature after 33 docs tasks).
+
+**What I built** (in `prototype/src/scorecard/`):
+- **`scoring.ts`** — pure, testable scoring model. Six dimensions with weights taken verbatim from PRD §5 Phase 4 (user value 25% · evidence 20% · experience/UX 15% · differentiation 15% · long-term 15% · feasibility 10%, summing to 1.00). Computes the weighted 1–5 average, normalizes to **0–100** (`((avg−1)÷4)×100`), produces contributions and a non-binding band, and builds a self-describing JSON export record **only when all six are scored**.
+- **`CapabilityScorecard.tsx`** — React 19 UI: capability-name field, six scored rows, an **accessible 1–5 radio-group** rating control (arrow/Home/End keys, roving tabindex, aria), a sticky summary with SVG gauge, live score, band, animated contribution bars, and **export actions** (Copy JSON / Download JSON / Reset), disabled until complete.
+- **`CapabilityScorecard.css`** — Apple-craft styling reusing existing tokens, full dark-mode, responsive collapse, focus-visible rings, and a `prefers-reduced-motion` fallback.
+- **`App.tsx` / `App.css`** — simplified to mount the scorecard; removed dead Vite-template code.
+
+**Anti-fabrication:** ships with no pre-filled scores and no evaluation of any real app; anchors are rubric definitions, not observations; UI and the exported `disclaimer` state the weights are a non-validated heuristic (PRD §5) and that mandatory clinical/privacy/accessibility gates are separate and non-compensable (PRD §9).
+
+**Verification:**
+- `npm run build` → **exit 0** (`tsc -b` strict + `vite build`, zero warnings/errors).
+- `npm run lint` → **exit 0** (eslint clean).
+
+`tasks.json` TASK-034 set to **`in_review`**; `PROGRESS.md` updated. **No commit made**, per instructions.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/index-DyH45Qvo.css    9.59 kB │ gzip:  2.75 kB
+dist/assets/index-DB5E-1GM.js   231.34 kB │ gzip: 73.15 kB
+
+✓ built in 105ms
+The review is complete. TASK-034 passed every acceptance criterion and every non-negotiable CLAUDE.md standard:
+
+- **Functionally complete**: weighted 1–5 scoring across all six required dimensions → 0–100 normalization → exportable JSON ratings.
+- **No fabrication**: weights are faithful to PRD §5 (25/20/15/15/15/10), scores are hand-entered judgements, and anchors are rubric definitions — with an explicit disclaimer and separate, non-compensable safety gates (genuine zero-guilt design).
+- **Clean craft**: `tsc -b` + `vite build` and ESLint all pass with zero errors; no `any`, no `@ts-ignore`; fully keyboard-accessible with reduced-motion support.
+
+`tasks.json` → TASK-034 set to `completed`; `PROGRESS.md` updated with the 3-bullet summary.
+
+APPROVED

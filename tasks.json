@@ -370,7 +370,7 @@
       "id": "TASK-034",
       "title": "Build the interactive capability evaluation scorecard",
       "workstream": "Capability Extraction",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Build the interactive capability evaluation scorecard'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Specify or implement a weighted 1–5 scorecard for user value, evidence, UX, differentiation, long-term utility and feasibility; calculate 0–100 and export ratings.",
