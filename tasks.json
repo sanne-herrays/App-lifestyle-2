@@ -403,7 +403,7 @@
       "id": "TASK-037",
       "title": "Create the build-buy-integrate-defer matrix",
       "workstream": "Technology & Economics",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the build-buy-integrate-defer matrix'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Define evaluation fields for differentiation, complexity, maintenance, data ownership, security, regulatory risk, cost and vendor lock-in; include scoring guidance.",

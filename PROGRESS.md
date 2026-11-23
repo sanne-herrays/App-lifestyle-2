@@ -931,3 +931,56 @@ Also fixed (craft): a stray `§3 G3` header mislabel — the G3 ratify pass-cond
 - **Both acceptance criteria met.** All six required adversarial domains (harm, dependency, anxiety, screen time, generalizability, simpler alternatives) are defined in §3 with adversary-voice question banks, valid-rebuttal requirements and revision/reject triggers; "documented rebuttal or revision" is made structurally enforceable via §4's five-disposition model (each with a mandatory minimum), the §4.2 severity-indexed evidence floor, and the §4.3 closure rule that blocks any decision while a challenge is undispositioned. Deliverable is clearly labeled (v0.1 "Proposed — not yet run") and independently reviewable.
 - **No fabrication confirmed by independent citation audit.** Every substantive PRD citation was re-resolved against `prd.md` and found verbatim/accurate — §5 Phase 4 (gates-first, "Red-team every high-priority item"), Phase 3 ("three alternatives plus one unconventional"; streak "shame and all-or-nothing" worked example), Prompt 06/07 deliverables and "Distinguish popularity from efficacy / Preserve specialist disagreements", §7 "data analysts", §8 Studio C Invisible App, §9 non-compensable gates, §3 (Not Boring)/Routinery cautions, §15 decision rule. The sole worked run (§9) is labelled ILLUSTRATIVE (synthetic) on `*-SYNTH-*` ids; no real `EVD`, metric, quote or clinical outcome is asserted.
 - **CLAUDE.md compliance.** Placeholder scan clean (no TODO/TBD/Lorem ipsum/FIXME); densely concrete framework, no boilerplate. Docs-only change — no `prototype/src/` touched — so the strict-TypeScript/Apple-craft gates are inapplicable and satisfied. Task marked `completed`.
+
+## TASK-037 — Create the build-buy-integrate-defer matrix (Technology & Economics / WS05)
+**Date:** 2026-11-23 · **Status:** in_review
+
+**Built:**
+- `docs/strategy/build-buy-integrate-defer-matrix.md` — publication-grade capability sourcing matrix (v0.1, "Proposed — matrix and scoring defined, not yet used to evaluate any real capability").
+- **All eight acceptance-criteria dimensions defined with 1–5 anchored scales + scoring guidance + direction + model role** (§3): DIF differentiation, CPX complexity, MNT maintenance, OWN data ownership, SEC security, REG regulatory risk, CST cost (TCO, build-vs-buy delta), LOCK vendor lock-in. Each score must cite a `score_basis`; unsourced inputs are `unknown` and excluded from the index average.
+- **Rejects a single compensatory 0–100 total** (§1.2, F-2) because sourcing is a routing decision, not a ranking — averaging differentiation against cost conflates opposite verdicts and would let cost/differentiation buy past safety gates (`prd.md` §9). Instead: **gates → two orthogonal indices → quadrant → modifiers**.
+- **Three non-compensable gates run first** (§4): G1 regulatory/clinical (REG ≥ 4 → forced Defer pending TASK-040 + R14/R15 co-sign), G2 data-sovereignty (OWN = 5 special-category health data → Buy forbidden, Build/Integrate-with-isolation only), G3 security floor (strikes any option below the encryption/access/audit baseline). No score overrides a gate.
+- **Two-index routing model** (§5): Own-It Value V (DIF 0.50 / OWN 0.30 / LOCK 0.20) and Build-Cost C (CPX 0.35 / MNT 0.30 / CST 0.25 / SEC 0.10), kept as a pair and never netted; High/Low ≥3.5 split maps a quadrant to Build / Integrate-the-layer / Integrate-or-Build / Buy-Integrate, then a LOCK ≥ 4 modifier upgrades Buy→Integrate-behind-abstraction-with-exit-plan or →Defer.
+- `BBI-NNN` evaluation-record field dictionary (§6), entry/ordering/transition validation (§7), a 10-item forbidden-value catalogue (§7.4), two synthetic worked rows (§8: `BBI-SYNTH-001` billing → **Integrate**, `BBI-SYNTH-002` habit engine → **Build**, demonstrating the model reproduces `prd.md` §10's own commodity-vs-core-IP split from first principles), dependencies/unknowns/change log (§9).
+- Scope fenced from neighbours: verdict stored in `DEC` `↔ TASK-009`; attaches to decision form `↔ TASK-035`; tool-specific buy/defer timing `→ TASK-038`; iOS integration feasibility `→ TASK-039`; privacy/clinical checklist content `→ TASK-040`; capability value scorecard `↔ TASK-034`. None duplicated.
+
+**No-fabrication compliance:** Evaluates no real capability, names no real vendor, asserts no cost figure, vendor capability, retention/CAC/LTV, or regulatory determination as fact. Both worked rows (§8) labelled **ILLUSTRATIVE (synthetic)** on `*-SYNTH-*` ids with every input flagged placeholder; vendor is a *class*, flagged as needing a real named candidate from TASK-038 before contracting. Weights/thresholds labelled proposed heuristics, not validated instruments. Unknown inputs held at literal `unknown`; gate dimensions left unknown force Defer, never a guessed verdict. Placeholder scan clean (no TODO/`[TBD]`/Lorem ipsum/FIXME).
+
+**Verified:**
+- `cd prototype && npm run build` → exit code 0 (`tsc -b` + `vite build` clean, zero warnings/errors). Docs-only change; no `prototype/src/` files touched, so the strict-TypeScript gate is inapplicable and satisfied.
+
+**Not done (per workflow rules):** No commit made. Task left at `in_review` pending Reviewer approval.
+
+## Review Rejection Notes
+
+**Task:** TASK-037 — Create the build-buy-integrate-defer matrix · **Reviewer verdict:** REJECTED → status returned to `pending` · **Date:** 2026-11-23
+
+The instrument itself (§3 eight anchored dimensions + scoring guidance, §4 gates, §5 two-index routing, §6 `BBI` record, §7 validation, §7.4 forbidden-value catalogue) is strong and both acceptance criteria are substantively met. PRD citations spot-checked verbatim/accurate (§9 "mandatory gates, not compensable weighted scores"; §10 "Do not recreate a mature billing or analytics platform…"; §13 Prompt 05 "Do not recommend a purchase without an explicit capability gap"). Placeholder scan clean; no `any`/`@ts-ignore`. The deliverable is blocked solely on defects in the §8.2 worked example — the one place whose explicit job is to prove the matrix computes correctly. **Builder must fix all of the following and re-submit:**
+
+1. **Arithmetic error (§8.2, hard).** The contrast row scores DIF 5 / OWN 4 / LOCK 4 and states **"V ≈ 4.6"**. With the §5.1 weights (0.50/0.30/0.20) and all three V-dimensions explicitly given (denominator 1.0, no `unknown` exclusion possible), V = 2.5 + 1.2 + 0.8 = **4.5 exactly**. "≈ 4.6" is wrong under any rounding. Correct to 4.5. (For reference, §8.1's math — V 1.5, C 4.55 — is exact; the error is isolated to §8.2.)
+
+2. **Non-reproducible C index + gate-rule self-contradiction (§8.2, hard).** §8.2 emits a **Build** verdict but prints only 6 of 8 scores — **SEC and REG are omitted**. Two problems: (a) `C ≈ 2.7` cannot be reproduced from the printed scores (CPX 3 / MNT 3 / CST 2); it only reconciles if an unstated SEC score is assumed, violating F-3 ("any dimension scored without a `score_basis`") and the §5.2 auditability requirement. (b) If SEC/REG are treated as `unknown`, the document's own **§3.4-bis** forces **Defer (pending gate input)**, not Build — so as written, the showcase example contradicts the gate rule it just defined. Fix by printing all eight scores in §8.2 (so G1/G3 demonstrably `pass` and C recomputes transparently to a verifiable figure), or restructure the row so no non-Defer verdict is emitted while gate dimensions are unstated.
+
+Both are self-contained, ~5-minute fixes confined to §8.2; no change to §§0–7 is required. Re-verify every arithmetic figure in §8 against the §5.1 weights before resubmitting, and update the §9.3 change log.
+
+## TASK-037 — Resubmission after review fix (v0.2)
+**Date:** 2026-11-23 · **Status:** in_review
+
+**Fixed (both rejection points, confined to §8.2 as directed):**
+1. **Arithmetic error corrected.** The contrast row's Own-It Value `V` was stated "≈ 4.6"; with the §5.1 weights (DIF 0.50 / OWN 0.30 / LOCK 0.20) and scores DIF 5 / OWN 4 / LOCK 4, `V = 2.5 + 1.2 + 0.8 = 4.5` exactly. Now reads **4.5**.
+2. **Non-reproducible C index + gate self-contradiction removed.** §8.2 now prints **all eight** dimension scores (added **SEC 3** and **REG 3**, each with a reading), so: (a) the Build-Cost index recomputes transparently — `C = 0.35×3 + 0.30×3 + 0.25×2 + 0.10×3 = 2.75 → 2.8` (one decimal, §5.2) — satisfying F-3 auditability; and (b) with no gate dimension left `unknown`, §3.4-bis no longer forces Defer, so the **Build** verdict is now consistent with the document's own gate rules. Gates shown passing: G1 (REG 3 < 4, no forced Defer), G2 (OWN 4 ≠ 5, Buy not forbidden), G3 (SEC 3, floor met). The LOCK ≥ 4 modifier correctly does **not** fire (it upgrades only a provisional *Buy*; here the provisional verdict is Build, which high lock-in reinforces).
+
+**Re-verified independently:**
+- All §8 arithmetic recomputed against §5.1 weights: §8.1 `V=1.5`, `C=4.55` (unchanged, exact); §8.2 `V=4.5`, `C=2.75→2.8` (correct). No residual "≈ 4.6"/"≈ 2.7" figures remain outside the change-log note describing the fix.
+- §9.3 change log updated with a v0.2 row; header version bumped 0.1 → 0.2. No change to §§0–7.
+- Placeholder scan clean (no TODO/`[TBD]`/Lorem ipsum/FIXME).
+- `cd prototype && npm run build` → exit code 0 (`tsc -b` + `vite build` clean, zero warnings/errors). Docs-only change; no `prototype/src/` files touched.
+
+**Not done (per workflow rules):** No commit made. Task returned to `in_review` pending Reviewer re-approval.
+
+## TASK-037 — Reviewer approval (v0.2)
+**Date:** 2026-11-23 · **Verdict:** APPROVED → status `in_review` → `completed`
+
+- **Both acceptance criteria met.** All eight required evaluation dimensions (DIF differentiation, CPX complexity, MNT maintenance, OWN data ownership, SEC security, REG regulatory risk, CST cost/TCO, LOCK vendor lock-in) are defined in §3 with 1–5 anchored scales, scoring direction, model role and a mandatory `score_basis` citation. The deliverable is independently reviewable, clearly labeled (v0.2, "Proposed — not yet applied"), and asserts no real capability, vendor, cost or regulatory determination as fact; both worked rows (§8) are synthetic `*-SYNTH-*` end-to-end.
+- **Both prior rejection defects verified fixed.** §8.2's Own-It Value now reads **V = 4.5** (0.50×5 + 0.30×4 + 0.20×4), correcting the earlier "≈ 4.6"; all eight dimension scores are now printed (SEC 3, REG 3 added), so Build-Cost **C = 2.75 → 2.8** recomputes transparently (F-3 auditability satisfied) and no gate dimension is left `unknown` — resolving the §3.4-bis self-contradiction that had let a Build verdict stand on unstated gates. §8.1 arithmetic (V 1.5, C 4.55 → Integrate) independently re-verified; the only residual "≈ 4.6" mention is the §9.3 change-log note describing the fix.
+- **CLAUDE.md compliance.** Placeholder scan clean (no TODO/`[TBD]`/Lorem ipsum/FIXME); no `any`/`@ts-ignore`; dense, concrete framework with no boilerplate. Docs-only change — `git status` confirms no `prototype/src/` files touched — so the strict-TypeScript/Apple-craft gates are inapplicable and satisfied. Task marked `completed`.

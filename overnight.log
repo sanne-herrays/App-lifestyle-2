@@ -1937,3 +1937,102 @@ dist/assets/index-DB5E-1GM.js   231.34 kB │ gzip: 73.15 kB
 `tasks.json` updated (`in_review` → `completed`) and a 3-bullet approval summary appended to `PROGRESS.md`.
 
 APPROVED
+[main f0dedb0] feat: complete autonomous task
+ 4 files changed, 474 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/capability-red-team-challenge-protocol.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   8bce1e2..f0dedb0  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Mon Nov 23 01:37:14 CET 2026
+==========================================
+Task complete. Per the workflow instructions, I executed only the single first-pending task and stopped before committing.
+
+## Summary — TASK-037: Build / Buy / Integrate / Defer matrix
+
+**Deliverable:** `docs/strategy/build-buy-integrate-defer-matrix.md` (WS05 Technology & Economics), grounded in `prd.md` §6, §10, and §13 Prompt 05.
+
+**What it does:** A reusable instrument that routes any needed capability to **Build / Buy / Integrate / Defer**. All eight acceptance-criteria dimensions — differentiation, complexity, maintenance, data ownership, security, regulatory risk, cost, vendor lock-in — are defined with 1–5 anchored scales, scoring direction, and model role.
+
+**Key design decision:** It deliberately rejects a single compensatory 0–100 score (unlike the capability scorecard) because sourcing is a *routing* decision, not a ranking — averaging differentiation against cost conflates opposite verdicts and would let a cheap price buy past a safety gate. Instead it uses **non-compensable gates → two orthogonal indices (Own-It Value vs. Build-Cost) → quadrant routing → lock-in modifier**, mirroring the PRD §9 "mandatory gates, not compensable weighted scores" principle. The two synthetic worked rows show the model independently reproduces PRD §10's own "build the core IP, integrate the commodity billing" split.
+
+**Verification:**
+- `cd prototype && npm run build` → **exit code 0** (`tsc -b` + `vite build` clean, zero warnings/errors).
+- Docs-only change — no `prototype/src/` files touched (confirmed via `git status`).
+- No-fabrication: no real capability/vendor/cost/regulatory claim asserted; worked examples labelled synthetic on `*-SYNTH-*` ids; placeholder scan clean.
+
+**Status changes:** `tasks.json` TASK-037 → `in_review`; `PROGRESS.md` log appended. **No commit made** — left for the Reviewer step.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/index-DyH45Qvo.css    9.59 kB │ gzip:  2.75 kB
+dist/assets/index-DB5E-1GM.js   231.34 kB │ gzip: 73.15 kB
+
+✓ built in 82ms
+Both files are updated: `tasks.json` TASK-037 returned to `pending`, and `PROGRESS.md` has a `## Review Rejection Notes` section with the exact defects.
+
+## Review summary — TASK-037 (Create the build-buy-integrate-defer matrix)
+
+**The good (and it's genuinely strong):** All eight acceptance-criteria dimensions (DIF, CPX, MNT, OWN, SEC, REG, CST, LOCK) are defined with anchored 1–5 scales plus scoring guidance, direction, and model role (AC1 ✓). The document is clearly labeled v0.1/Proposed, evaluates no real capability/vendor, and carries a no-fabrication statement with synthetic `*-SYNTH-*` examples (AC2 ✓). Placeholder scan is clean, there's no `any`/`@ts-ignore`, every PRD quote I spot-checked is verbatim and traceable, and §8.1's arithmetic (V 1.5, C 4.55) is exact.
+
+**Why it fails anyway — §8.2, the contrast worked example:**
+1. **Arithmetic error:** DIF 5 / OWN 4 / LOCK 4 at weights 0.50/0.30/0.20 gives V = **4.5 exactly**, but the document states "V ≈ 4.6". Wrong under any rounding.
+2. **Non-reproducible + self-contradicting:** It emits a **Build** verdict while omitting the SEC and REG scores. `C ≈ 2.7` can't be reproduced from the printed scores, and under the document's own §3.4-bis an unknown gate dimension *forces Defer, not Build* — so the showcase example violates the rule it just defined (and F-3's "no score without a basis").
+
+A worked example exists to prove the instrument computes correctly; one of this one's two computations is wrong and the other contradicts the matrix's gate logic. That's squarely a reviewer's job to catch, so it goes back — these are ~5-minute fixes confined to §8.2.
+
+REJECTED
+Task rejected by Reviewer. Retrying...
+==========================================
+Starting next task at Mon Nov 23 01:46:26 CET 2026
+==========================================
+TASK-037 is complete. Per the workflow rules, I'm stopping here without committing.
+
+## Summary
+
+**TASK-037 — Create the build-buy-integrate-defer matrix** (Technology & Economics / WS05)
+
+The deliverable file already existed from a prior session but had been **rejected by the reviewer** for two technically-correct defects confined to the §8.2 worked example, and the task was reset to `pending`. The strong core instrument (§§0–7) was approved as substantively meeting both acceptance criteria, so I fixed only the two flagged defects as directed:
+
+1. **Arithmetic error** — the contrast row's Own-It Value index read "≈ 4.6"; corrected to **4.5** (0.50×5 + 0.30×4 + 0.20×4 = 4.5 exactly).
+2. **Non-reproducible C index + gate self-contradiction** — §8.2 printed only 6 of 8 scores, making its Build-Cost index unverifiable (violating F-3) and, under the doc's own §3.4-bis rule, forcing a Defer that contradicted its stated Build verdict. Now **all eight scores are printed** (added SEC 3, REG 3): gates G1/G2/G3 demonstrably pass, `C` recomputes transparently to **2.75 → 2.8**, and the Build verdict is internally consistent.
+
+**Verification:**
+- All §8 arithmetic independently recomputed against §5.1 weights (§8.1 V=1.5/C=4.55 unchanged; §8.2 V=4.5/C=2.75→2.8 correct); no stray "4.6"/"2.7" figures remain.
+- §9.3 change log updated (v0.2 row); header version bumped 0.1 → 0.2; no change to §§0–7.
+- Placeholder scan clean.
+- `npm run build` → **exit code 0** (tsc -b + vite build clean).
+
+**State changes:** `tasks.json` TASK-037 → `in_review`; PROGRESS.md resubmission entry appended. No commit made.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/index-DyH45Qvo.css    9.59 kB │ gzip:  2.75 kB
+dist/assets/index-DB5E-1GM.js   231.34 kB │ gzip: 73.15 kB
+
+✓ built in 74ms
+The deliverable passes review. Summary of the verdict:
+
+**TASK-037 — Create the build-buy-integrate-defer matrix**
+
+- **Acceptance criteria:** All eight required evaluation fields (differentiation, complexity, maintenance, data ownership, security, regulatory risk, cost, vendor lock-in) are defined with anchored 1–5 scales and scoring guidance (§3). Independently reviewable, clearly labeled v0.2 "Proposed," no fabricated observations — the two worked examples are synthetic `*-SYNTH-*` end-to-end.
+- **Prior rejection defects fixed & re-verified:** §8.2 V now = 4.5 (was "≈4.6"); all eight scores printed so C = 2.8 is reproducible and no gate dimension is `unknown`, removing the §3.4-bis contradiction. §8.1 math (V 1.5 / C 4.55 → Integrate) confirmed. PRD citations spot-checked verbatim.
+- **CLAUDE.md:** No placeholders, no `any`/`@ts-ignore`, docs-only (no `prototype/src/` touched — build gate inapplicable).
+
+Updated `tasks.json` TASK-037 → `completed` and appended a 3-bullet approval summary to `PROGRESS.md`.
+
+APPROVED
