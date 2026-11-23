@@ -381,7 +381,7 @@
       "id": "TASK-035",
       "title": "Create the adopt/adapt/invent/reject/defer decision form",
       "workstream": "Capability Extraction",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the adopt/adapt/invent/reject/defer decision form'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Define required rationale, linked evidence, alternatives, reviewer, risks and follow-up experiment for each decision; prevent approval without mandatory fields.",
