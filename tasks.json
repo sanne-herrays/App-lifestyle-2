@@ -524,7 +524,7 @@
       "id": "TASK-048",
       "title": "Create the concept testing and final selection pack",
       "workstream": "Validation & Selection",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the concept testing and final selection pack'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Provide neutral usability scripts, counterbalancing, success measures, concept scorecard, evidence limitations, decision gate and final MVP handoff checklist; prohibit invented test results.",
