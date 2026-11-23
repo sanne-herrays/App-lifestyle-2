@@ -2314,3 +2314,53 @@ Review complete. TASK-042 "Build the opportunity prioritization rubric" meets bo
 `tasks.json` status advanced `in_review` → `completed`; 3-bullet summary appended to `PROGRESS.md`.
 
 APPROVED
+[main 5061bf8] feat: complete autonomous task
+ 4 files changed, 617 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/opportunity-prioritization-rubric.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   1012ba5..5061bf8  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Mon Nov 23 02:32:03 CET 2026
+==========================================
+TASK-043 complete and left at `in_review` as instructed. Summary:
+
+## TASK-043 — Create six isolated concept studio briefs (WS07)
+
+**Deliverable:** `docs/strategy/concept-studio-briefs.md` (v0.1) — a publication-grade briefing instrument grounded in PRD §8 / Prompt 09.
+
+**Both acceptance criteria met:**
+1. **Six separate briefs** — §5–§10 cover Behavior First, Joy First, Invisible App, Health Intelligence, Life Companion, Category Breaker. Each reproduces its PRD §8 mandate verbatim, then operationalizes it with a distinct framing question, lens, Atlas emphasis, "strong concept" definition, self-critique agenda, and studio-specific traps — so the six lenses are genuinely different, not variations on one.
+2. **Share evidence, prohibit cross-studio concept viewing** — delivered structurally, not just asserted:
+   - §2: one identical, versioned, hashed shared package (P1–P10) issued to all six, released only after the §7 Atlas-release gate.
+   - §3: the isolation protocol — a precise shared-evidence/sequestered-concepts line, six separation mechanisms (incl. independence attestation), and breach handling (quarantine from the comparative validation). Evidence is always shared; ideation/dossiers/storyboards/lead picks stay private until the Gate-3 first review.
+
+**Craft & compliance:** common brief spine (§4), seven non-negotiables (B1–B7), completeness checklist (BC-1…BC-9), 13-item forbidden-value catalogue (§12), and full governance/dependencies/change log (§13). Contains **no concepts and no fabricated research** — the package is referenced by record ID + version; the §2.2 honest-state note records that upstream inputs are not yet populated, so these are release-ready templates. Scope fenced from TASK-044 (submission format), TASK-045 (wireframes), and TASK-032 (capability workshop).
+
+**Verified:** `cd prototype && npm run build` → **exit code 0** (`tsc -b` + `vite build` clean). Docs-only change; `git status` confirms no `prototype/src/` touched; placeholder scan clean.
+
+`tasks.json`: TASK-043 → `in_review`. PROGRESS.md logged. **No commit made**, per workflow rules.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/index-DyH45Qvo.css    9.59 kB │ gzip:  2.75 kB
+dist/assets/index-DB5E-1GM.js   231.34 kB │ gzip: 73.15 kB
+
+✓ built in 81ms
+Review complete. TASK-043 ("Create six isolated concept studio briefs") passes against both acceptance criteria and all applicable CLAUDE.md standards:
+
+- **Six separate, genuinely distinct briefs** — each with its PRD §8 mandate reproduced verbatim (all six verified exact against `prd.md:163-168`) and operationalized into a different lens.
+- **"Share evidence, prohibit cross-studio concept viewing"** — delivered structurally via the §2 identical hashed package and the §3 isolation protocol (S-1…S-6 + breach quarantine), not merely asserted.
+- **No fabrication** — evidence referenced by record ID/version, honest-state note on unpopulated upstreams, no concepts/wireframes inside the brief, placeholder scan clean. Ten citations spot-checked verbatim.
+- **No boilerplate, no `any`/`@ts-ignore` concerns** (docs-only; no `prototype/src/` touched).
+
+Actions taken: `tasks.json` TASK-043 `in_review` → `completed`; 3-bullet approval summary appended to `PROGRESS.md`. No commit made (per workflow rules).
+
+APPROVED
