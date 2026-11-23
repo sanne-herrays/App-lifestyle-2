@@ -414,7 +414,7 @@
       "id": "TASK-038",
       "title": "Create the phased tool purchasing decision sheet",
       "workstream": "Technology & Economics",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the phased tool purchasing decision sheet'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "List Figma, Mobbin, Appfigures, AppFollow, Dovetail, Maze, analytics and RevenueCat with trigger, alternative, cost verification and buy/defer decision fields.",
