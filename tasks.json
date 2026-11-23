@@ -447,7 +447,7 @@
       "id": "TASK-041",
       "title": "Create the Opportunity Atlas record schema",
       "workstream": "Opportunity Synthesis",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the Opportunity Atlas record schema'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Define OPP ID, root user need, evidence, current-solution gap, desired outcome, mechanisms, HMW statement, feasibility and test fields.",
