@@ -513,7 +513,7 @@
       "id": "TASK-047",
       "title": "Define the Habit Graduation state machine",
       "workstream": "Concept Innovation",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Define the Habit Graduation state machine'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Specify states, transitions, events, persistence rules and tests for initiation, repetition, adaptation, graduation and recovery; no punitive reset on missed days.",

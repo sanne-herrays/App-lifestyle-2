@@ -2548,3 +2548,51 @@ dist/assets/index-CY9dtyKb.js   228.33 kB │ gzip: 71.67 kB
 Review complete. TASK-046 "Prototype the 'Your Little Win Today' interaction" meets every acceptance criterion and every hard CLAUDE.md gate (clean strict-TS build, no `any`/`@ts-ignore`, polished and interactive, no fabrication, no guilt copy). I verified the swipe+tap equivalence, completion feedback, optional/safe haptics, the three-way reduced-motion fallback, and that the component has no JS dependency on the rest of the app. Two minor polish nits exist but are fully guarded and violate no criterion. Status advanced `in_review` → `completed` in tasks.json and logged in PROGRESS.md.
 
 APPROVED
+[main a32ebf8] feat: complete autonomous task
+ 8 files changed, 1199 insertions(+), 4 deletions(-)
+ create mode 100644 prototype/src/little-win/LittleWinToday.css
+ create mode 100644 prototype/src/little-win/LittleWinToday.tsx
+ create mode 100644 prototype/src/little-win/haptics.ts
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   85c1dc1..a32ebf8  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Mon Nov 23 03:38:26 CET 2026
+==========================================
+Done. TASK-047 executed completely and left at `in_review` per the workflow rules (no commit made).
+
+## Summary
+
+**Task executed:** TASK-047 — Define the Habit Graduation state machine (first `pending` task; Concept Innovation / WS07).
+
+**Deliverable:** `docs/strategy/habit-graduation-state-machine.md` (v0.1) — a publication-grade behavioral-logic specification that `↔ TASK-045` explicitly deferred. It covers every acceptance-criterion phase:
+
+- **States** — a two-region orthogonal statechart: Lifecycle (`Draft → Initiating → Repeating ⇄ Recovering → Graduated`, plus `Paused`/`Released`) and an orthogonal **Plan** region (`Standard ⇄ Floor ⇄ Expanded`) that realizes **adaptation** without lifecycle regression.
+- **Events** — 14 user + 7 system/time events, fully catalogued.
+- **Transitions** — complete guard/action tables; the machine is total.
+- **Persistence** — event-sourced log + rebuildable projection, idempotency, offline-first commutative merge, clock-change robustness (progress over scheduled windows, never wall-clock), data-minimization/erasure, schema versioning.
+- **Tests** — `T-01…T-22` conformance + `PT-01…PT-10` property/invariant tests.
+- **No punitive reset** — enforced as machine-checkable invariants (`INV-1/2/5`), a supportive non-punitive `Recovering` state, and a window-rate consistency model instead of a snappable streak.
+
+Behaviorally grounded in the PRD's streak-trap warning (§3:135), the engagement/adherence/automaticity/outcome separation (§1:19), and COM-B/BCTTv1/SDT/Fogg (§6). The **"21-day myth" is explicitly refused**; all thresholds are symbolic parameters marked *to be calibrated*; seven `[MECH]` levers are routed to `→ TASK-048` as hypotheses — no efficacy, clinical, or fabricated claim asserted. A §18 validator (V1–V11) with an AC crosswalk makes it independently reviewable.
+
+**Verification:** `cd prototype && npm run build` → `tsc -b && vite build` clean, **exit code 0**, zero warnings (docs-only change; no `prototype/src/` files touched).
+
+**State changes:** `tasks.json` TASK-047 → `in_review`; `PROGRESS.md` updated. No commit made.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/index-BUa79J0H.css   10.39 kB │ gzip:  2.89 kB
+dist/assets/index-CY9dtyKb.js   228.33 kB │ gzip: 71.67 kB
+
+✓ built in 80ms
+Review complete. TASK-047 "Define the Habit Graduation state machine" satisfies every acceptance criterion and every hard CLAUDE.md gate: it fully specifies states, transitions, events, persistence rules and tests across all five phases (initiation, repetition, adaptation, graduation, recovery); it makes "no punitive reset on missed days" structural via machine-checkable invariants (`INV-1/2/5`), a supportive `Recovering` state, and a window-rate (not streak) model; it fabricates nothing (all thresholds are symbolic `TO BE CALIBRATED` parameters, the 21-day myth is explicitly refused, mechanisms are tagged hypotheses, tests are specs not results); it holds the clinical boundary (`INV-6`) and autonomy (`INV-4`); and it is independently reviewable via the §18 V1–V11 validator with an AC crosswalk. The build re-runs clean, the change is docs-only (no `prototype/src/` touched, so no `any`/`@ts-ignore` exposure), and no placeholders/filler are present. I advanced the status `in_review` → `completed` in `tasks.json` and appended the review summary to `PROGRESS.md`.
+
+APPROVED
