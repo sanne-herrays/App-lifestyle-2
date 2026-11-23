@@ -359,7 +359,7 @@
       "id": "TASK-033",
       "title": "Create the capability safety gate checklist",
       "workstream": "Capability Extraction",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the capability safety gate checklist'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Define clinical, privacy, manipulation, accessibility and unsupported-claims checks with pass, redesign, investigate and reject outcomes.",
