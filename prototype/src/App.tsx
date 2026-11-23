@@ -1,10 +1,10 @@
-import CapabilityScorecard from './scorecard/CapabilityScorecard'
+import LittleWinToday from './little-win/LittleWinToday'
 import './App.css'
 
 function App() {
   return (
     <main className="app-shell">
-      <CapabilityScorecard />
+      <LittleWinToday />
     </main>
   )
 }
