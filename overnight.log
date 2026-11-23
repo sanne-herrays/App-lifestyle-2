@@ -1895,3 +1895,45 @@ Review complete. TASK-035 (adopt/adapt/invent/reject/defer decision form) passes
 Updated `tasks.json` (`in_review` → `completed`) and appended the approval summary to `PROGRESS.md`.
 
 APPROVED
+[main 8bce1e2] feat: complete autonomous task
+ 4 files changed, 531 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/adopt-adapt-invent-reject-defer-decision-form.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   66ffbea..8bce1e2  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Mon Nov 23 01:28:32 CET 2026
+==========================================
+Done. TASK-036 complete and left at `in_review`, no commit made.
+
+## Summary
+
+**Task executed:** TASK-036 — Create the capability red-team challenge protocol (first `pending` task; Capability Extraction / WS02).
+
+**Deliverable:** `docs/strategy/capability-red-team-challenge-protocol.md` (v0.1, "Proposed — not yet run"), matching the established house style of the adjacent Capability Extraction docs.
+
+**How it meets the acceptance criteria:**
+- **Six adversarial challenge domains** — the exact six named (harm, dependency, anxiety, screen time, generalizability, simpler alternatives) — each with a question bank in the adversary's voice, valid-rebuttal requirements, and revision/reject triggers (§3).
+- **"Require documented rebuttal or revision"** made structurally enforceable: a five-disposition model with a mandatory minimum per disposition, a severity-indexed evidence floor, and a closure rule where any un-dispositioned challenge blocks the decision (§4). Adversarial default (RT3): the burden of proof is on the capability, and popularity/engagement can never rebut a harm/dependency/anxiety challenge.
+- **Independently reviewable & no fabrication:** clearly labeled proposed instrument; the only worked example re-uses the PRD's *illustrative* streak capability, labeled ILLUSTRATIVE (synthetic) on `*-SYNTH-*` ids, left deliberately "adapt, don't adopt." No real finding, metric, quote, or clinical outcome asserted.
+
+**Verification:** `cd prototype && npm run build` → **exit code 0** (`tsc -b` + `vite build` clean). Docs-only change; no `prototype/src/` touched.
+
+**State changes:** `tasks.json` TASK-036 → `in_review`; `PROGRESS.md` log appended. **No commit** made, per the workflow rules — awaiting Reviewer approval.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/index-DyH45Qvo.css    9.59 kB │ gzip:  2.75 kB
+dist/assets/index-DB5E-1GM.js   231.34 kB │ gzip: 73.15 kB
+
+✓ built in 75ms
+`tasks.json` updated (`in_review` → `completed`) and a 3-bullet approval summary appended to `PROGRESS.md`.
+
+APPROVED

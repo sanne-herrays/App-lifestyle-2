@@ -392,7 +392,7 @@
       "id": "TASK-036",
       "title": "Create the capability red-team challenge protocol",
       "workstream": "Capability Extraction",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the capability red-team challenge protocol'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Define adversarial questions about harm, dependency, anxiety, screen time, generalizability and simpler alternatives; require documented rebuttal or revision.",
