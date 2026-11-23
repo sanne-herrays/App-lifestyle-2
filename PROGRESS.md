@@ -1172,3 +1172,74 @@ No other defects found. Once the count is corrected and re-verified for consiste
 - **APPROVED.** Both acceptance criteria met: AC1 — the template mandates the full PRD §8/§13 shape with concrete, machine-checkable gates (≥15 ideas behind a real distinctness test §4.1/VAL-2; exactly three dossiers behind a contrast test §6.1/VAL-4; element-level E/A/I evidence-vs-invention labels §5/VAL-5; per-dossier risk registers §7/VAL-7; a single lead-concept declaration Part F/VAL-8) and provides completeness validation as a runnable 10-check gate (§8 VAL-1…VAL-10) with accept / return-incomplete / reject dispositions. AC2 — independently reviewable, clearly labeled, and no fabricated research/results.
 - **No-fabrication verified.** Document asserts no concept, idea, interview, metric, effect size or test result; §9 is fenced end-to-end as ILLUSTRATIVE with transparently synthetic tokens (`IDEA-X-01`/`EVD-nnn`/`CONCEPT-X-01`); appeal claims are structurally forced into §4.4/VAL-9 test-hypothesis form ("never present imagined preferences as validated"). Placeholder scan clean — the lone `[TBD]`-substring hit is "JTBD", a framework acronym, not a placeholder. PRD citations spot-checked exact against `prd.md`: 18 dossiers/five-step method `:170`, Gate 3 criteria + "Polished unsupported reports do not pass" `:203-205`, "90+ ideas, 18 concept dossiers" `:218`, Prompt 09 verbatim `:271`, streaks/non-punitive missed-day `:135`, least-unnecessary-effort §15.
 - **Standards gates satisfied.** No boilerplate — concrete frameworks throughout (COM-B/BCTTv1/SDT/Fogg, distinctness/contrast tests, T1–T7, 12-item forbidden-action catalogue, four non-compensable gates). Zero-guilt design structurally enforced (non-punitive missed-day T5/VAL-6; behavioral-harm + autonomy gates §7). TypeScript/`any`/`@ts-ignore` gate N/A — docs-only; `git status` confirms no `prototype/src/` touched. Status advanced `in_review` → `completed`.
+
+## TASK-045 — Create the eight-screen low-fidelity wireframe specification (Concept Innovation / WS07)
+**Date:** 2026-11-23 · **Status:** in_review
+
+**Built:**
+- `docs/strategy/eight-screen-wireframe-specification.md` — the low-fidelity screen skeleton the six studios (`↔ TASK-043`) build their clickable prototypes against and the minimum a finalist wireframes before Gate 4 (`prd.md` §9/§11). v0.1, "specification defined; no concept, screen design, user test or result asserted."
+- **Defines all eight named screens (AC1):** W1 Welcome, W2 Discovery/Personalization, W3 First Action, W4 Daily Home, W5 Guided Habit, W6 Progress/Reflection, W7 Missed Day/Recovery, W8 Personal Insight (the `prd.md` §9 line 178 finalist minimum). Each screen (§4–§11) carries an ASCII low-fi frame + the 8-field per-screen schema (purpose/job, entry/exit, region inventory w/ single primary action, **interaction annotations** `Ix` keyed to the frame, states, **accessibility annotations** `Ax`, copy intent/tone, mechanism-to-test & traceability). *Document orders Missed Day (§9) before Progress (§10) so the non-punitive rule is established first; §2 map keeps W6=Progress / W7=Missed Day.*
+- **Interaction annotations (AC1):** per-screen numbered `Ix` interactions keyed to each wireframe (gestures w/ tap equivalents, transitions, completion feedback, deep-links), plus the global interaction grammar (§3.6) — satisfies `prd.md` §9 "annotated interactions."
+- **Accessibility annotations (AC1):** three layers — the §3.5 global baseline (AX-1…AX-10: VoiceOver/traits, Dynamic Type, WCAG 2.2 AA contrast 4.5:1 / 3:1, 44×44pt HIG targets, color-independence, reduced-motion, focus/switch control, multi-modal feedback, no forced timeouts, error ID), per-screen `Ax` specifics, and the §13 consolidated conformance checklist (C1–C14, each mapped to a WCAG/HIG citation) audited against `↔ TASK-022`. Written as *conformance requirements against external standards* → checkable facts, not research.
+- **Non-negotiables carried onto every screen:** W1–W7 rules — all-eight/all-states (W1), accessibility-as-gate (W2), **non-punitive missed day** (W3; W7/§9 MUST NOT reset/shame/loss-frame — the load-bearing `prd.md` §3 line 135 rule), autonomy/reversibility (W4), privacy + **clinical boundary** (W5; W8 no diagnosis/medical claim, escalation routing `↔ TASK-040`), invention-labelled/performance-deferred (W6), no fabricated content (W7).
+- **Reviewability + anti-fabrication machinery:** §14 runnable 12-check validator (V1–V12) with accept / return-incomplete / reject + non-compensable gates (V5–V9, V11); §15 ten forbidden anti-patterns (punitive streak, medical claim, dark patterns, first-value paywall, over-collection, color/haptic/gesture-only, fabrication, asserted efficacy, engagement-pressure, trapping flows); §12 cross-screen reference flow.
+
+**Scope fencing (standalone, per task scope):** This task = the *screen specification* (slots, states, accessibility) — concept-neutral (§3.8). It **points to but does not define** `→ TASK-046` (the "Your Little Win Today" microinteraction — only its host contract is stated in W3/W5), `→ TASK-047` (Habit Graduation state machine — screens *render* states/fire events; machine logic is that task), and `→ TASK-048` (every efficacy/desirability question is a `[MECH]`+hypothesis routed there). Consumes `↔ TASK-016` (ten journeys), `↔ TASK-019/020/021/022` (audit criteria), `↔ TASK-040` (clinical/privacy), `↔ TASK-043/044` (briefs/submission format).
+
+**No-fabrication compliance (AC2):** Contains **no concept, brand, final visual design, final copy, user, metric, quote, test result or clinical outcome.** Wireframes are grayscale/label-only ASCII, marked **ILLUSTRATIVE — STRUCTURE ONLY**, using placeholder intent tokens (`[greeting]`, `[action title]`, `[primary CTA]`). Every behavioral lean is tagged `[MECH: …]` + evidence pointer (`↔ TASK-025`) + a `→ TASK-048` test hypothesis — nothing asserted as proven. W8 "no-insight-yet" state explicitly forbids fabricating an insight to fill space. Placeholder scan (Lorem/[TBD]/TODO/FIXME/XXX) → none ("JTBD" is a framework acronym, not a placeholder).
+
+**Verified:**
+- `cd prototype && npm run build` → `BUILD_EXIT=0` (`tsc -b` + `vite build` clean, zero warnings/errors). Docs-only change; `git status` confirms no `prototype/src/` files touched (only the new doc added; `overnight.log` pre-existing modification).
+- Strict-TS / `any` / `@ts-ignore` gate N/A (docs-only).
+
+**Not done (per workflow rules):** No commit made. Task left at `in_review` pending Reviewer approval.
+
+## Review Rejection Notes
+
+**Task:** TASK-045 — Create the eight-screen low-fidelity wireframe specification
+**Reviewer verdict:** REJECTED · status reverted `in_review` → `pending` · **Date:** 2026-11-23
+
+The deliverable is substantively strong — all eight named screens are defined with interaction (`Ix`) and accessibility (`Ax`) annotations, PRD citations spot-check exact (§9 line 178, §3 line 135, line 127), zero-guilt design is structurally enforced, and there is no fabricated research, placeholder, or filler. It is rejected on one real, propagated internal-consistency defect that breaks the document's own reviewability claim (AC2), plus a related naming collision. Both must be fixed on the next pass.
+
+**DEFECT 1 (blocking) — the W6/W7 screen identifiers are swapped between the canonical map and the section bodies, and the contradiction propagates into the §14 validator.**
+- The §2 "eight-screen map" assigns **W6 = Progress/Reflection** and **W7 = Missed Day/Recovery**.
+- The section headers reverse this: **§9 is titled "W6 — Missed Day / Recovery"** and **§10 is titled "W7 — Progress / Reflection."** The same token (W6, W7) names two different screens depending on where you look.
+- This is not cosmetic. It corrupts the §14 reviewability validator that the document offers as its proof of "independent reviewability":
+  - **V6** ("**W7** does not reset/shame/loss-frame") is the missed-day gate, but §10 — the section titled "W7" — is **Progress**. The non-punitive gate points at the wrong screen.
+  - **V7** ("W8 and **W6**" clinical boundary) names W6, but §9 — the section titled "W6" — is **Missed Day**, not a health-data screen.
+  - The §12 cross-flow diagram and W4's routing ("→ W6 Progress," "W7 Missed Day") follow the §2-map meaning, directly contradicting the §9/§10 headers.
+- A studio or reviewer cannot unambiguously resolve "W6"/"W7," which defeats the artifact's stated purpose (a precise shared skeleton six studios build against and a reviewer diffs field-by-field) and fails AC2 "independently reviewable."
+- **Fix:** Pick one binding and make it total. Recommended: keep the §2 map (W6 = Progress, W7 = Missed Day) and relabel the section headers to match — i.e. §9 becomes "W7 — Missed Day / Recovery" and §10 becomes "W6 — Progress / Reflection" (document order may still place Missed Day first; just keep each screen's W-number attached to it). Then sweep every W6/W7 reference in §7, §12, §14 (V6/V7), §16 and the §702 note so all agree.
+
+**DEFECT 2 (must fix, compounds Defect 1) — the §1 "W-rules" (W1–W7) share the exact token space as the W1–W8 screen IDs.**
+- "W1 — All eight screens" (rule) vs "W1 Welcome" (screen); "W3 — missed-day non-punitive" (rule) vs "W3 First Action" (screen); etc. References such as "W3 governs this screen absolutely" (rule) and "→ W5/W3" (First Action screen) appear in the same section (§9), so the same token carries two meanings in one paragraph.
+- **Fix:** Rename the seven non-negotiable rules to a distinct namespace (e.g. `R1–R7` or `RULE-1…RULE-7`) and update every in-text rule reference — "(W4 autonomy)" → "(R4 autonomy)", "W3 governs this screen" → "(R3)", etc. Leave the W1–W8 tokens to mean screens only.
+
+**No other defects.** Content, coverage, anti-fabrication, zero-guilt enforcement, and PRD traceability are approved; this is purely an identifier-consistency pass. Once Defects 1 and 2 are corrected and the W-reference sweep is verified consistent across §2/§7/§9/§10/§12/§14/§16, resubmit for review.
+
+## Review Rework & Resubmission
+
+**Task:** TASK-045 — Create the eight-screen low-fidelity wireframe specification
+**Action:** Addressed both Reviewer-rejection defects · status set `pending` → `in_review` · v0.1 → **v0.2** · **Date:** 2026-11-23
+
+The prior review REJECTED on identifier-consistency grounds only (content, coverage, anti-fabrication, zero-guilt enforcement and PRD traceability were approved). Both documented defects are now fixed; no behavioral, accessibility, mechanism-labelling or coverage substance was changed.
+
+**DEFECT 1 (blocking) — W6/W7 screen-ID swap — FIXED.** Root cause: the §2 map, §12 flow diagram, §14 validator (V6/V7/V8) and §13 checklist (confirmed by C12 "W6,W8" = charts on Progress+Insight) were all written in the canonical scheme **W6 = Progress/Reflection, W7 = Missed Day/Recovery**, but only the two section headers had slipped into the reverse scheme (§9 titled "W6 — Missed Day", §10 titled "W7 — Progress"). Fix: relabelled the two headers to §9 **"W7 — Missed Day / Recovery"** and §10 **"W6 — Progress / Reflection"** (document order still places Missed Day first so RULE-3 is established before the Progress screen). Every inline screen reference already used the canonical scheme, so only the two headers needed changing. Verified: V6 ("W7 does not reset…") now points at §9 (Missed Day); V7 ("W8 and W6…") at §10 (Progress) + W8; §12 diagram and §702 AC1 note ("progress W6/§10, missed day W7/§9") now agree.
+
+**DEFECT 2 (must fix) — rule/screen namespace collision — FIXED.** The seven non-negotiable rules used `W1`–`W7` tokens identical to the `W1`–`W8` screen IDs. Renamed the rules to a distinct **`RULE-1`–`RULE-7`** namespace (chose `RULE-n` over `R1`–`R7` because `Rn` is already the per-screen region namespace, and over role IDs `R01`…). Added an explicit namespace legend at the head of §1. Swept **every** in-text rule reference across §1–§16 (map row, §2.1/§2.2, §3 conventions, §4–§11 per-screen annotations, §12 flow notes, §14 V6/V10, §15 forbidden-list items 1–9, §16 note) from `Wn` → `RULE-n`, classifying each `Wn` occurrence by context as rule-ref (converted) or screen-ref (kept). Also corrected a stray `§6`→`§10` section pointer in §0.
+
+**Verified:**
+- 7 rule definitions present as `RULE-1`…`RULE-7`; namespace legend present; no stray `RULE-8/9` or leftover `W-rule(s)` tokens.
+- Every remaining `W<digit>` token is a screen reference consistent with W6=Progress / W7=Missed Day (headers, §2 map, §12 diagram, V1/V7/V8, C7/C8/C9/C11/C12).
+- `cd prototype && npm run build` → `BUILD_EXIT=0` (docs-only change; no `prototype/src/` files touched).
+
+**Not done (per workflow rules):** No commit made. Task left at `in_review` pending Reviewer approval.
+
+## Review Approval — TASK-045
+
+**Task:** TASK-045 — Create the eight-screen low-fidelity wireframe specification
+**Reviewer verdict:** APPROVED · status set `in_review` → `completed` · **Date:** 2026-11-23
+
+- **AC1 met** — all eight named screens are defined (W1 Welcome, W2 Discovery, W3 First Action, W4 Daily Home, W5 Guided Habit, W6 Progress, W7 Missed Day, W8 Personal Insight), each with numbered interaction annotations (`Ix`) keyed to a grayscale low-fi ASCII frame and three-layer accessibility annotations (§3.5 AX-1…AX-10 baseline + per-screen `Ax` + §13 C1–C14 WCAG/HIG conformance checklist). AC2 met — independently reviewable via the §14 12-check validator with non-compensable gates, clearly labeled (header/status/version/change log), and no fabricated research: every behavioral lean is a `[MECH]`+hypothesis routed to `→ TASK-048`, all frames ILLUSTRATIVE with placeholder tokens, W8 "no-insight-yet" forbids inventing an insight.
+- **Both prior-rejection defects verified fixed in the live doc** — Defect 1 (W6/W7 screen-ID swap): §9=W7 Missed Day, §10=W6 Progress now match the §2 map, V6/V7 validator checks and the §12 flow diagram; grep confirms every `W<digit>` token is a screen reference. Defect 2 (rule/screen token collision): the seven non-negotiables are now the distinct `RULE-1…RULE-7` namespace (legend in §1), all seven defined, zero leftover `W`-rule or `RULE-8/9` tokens.
+- **Standards gates satisfied** — no boilerplate (concrete COM-B/BCTTv1/SDT/Fogg mechanisms, WCAG 2.2 AA + Apple HIG conformance, 10-item forbidden anti-pattern list); zero-guilt design structurally enforced (RULE-3 non-punitive missed-day → V6 reject-gate + §15 item 1); PRD citations spot-checked exact (§3:127, §3:135, §8:170, §9:178, §11:201-202); placeholder scan clean. Strict-TS/`any`/`@ts-ignore` gate N/A — docs-only, `git status` confirms no `prototype/src/` touched.

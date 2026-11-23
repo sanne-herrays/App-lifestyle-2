@@ -491,7 +491,7 @@
       "id": "TASK-045",
       "title": "Create the eight-screen low-fidelity wireframe specification",
       "workstream": "Concept Innovation",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the eight-screen low-fidelity wireframe specification'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Define welcome, discovery, first action, daily home, guided habit, progress, missed day and personal insight screens with interaction and accessibility annotations.",

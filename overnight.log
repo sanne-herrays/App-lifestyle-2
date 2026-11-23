@@ -2411,3 +2411,91 @@ dist/assets/index-DB5E-1GM.js   231.34 kB │ gzip: 73.15 kB
 Review complete. TASK-044 (the divergent concept submission template) meets both acceptance criteria and all CLAUDE.md non-negotiables: a concrete, gate-driven output format with a runnable 10-check completeness validator, element-level evidence/invention labeling, structurally-enforced zero-guilt design, and no fabricated research — all PRD citations verified exact. I advanced its status `in_review` → `completed` in `tasks.json` and appended the reviewer verdict to `PROGRESS.md`.
 
 APPROVED
+[main 2f3b9a8] feat: complete autonomous task
+ 4 files changed, 351 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/divergent-concept-submission-template.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   7866232..2f3b9a8  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Mon Nov 23 02:46:37 CET 2026
+==========================================
+Done. Executed TASK-045 completely and exiting without committing, per instructions.
+
+## Summary
+
+**Task:** TASK-045 — Create the eight-screen low-fidelity wireframe specification (first `pending` task; Concept Innovation / WS07).
+
+**Deliverable:** `docs/strategy/eight-screen-wireframe-specification.md` (v0.1) — the low-fidelity screen skeleton the six concept studios build their clickable prototypes against and the Gate-4 wireframe minimum for finalists.
+
+**AC1 — all eight screens with interaction + accessibility annotations:**
+- Defines **W1 Welcome, W2 Discovery, W3 First Action, W4 Daily Home, W5 Guided Habit, W6 Progress, W7 Missed Day, W8 Personal Insight** (the `prd.md` §9 set), each with an ASCII low-fi frame and an 8-field schema: purpose, entry/exit, region inventory (single primary action), **interaction annotations** (`Ix` keyed to the frame), states, **accessibility annotations** (`Ax`), copy intent/tone, and mechanism-to-test traceability.
+- Accessibility is three-layered: global baseline (§3.5, AX-1…AX-10 against WCAG 2.2 AA + Apple HIG — contrast 4.5:1/3:1, 44×44pt targets, Dynamic Type, VoiceOver, reduced-motion, color-independence), per-screen specifics, and a consolidated §13 checklist (C1–C14) audited against `↔ TASK-022`.
+- Carries the non-negotiables onto every screen: **non-punitive missed day** (W7/§9), **clinical boundary** on W8 (no diagnosis/medical claim), autonomy, data minimization. §14 runnable validator (V1–V12) + §15 forbidden anti-patterns make it independently reviewable.
+
+**AC2 — no fabrication:** No concept, brand, final copy, user, metric, quote or test result. Wireframes are grayscale/label-only (marked ILLUSTRATIVE — STRUCTURE ONLY); every behavioral claim is a `[MECH]` + hypothesis routed to `→ TASK-048`. Scoped standalone — references but does not build TASK-046/047/048.
+
+**Verification:** `cd prototype && npm run build` → **exit 0** (clean, zero warnings). Docs-only; `git status` confirms no `prototype/src/` touched. Placeholder scan clean.
+
+**State changes:** `tasks.json` TASK-045 → `in_review`; PROGRESS.md log appended. **No commit made** (per instructions).
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/index-DyH45Qvo.css    9.59 kB │ gzip:  2.75 kB
+dist/assets/index-DB5E-1GM.js   231.34 kB │ gzip: 73.15 kB
+
+✓ built in 75ms
+Review complete.
+
+**Verdict:** The TASK-045 deliverable is substantively excellent — all eight screens defined with interaction and accessibility annotations, no fabrication, zero-guilt design structurally enforced, PRD citations verified exact, and build clean. But it fails on a real, propagated defect: the **W6/W7 screen identifiers are swapped** between the canonical §2 map (W6=Progress, W7=Missed Day) and the section headers (§9 "W6 — Missed Day", §10 "W7 — Progress"). This isn't cosmetic — it misdirects the document's own §14 validator gates (V6's non-punitive check points at the Progress section; V7's clinical-boundary check names the Missed Day section) and contradicts the §12 cross-flow, defeating the "independently reviewable" acceptance criterion (AC2). A second, compounding defect: the §1 "W-rules" (W1–W7) collide with the W1–W8 screen IDs, making tokens like "W3" ambiguous in the same paragraph.
+
+Actions taken:
+- `tasks.json`: TASK-045 reverted `in_review` → `pending`.
+- `PROGRESS.md`: appended `## Review Rejection Notes` with the exact defects and recommended fixes for the Builder.
+
+REJECTED
+Task rejected by Reviewer. Retrying...
+==========================================
+Starting next task at Mon Nov 23 02:58:33 CET 2026
+==========================================
+Done. **TASK-045 — Create the eight-screen low-fidelity wireframe specification** is complete and set to `in_review`.
+
+## What this session actually was
+
+The task had been submitted once, **REJECTED by the Reviewer**, and reverted to `pending` with two documented defects. The deliverable itself (`docs/strategy/eight-screen-wireframe-specification.md`, 707 lines) was substantively approved — all eight screens with interaction/accessibility annotations, PRD-grounded, zero fabrication. The rejection was purely about **identifier consistency**. I fixed both defects:
+
+**Defect 1 (blocking) — W6/W7 screen-ID swap.** The §2 map, §12 flow, §14 validator (V6/V7/V8) and §13 checklist all used the canonical scheme (**W6 = Progress, W7 = Missed Day**) — confirmed by C12 "W6,W8" listing the two chart-bearing screens. Only the two section *headers* had slipped into the reverse scheme. Fix: relabelled §9 → "W7 — Missed Day / Recovery" and §10 → "W6 — Progress / Reflection" (keeping Missed Day first in document order). Now V6 points at the Missed-Day screen and V7 at Progress+Insight, as intended.
+
+**Defect 2 — rule/screen namespace collision.** Renamed the seven non-negotiable rules from colliding `W1–W7` tokens to a distinct **`RULE-1`–`RULE-7`** namespace (chose `RULE-n` because `Rn` is already the per-screen region namespace and `R0n` the role IDs), added an explicit namespace legend at the top of §1, and swept every in-text rule reference across §1–§16 — classifying each `W<digit>` occurrence as rule-ref (converted) vs screen-ref (kept). Also corrected a stray `§6`→`§10` pointer in §0.
+
+## Verification
+- 7 rule definitions present (`RULE-1…RULE-7`); no stray `RULE-8/9` or leftover `W-rule` tokens; namespace legend in place.
+- All 190 remaining `W<digit>` tokens are screen references consistent with W6=Progress / W7=Missed Day.
+- `cd prototype && npm run build` → **exit 0** (docs-only change; no `prototype/src/` touched).
+- Bumped v0.1 → v0.2 with a change-log entry; appended a factual rework log to `PROGRESS.md`.
+
+Per the workflow rules, **no commit was made** — the task sits at `in_review` awaiting Reviewer approval.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/index-DyH45Qvo.css    9.59 kB │ gzip:  2.75 kB
+dist/assets/index-DB5E-1GM.js   231.34 kB │ gzip: 73.15 kB
+
+✓ built in 88ms
+Review complete. TASK-045 passes against both acceptance criteria and all CLAUDE.md standards: all eight screens are fully specified with interaction and accessibility annotations, the deliverable is independently reviewable with no fabricated research, zero-guilt design is structurally enforced (RULE-3 → V6 gate), and both defects from the prior rejection cycle are genuinely fixed and verified consistent across the live document (§2 map, section headers, §12 flow, §14 validator). PRD citations spot-check exact; docs-only so the TypeScript build gate is N/A and no prototype files were touched. Status updated `in_review` → `completed` in `tasks.json` and a 3-bullet summary appended to `PROGRESS.md`.
+
+APPROVED
