@@ -2128,3 +2128,51 @@ dist/assets/index-DB5E-1GM.js   231.34 kB │ gzip: 73.15 kB
 Both actions applied: `tasks.json` TASK-039 advanced `in_review` → `completed`, and a 3-bullet Reviewer verdict appended to `PROGRESS.md`.
 
 APPROVED
+[main 22f1001] feat: complete autonomous task
+ 4 files changed, 363 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/ios-capability-integration-inventory.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   eb3341f..22f1001  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Mon Nov 23 02:04:51 CET 2026
+==========================================
+Done. Executed **TASK-040 — Create the privacy and clinical boundary checklist** (the first `pending` task).
+
+## Summary
+
+**Deliverable:** `docs/strategy/privacy-clinical-boundary-checklist.md` (v0.1, "Proposed — not yet run").
+
+**All seven acceptance-criteria terms are covered as 1:1 boundary domains:**
+- **B1** Data minimization & purpose limitation
+- **B2** Consent & lawful basis
+- **B3** Access control & data security
+- **B4** Medical-claim boundary
+- **B5** Clinical escalation & crisis/red-flag routing
+- **B6** Clinical-review requirement
+- **B7** Regulatory assessment triggers → a dedicated **`REG-T` register** (§5) of 8 triggers (GDPR Art. 9/35 DPIA, SaMD/EU MDR, cross-border, children's data, HIPAA/FTC, App Store, Art. 22), each routing to a qualified reviewer rather than an in-Lab determination.
+
+**Design choices grounding it in the PRD:** four-outcome vocabulary (`clear/investigate/redesign/block`) aligned to the TASK-033 safety gate so results feed back without translation; non-compensable worst-domain aggregation (`prd.md` §9); separation of duties (R15 privacy-side / R14 clinical-side). It is explicitly the deeper instrument that **TASK-033 §4.1/§4.2 and TASK-039 health-data surfaces *call***, resolving the `→ TASK-040` pointers both opened.
+
+**No-fabrication compliance:** no legal determination, DPIA, classification, or clinical/test result asserted; frameworks are named only as *triggers to route to counsel* (F-10 bars any "applies/compliant" claim); P4 forbids the Lab self-clearing a qualified determination. The one worked run is ILLUSTRATIVE (synthetic) on `*-SYNTH-*` ids, left `referred` per hard rule H1. Jurisdictions and SaMD status left as explicit open unknowns.
+
+**Verification:** `cd prototype && npm run build` → **exit code 0** (`tsc -b` + `vite build` clean). Docs-only change; no `prototype/src/` touched. Placeholder scan clean.
+
+**State:** `tasks.json` TASK-040 set to `in_review`; `PROGRESS.md` updated. **No commit made**, per workflow rules — awaiting Reviewer approval.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/index-DyH45Qvo.css    9.59 kB │ gzip:  2.75 kB
+dist/assets/index-DB5E-1GM.js   231.34 kB │ gzip: 73.15 kB
+
+✓ built in 82ms
+TASK-040 reviewed against its acceptance criteria and all CLAUDE.md non-negotiables. The deliverable (`docs/strategy/privacy-clinical-boundary-checklist.md`) defines all seven required areas as concrete, auditable domains with a dedicated regulatory-trigger referral register; carries no placeholders, no fabricated observations or test results, no `any`/`@ts-ignore`; and the prototype build is clean (docs-only change). `tasks.json` advanced `in_review` → `completed`; a 3-bullet reviewer sign-off appended to `PROGRESS.md`.
+
+APPROVED

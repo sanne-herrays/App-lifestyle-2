@@ -436,7 +436,7 @@
       "id": "TASK-040",
       "title": "Create the privacy and clinical boundary checklist",
       "workstream": "Technology & Economics",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the privacy and clinical boundary checklist'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Define data minimization, consent, access control, medical claims, escalation, clinical review and applicable regulatory assessment triggers.",
