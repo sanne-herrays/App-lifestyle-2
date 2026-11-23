@@ -1072,3 +1072,54 @@ Both are self-contained, ~5-minute fixes confined to §8.2; no change to §§0�
 - **Acceptance criteria met in full.** All nine AC-named fields are defined, first-class, and explicitly mapped in the §3.8 proof-of-coverage table — `opp_id`, `root_user_need` (+context/population), the evidence cluster (`need_refs`/`supporting_evidence`/`mechanism_refs`/`contradictions`/`evidence_grade`/`evidence_status`/`confidence`), `current_solution_gap` (+`gap_evidence`/`alternatives_considered`), `desired_outcome` (+`outcome_type`), `mechanisms` (+`mechanism_status`), `hmw_statement`, `feasibility` (+`constraints`/`clinical_integration`), and `test`. Deliverable is independently reviewable and clearly labeled (v0.1, "Proposed, not yet populated").
 - **No-fabrication verified against source.** Spot-checked `prd.md` citations match verbatim: the §7 HMW example (line 155), the §7 heading "never jump directly from evidence to concepts" (line 151), the `OPP-001` Atlas row (line 103), and the ≥12-opportunity/4–6-territory mandate (Prompt 08, line 267). The sole worked record (§8) is `ILLUSTRATIVE (synthetic)` end-to-end, frozen at `proposed`/`insufficient`/`not_yet_assessed` so the schema cannot manufacture evidence or approval. Placeholder scan clean (only false-positive "JTBD").
 - **Standards clean.** Docs-only change — `git status` confirms no `prototype/src/` touched, so strict-TypeScript / `any` / `@ts-ignore` / Apple-craft gates are inapplicable and satisfied; zero-guilt behavioral design actively honored (O1 anti-solutioning, §6 anti-manipulation, `manipulation` gate dimension). Status advanced `in_review` → `completed`.
+
+## TASK-042 — Build the opportunity prioritization rubric (Opportunity Synthesis / WS06)
+**Date:** 2026-11-23 · **Status:** in_review
+
+**Built:**
+- `docs/strategy/opportunity-prioritization-rubric.md` — publication-grade rubric (v0.1, "Proposed — rubric defined, no opportunity yet scored"). It is the scoring-and-grouping instrument the TASK-041 schema deliberately left to this task: TASK-041 owns the `OPP` record fields `priority_scores`/`territory_ref`; TASK-042 owns the weights, formula, gate pre-filter, territory rules, and the ≥12/4–6 portfolio requirement.
+- **Weighted evaluation across all five AC-named dimensions** (§4): D1 user importance 30% · D2 evidence strength 25% · D3 differentiation 20% · D4 feasibility 15% · D5 uncertainty 10% — each with a question-it-answers, required evidence basis, accountable scoring role, and 1–5 anchors; scored on **separate axes** (P2, `↔ TASK-041 O3` / `prd.md` §4 "usability grade ≠ health-impact grade").
+- **Mandatory gate pre-filter runs first and is non-compensable** (§3, Step A): clinical/privacy/accessibility/manipulation/unsupported-claims verdicts (`→ TASK-033/040`) screen opportunities *before* any score; no weighted total can buy back a `reject`/`redesign` (P1; `prd.md` §6 line 141 / §11).
+- **0–100 priority index computed over scored dimensions only** (§5.2): `unknown` dimensions are **excluded and lower `coverage`**, never defaulted to 3/5 (P3); index is never reported without coverage + uncertainty band; `coverage < 50` → held in a needs-evidence pool.
+- **Uncertainty preserved, not hidden** (P4, §4.5/§5.5): scored as D5 **and** reported as a standalone low/med/high-risk band that drives sequencing — high-upside/high-uncertainty opportunities are cheaply tested (`→ TASK-009`), not filtered out and not waved through; contradictions (`→ TASK-008`) and disagreements (`→ TASK-023`) raise uncertainty and are never averaged.
+- **≥12 opportunities / 4–6 territories enforced** (§7–§8): territories are **problem themes, not solutions**; coverage-over-force-fill anti-padding rule (§7.4); 8-check portfolio validation (PV-1…PV-8) gating count, territory bounds, clinical+non-clinical span, gate integrity, coverage honesty, uncertainty/contradiction preservation, and no solution-leakage.
+- Ranking/tie-breaks (evidence-led, §5.6), write-back contract for `priority_scores` (§6), a 17-item forbidden-value catalogue (§11), and dependencies/open-unknowns/change log (§12).
+
+**No-fabrication compliance:** No real opportunity scored. The two worked demonstrations are **ILLUSTRATIVE (synthetic)**: §9 scores the PRD §7 HMW example (`OPP-001`) and is shown *refusing* to inflate — `user_importance: unknown` (excluded), evidence D2=1 (hypothesis), index lands at 44 "watch"/high-risk with `coverage 70`, not a Lead; §10 is a synthetic 12-opportunity / 5-territory skeleton derived from PRD §5/§6/§7 framings purely to prove the ≥12/4–6 rule and portfolio validation run. No popularity/awards used to score; no fabricated evidence, effect size, quote, or clinical outcome. Placeholder scan (Lorem/[TBD]/TODO/FIXME) → none.
+
+**Verified:**
+- `cd prototype && npm run build` → `BUILD_EXIT=0` (`tsc -b` + `vite build` clean, zero warnings/errors). Docs-only change; `git status` confirms no `prototype/src/` files touched.
+
+**Not done (per workflow rules):** No commit made. Task left at `in_review` pending Reviewer approval.
+
+## Review Rejection Notes
+
+**Task:** TASK-042 — Build the opportunity prioritization rubric · **Verdict:** REJECTED (`in_review` → `pending`) · **Date:** 2026-11-23
+
+The rubric is substantively strong and close to passing: acceptance criteria are both addressed (five weighted dimensions — user importance 30 / evidence 25 / differentiation 20 / feasibility 15 / uncertainty 10 — plus the enforced ≥12-opportunity / 4–6-territory portfolio rule); PRD citations are verbatim-accurate (§6 line 141 weights heuristic, §7 line 153 ≥12/4–6 mandate, §7 line 155 HMW example, §4 line 107 "usability ≠ health impact", §11 line 205 "Polished unsupported reports do not pass"); both worked arithmetic examples recompute exactly (§5.3 → 76; §9 → 44 at coverage 70); synthetic material is labeled ILLUSTRATIVE end-to-end; and there are no TODOs/placeholders/fake logic. It is docs-only, so the TypeScript gates are N/A.
+
+It is rejected on **one** craft defect that the Builder must fix on the next pass:
+
+1. **Internal miscount in the §10 portfolio-validation walkthrough (blocking).** The §10 table marks **four** opportunities `high` risk — OPP-S01 (line 384), OPP-S07 (line 390), OPP-S08 (line 391), OPP-S10 (line 393) — but the PV-6/PV-8 reminder on **line 403** states *"the **three** `high-risk` opportunities (S01, S07, S08, S10)"*, asserting "three" while listing four IDs. This is a factual self-contradiction in the document's own validation example. In a rubric whose central discipline is counting integrity (the ≥12/4–6 rule) and "coverage honesty — no bare totals," a miscount in the worked portfolio check is an Apple-level-craft failure (CLAUDE.md §2), not a cosmetic nit.
+   - **Required fix:** change "three" → "four" on line 403 (the four listed IDs are correct and match the table). Then re-scan §9–§10 for any other count or label that must stay consistent with this change (confirm no prose elsewhere states a high-risk count of three, and that the four cited IDs remain the only `high`-risk rows in the §10 table).
+
+No other defects found. Once the count is corrected and re-verified for consistency, this deliverable should pass.
+
+## TASK-042 — Build the opportunity prioritization rubric (Opportunity Synthesis / WS06) — Resubmission
+**Date:** 2026-11-23 · **Status:** in_review
+
+**Fixed (addresses the sole blocking review-rejection defect):**
+- `docs/strategy/opportunity-prioritization-rubric.md` §10, line 403: corrected the §10 portfolio-validation walkthrough miscount — the PV-6/PV-8 reminder said *"the **three** `high-risk` opportunities (S01, S07, S08, S10)"* while listing **four** IDs. Changed "three" → "four"; the four listed IDs were already correct and match the four `high`-risk rows in the §10 table (OPP-S01, OPP-S07, OPP-S08, OPP-S10).
+- **Consistency re-scan (per reviewer's required follow-up):** confirmed the §10 table contains exactly four `/ high` rows (OPP-S01, S07, S08, S10); no other prose anywhere states a high-risk count of three; §9's single-opportunity example (OPP-001/OPP-S01 = 44 / 70% / high-risk) remains consistent with its §10 table row; PV-3's clinical `required` set (OPP-S08, OPP-S10) is unaffected; §12 change log's "two synthetic worked demonstrations" (§9, §10) still accurate. No other count or label required adjustment.
+
+**No-fabrication compliance:** Fix is a pure internal-consistency correction to an ILLUSTRATIVE (synthetic) walkthrough; no real opportunity, evidence, score, or outcome was added or altered. All synthetic material remains labeled end-to-end. Placeholder scan (Lorem/[TBD]/TODO/FIXME) → none.
+
+**Verified:**
+- `cd prototype && npm run build` → exit code 0 (`tsc -b` + `vite build` clean, zero warnings/errors). Docs-only change; no `prototype/src/` files touched.
+
+**Not done (per workflow rules):** No commit made. Task status set `pending` → `in_review` pending Reviewer approval.
+
+## TASK-042 — Build the opportunity prioritization rubric · REVIEW APPROVED (`in_review` → `completed`) · 2026-11-23
+- **Acceptance criteria met in full.** `docs/strategy/opportunity-prioritization-rubric.md` defines weighted evaluation across all five AC-named dimensions (D1 user importance 30 / D2 evidence 25 / D3 differentiation 20 / D4 feasibility 15 / D5 uncertainty 10, weights summing to 100), scored on separate axes with 1–5 anchors, a non-compensable gate pre-filter, a 0–100 index computed over scored dimensions only (with coverage + a preserved uncertainty band), and an enforced ≥12-opportunity / 4–6-territory portfolio rule demonstrated by the synthetic §10 run (12 opportunities, 5 territories, clinical + non-clinical span).
+- **Prior blocking defect verified fixed.** The §10 self-contradiction (reminder said "three" while listing four high-risk IDs) is corrected to "four" at line 403; the §10 table contains exactly four `/ high` rows (OPP-S01, S07, S08, S10) and the only remaining "three" (line 289) correctly refers to the three portfolio gates. Both worked arithmetic examples recompute exactly (§5.3 → 76; §9 → 44 at coverage 70).
+- **Standards clean.** All PRD citations spot-checked verbatim (§7 l.153 ≥12/4–6, Prompt 08 l.267, §7 l.151 heading, §11 l.205, §4 l.107 usability≠health-impact); synthetic material labeled ILLUSTRATIVE end-to-end; placeholder scan clean (no TODO/TBD/Lorem); docs-only change leaves `prototype/src/` untouched, so strict-TypeScript / `any` / `@ts-ignore` gates are N/A and satisfied.

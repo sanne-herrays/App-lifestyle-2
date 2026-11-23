@@ -2216,3 +2216,101 @@ dist/assets/index-DB5E-1GM.js   231.34 kB │ gzip: 73.15 kB
 TASK-041 status set to `completed` in `tasks.json`; a 3-bullet reviewer summary appended to `PROGRESS.md`.
 
 APPROVED
+[main 1012ba5] feat: complete autonomous task
+ 4 files changed, 465 insertions(+), 1 deletion(-)
+ create mode 100644 docs/strategy/opportunity-atlas-record-schema.md
+To https://github.com/sanne-herrays/App-lifestyle-2.git
+   f25fcfb..1012ba5  main -> main
+Task approved, committed, and pushed.
+==========================================
+Starting next task at Mon Nov 23 02:20:07 CET 2026
+==========================================
+Task complete. Per the workflow rules, I stop here without committing.
+
+## Summary — TASK-042: Build the opportunity prioritization rubric
+
+**First pending task identified:** TASK-042 (Opportunity Synthesis / WS06). Executed it in full and left it at `in_review`.
+
+**Deliverable:** `docs/strategy/opportunity-prioritization-rubric.md` — a publication-grade rubric (v0.1) that supplies exactly what the upstream TASK-041 Opportunity Atlas schema deferred to it (the weights, formula, and portfolio counts behind `priority_scores`/`territory_ref`).
+
+**How it meets both acceptance criteria:**
+- **"Weighted evaluation of user importance, evidence, differentiation, feasibility and uncertainty"** → all five are first-class dimensions with 1–5 anchors, separate scoring axes, accountable roles, and declared weights (30/25/20/15/10), rolled into a transparent 0–100 index. Uncertainty is handled with care — scored *and* preserved as a standalone risk band so a confident-looking total can't hide a thin basis.
+- **"≥12 opportunities grouped into 4–6 territories"** → enforced as a hard portfolio rule with an 8-check validation (PV-1…PV-8), coverage-over-force-fill anti-padding, and a required clinical + non-clinical span, per PRD §7 / Prompt 08.
+- **No fabrication** → grounded in `prd.md` §6/§7/§11 (verified citations); the two worked examples are labelled ILLUSTRATIVE (synthetic) and deliberately show the rubric *refusing* to inflate a hypothesis-based opportunity (the PRD example lands at 44/"watch", not a Lead). Mandatory safety gates are a non-compensable pre-filter; popularity/awards can never raise a score.
+
+**Verification:**
+- `cd prototype && npm run build` → **exit code 0** (tsc -b + vite build clean, zero warnings/errors). Docs-only change; no `prototype/src/` files touched.
+- Placeholder scan (Lorem/[TBD]/TODO/FIXME) → none.
+
+**State changes:** `tasks.json` TASK-042 → `in_review`; `PROGRESS.md` log appended. **No commit made** — left for the Reviewer step per the workflow rules.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/index-DyH45Qvo.css    9.59 kB │ gzip:  2.75 kB
+dist/assets/index-DB5E-1GM.js   231.34 kB │ gzip: 73.15 kB
+
+✓ built in 74ms
+I reviewed TASK-042 (the opportunity prioritization rubric) against its acceptance criteria and CLAUDE.md's craft standards.
+
+**What passed:** Five weighted dimensions with disclosed weights; the enforced ≥12-opportunity / 4–6-territory portfolio rule; verbatim-accurate PRD citations; both worked arithmetic examples recompute exactly (§5.3 → 76, §9 → 44); all synthetic material labeled `ILLUSTRATIVE`; no placeholders, TODOs, or fake logic; docs-only so TS gates are N/A.
+
+**What failed it:** A factual self-contradiction in the §10 portfolio-validation walkthrough. The table marks **four** opportunities `high`-risk (OPP-S01, S07, S08, S10), but line 403 says "the **three** `high-risk` opportunities (S01, S07, S08, S10)" — asserting three while listing four. In a rubric whose entire thesis is counting integrity and "coverage honesty," a miscount in its own worked validation example is an Apple-level-craft miss, which is exactly what this gate exists to catch.
+
+Actions taken:
+- `tasks.json`: TASK-042 status `in_review` → `pending`.
+- `PROGRESS.md`: appended `## Review Rejection Notes` with the exact line, the defect, and the surgical fix ("three" → "four", then re-scan §9–§10 for consistency).
+
+REJECTED
+Task rejected by Reviewer. Retrying...
+==========================================
+Starting next task at Mon Nov 23 02:28:38 CET 2026
+==========================================
+Done. Here's a summary of this session's work.
+
+## TASK-042 — Build the opportunity prioritization rubric
+
+**Situation:** The first `pending` task, TASK-042, had already been built in a prior session, submitted, and then **rejected** by the Reviewer for a single blocking craft defect (logged in PROGRESS.md). The deliverable `docs/strategy/opportunity-prioritization-rubric.md` was present on disk (untracked) in its rejected state. My job this session was to clear that defect, not rebuild.
+
+**The defect (fixed):** In §10's synthetic portfolio-validation walkthrough, line 403 asserted *"the **three** `high-risk` opportunities (S01, S07, S08, S10)"* — stating "three" while listing **four** IDs. In a rubric whose core discipline is counting integrity (the ≥12/4–6 rule) and "coverage honesty," this self-contradiction was flagged as an Apple-level-craft failure.
+
+**What I did:**
+- Verified the discrepancy independently: the §10 table has **exactly four** `/ high` rows (OPP-S01, S07, S08, S10), so "three" was the error, not the ID list.
+- Changed "three" → "four" (line 403).
+- Ran the reviewer's required consistency re-scan: no other prose states a high-risk count of three; §9's single example stays consistent with its §10 row; PV-3 clinical set and §12 change log unaffected.
+- `cd prototype && npm run build` → **exit code 0** (`tsc -b` + `vite build` clean; docs-only change, no `prototype/src/` touched).
+- Set TASK-042 `pending` → `in_review` in `tasks.json`.
+- Appended a factual resubmission entry to `PROGRESS.md`.
+
+**Not done (per workflow rules):** No commit made — left at `in_review` pending Reviewer approval.
+
+The underlying document already satisfied both acceptance criteria (five weighted dimensions — user importance 30 / evidence 25 / differentiation 20 / feasibility 15 / uncertainty 10 — and the enforced ≥12-opportunity / 4–6-territory portfolio rule with PV-1…PV-8 validation); that work stands, with the one blocking miscount now corrected.
+
+> prototype@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 20 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.45 kB │ gzip:  0.29 kB
+dist/assets/index-DyH45Qvo.css    9.59 kB │ gzip:  2.75 kB
+dist/assets/index-DB5E-1GM.js   231.34 kB │ gzip: 73.15 kB
+
+✓ built in 79ms
+Review complete. TASK-042 "Build the opportunity prioritization rubric" meets both acceptance criteria and all CLAUDE.md standards:
+
+- **Weighted evaluation across all five named dimensions** (importance 30 / evidence 25 / differentiation 20 / feasibility 15 / uncertainty 10), scored on separate axes with non-compensable safety gates applied first.
+- **≥12 opportunities in 4–6 territories** enforced and demonstrated (synthetic §10: 12 opportunities, 5 territories, clinical + non-clinical span).
+- **No fabrication / clean craft:** synthetic material labeled ILLUSTRATIVE end-to-end, all PRD citations verbatim-accurate, both arithmetic examples recompute exactly, no placeholders. The sole prior blocking defect (the §10 "three" vs. four-IDs miscount) is fixed and internally consistent. Docs-only, so TypeScript gates are N/A.
+
+`tasks.json` status advanced `in_review` → `completed`; 3-bullet summary appended to `PROGRESS.md`.
+
+APPROVED

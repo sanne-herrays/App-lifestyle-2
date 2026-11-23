@@ -458,7 +458,7 @@
       "id": "TASK-042",
       "title": "Build the opportunity prioritization rubric",
       "workstream": "Opportunity Synthesis",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Build the opportunity prioritization rubric'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Define weighted evaluation of user importance, evidence, differentiation, feasibility and uncertainty; require at least 12 opportunities grouped into 4–6 territories.",
