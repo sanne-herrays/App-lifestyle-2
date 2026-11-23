@@ -425,7 +425,7 @@
       "id": "TASK-039",
       "title": "Create the iOS capability and integration inventory",
       "workstream": "Technology & Economics",
-      "status": "pending",
+      "status": "completed",
       "scope": "Produce only the standalone deliverable described by 'Create the iOS capability and integration inventory'; do not implement or assume completion of other tasks.",
       "acceptance_criteria": [
         "Document HealthKit, widgets, Live Activities, notifications, haptics, on-device processing and sync interfaces with permissions and feasibility questions.",
